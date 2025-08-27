@@ -5,7 +5,7 @@ import data from "@/constants/solutionPage/bank.json"
 
 export default function Bank() {
   return (
-    <div className="h-auto w-screen ">
+    <div className="h-auto w-full ">
       <h1 className="text-center text-6xl pt-10 font-bold">
         Solution Overview
       </h1>

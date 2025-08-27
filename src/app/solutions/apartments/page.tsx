@@ -5,7 +5,7 @@ import data from "@/constants/solutionPage/apartments.json"
 
 export default function Apartment() {
   return (
-    <div className="h-auto w-screen ">
+    <div className="h-auto w-full ">
       <h1 className="text-center text-6xl pt-10 font-bold">
         Solution Overview
       </h1>
