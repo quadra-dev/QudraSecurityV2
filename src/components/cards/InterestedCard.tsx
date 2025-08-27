@@ -68,7 +68,7 @@ export default function InterestedCard() {
               title="Appartments"
               description="Every Property tells a story, make sure yours is one of safety, not full of regrets"
               gradient="bg-[#FFCCE2]"
-              hoverBorder="group-hover:border-[#FFD55E]"
+              hoverBorder="group-hover:border-[#9E1E85]"
             />
  
 
@@ -87,7 +87,7 @@ export default function InterestedCard() {
             title="Stop the scroll"
             description="Create videos that captivate your audience and drive leads—social videos, product explainers, commercials, and more."
             gradient="bg-[#FFE599]"
-            hoverBorder="group-hover:border-[#9E1E85]"
+            hoverBorder="group-hover:border-[#FFD55E]"
           />
         </div>
       </div>
