@@ -1,7 +1,7 @@
 import InterestedCard from "@/components/cards/InterestedCard";
 import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
-import data from "@/constants/solutionPage/campus.json"
+import data from "@/constants/solutionPage/campus.json";
 
 export default function Campus() {
   return (
@@ -10,14 +10,13 @@ export default function Campus() {
         Solution Overview
       </h1>
       <p className="text-center pt-5 px-3 md:px-50">
-        Safety is a top most priority for every property manager, especially in
-        today’s world where we see the rising cases of unauthorised access to
-        theft and emergency situations almost everyday. As cities grow and the
-        number of tourists rises, it has become more essential to find a
-        reliable and advanced solution for security. We provide advanced
-        security solutions for residential, commercial and mixed-use properties
-        at Quadra Security. We have systems in place that protect residents,
-        visitors, and valuable assets while giving you peace of mind 24/7.
+         Student safety is the foremost priority for any campus and so is
+        protecting staff and property. A campus should be a secure, trusted, and
+        well-ordered environment where students can focus on their goals without
+        worrying about security threats At Quadra Security, we help you create
+        a safe and disciplined atmosphere by providing reliable, modern campus
+        security systems tailored to your needs. With our advanced technology,
+        you can conduct daily activities with complete peace of mind.
       </p>
       <div className="pb-25 pt-5">
         <Buttonfunction data={data} />

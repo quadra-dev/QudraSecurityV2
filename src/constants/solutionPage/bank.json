@@ -1,92 +1,57 @@
 {
   "areas": [
-    { "id": 1, "name": "Entrance", "top": "80%", "left": "45%" },
-    { "id": 2, "name": "Lobby", "top": "60%", "left": "40%" },
-    { "id": 3, "name": "Indoors", "top": "25%", "left": "38%" },
-    { "id": 4, "name": "Boundary", "top": "35%", "left": "90%" },
-    { "id": 5, "name": "Control Room", "top": "50%", "left": "56%" },
-    { "id": 6, "name": "Parking", "top": "60%", "left": "70%" },
-    { "id": 7, "name": "Lift", "top": "15%", "left": "31%" }
+    { "id": 1, "name": "Entrance", "top": "70%", "left": "45%" },
+    { "id": 2, "name": "Indoors", "top": "60%", "left": "60%" },
+    { "id": 3, "name": "Parking", "top": "75%", "left": "90%" },
+    { "id": 4, "name": "Boundary", "top": "50%", "left": "90%" }
+   
   ],
 
   "challenges": [
     {
       "id": 1,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Unauthorized entry can allow thieves, intruders, or even armed individuals to access the premises.",
+      "challange2": "Weak security at gate or no proper management of security.",
+      "offering1": "Industry-standard metal detectors from trusted brands to detect and prevent the entry of weapons or harmful objects.",
+      "offering2": "Burglar alarm systems that alerts everybody immediately with loud alarms whenever a suspicious activity is detected.",
+      "offering3": "Biometric attendance systems for proper attendance tracking for better workforce management and to prevent forgery.",
+      "offering4": "Vandalism-proof cameras that works perfectly even when damaged.",
+      "offering5":"X-ray baggage scanners to check bags and parcels for prohibited items or weapons.",
+      "offering6":"End-to-end service, ensure complete site survey to installation, integration, and annual maintenance."
     },
     {
       "id": 2,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Keeping staff safe while working.",
+      "challange2": "Identifying suspicious behaviour or activity by staff or customer.",
+      "challange3": "Preventing violence and property damage.",
+      "offering1": "24/7 CCTV surveillance to monitor the transaction area and the complete office.",
+      "offering2": "Emergency call buttons to allow staff to alert everyone whenever a harmful activity is detected.",
+      "offering3": "Electronic door locks to restrict access to cash rooms and server areas.",
+      "offering4": "Industry-standard metal detectors to screen everybody at the entry for weapons or prohibited items",
+      "offering5":"End-to-end service, complete site survey, professional installation, integration with existing setup, and AMC."
     },
     {
       "id": 3,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Verifying vehicle authenticity before entry",
+      "challange2": "Preventing vehicle-related crimes or property damage.",
+      "offering1": "ANPR (Automatic Number Plate Recognition) to instantly identify and log every vehicle entering campus.",
+      "offering2": "Vandalism-proof cameras that can resist damage for uninterrupted coverage.",
+      "offering3": "24/7 CCTV coverage to monitor all parking areas in real time.",
+      "offering4": "Boom barriers to control access for authorized vehicles.",
+      "offering5":"Night vision cameras to maintain visibility in dark zones",
+      "offering6":"End-to-end service, complete site survey, professional installation, integration with existing setup, and AMC."
     },
     {
       "id": 4,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 5,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 6,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 7,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Trespassing attempts outside banking hours",
+      "challange2": "Lack of real-time alerts for perimeter threats.",
+      "offering1": "24/7 CCTV coverage for full perimeter monitoring.",
+      "offering2": "Night vision cameras to ensure surveillance in total darkness.",
+      "offering3": "Vandalism-proof cameras that can resist tampering for uninterrupted coverage.",
+      "offering4": "AI-powered smart alert systems to detect and report unusual activity.",
+      "offering5":"360-degree cameras to ensure no area of the perimeter is left unwatched.",
+      "offering6":"End-to-end service, complete site survey, professional installation, integration with existing setup, and AMC."
     }
   ],
-  "imagePath":"/solutionImages/apartment/apartment.png"
+  "imagePath":"/solutionImages/bank/bank.png"
 }

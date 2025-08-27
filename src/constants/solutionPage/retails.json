@@ -1,92 +1,56 @@
 {
   "areas": [
-    { "id": 1, "name": "Entrance", "top": "80%", "left": "45%" },
-    { "id": 2, "name": "Lobby", "top": "60%", "left": "40%" },
+    { "id": 1, "name": "Entrance", "top": "25%", "left": "10%" },
+    { "id": 2, "name": "Checkout", "top": "60%", "left": "40%" },
     { "id": 3, "name": "Indoors", "top": "25%", "left": "38%" },
-    { "id": 4, "name": "Boundary", "top": "35%", "left": "90%" },
-    { "id": 5, "name": "Control Room", "top": "50%", "left": "56%" },
-    { "id": 6, "name": "Parking", "top": "60%", "left": "70%" },
-    { "id": 7, "name": "Lift", "top": "15%", "left": "31%" }
+    { "id": 4, "name": "ControlRoom", "top": "25%", "left": "85%" }
   ],
 
   "challenges": [
     {
       "id": 1,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Risk of weapons or sharp objects entering the premises.",
+      "challange2": "Unidentified or suspicious visitors gaining access.",
+      "challange3": "Difficulty tracking staff attendance accurately.",
+      "offering1": "Metal detectors to prevent entry of weapons or harmful objects.",
+      "offering2": "Burglar alarm systems for instant alerts on suspicious activity.",
+      "offering3": "Biometric attendance systems for accurate staff entry tracking.",
+      "offering4": "X-ray baggage scanners to inspect bags and parcels for prohibited items.",
+      "offering5":"EPABX systems for smooth internal communication.",
+      "offering6":"Complete service package from site survey to installation and maintenance."
     },
     {
       "id": 2,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Difficulty monitoring staff behaviour and transactions.",
+      "challange2": "Fraud or forgery during low-traffic hours.",
+      "challange3": "Shoplifting through hidden items in carts or bags.",
+      "offering1": "AI-powered facial recognition to identify known offenders",
+      "offering2": "Night vision CCTV cameras for clear monitoring at all hours.",
+      "offering3": "Emergency alert buttons for staff to call security instantly.",
+      "offering4": "360° cameras for complete checkout coverage.",
+      "offering5":"EPABX communication systems for instant coordination between counters and security."
     },
     {
       "id": 3,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Theft from shelves or product displays.",
+      "challange2": "Vandalism or fire hazards going unnoticed.",
+      "challange3": "Tracking suspicious movements in crowded spaces.",
+      "offering1": "HD CCTV cameras for crystal-clear coverage of all aisles.",
+      "offering2": "Fire alarm systems for early smoke or fire detection.",
+      "offering3": "360° security cameras for complete area monitoring.",
+      "offering4": "AI-based alerts for unusual activity or behaviour.",
+      "offering5":"Vandalism-proof cameras to prevent tampering."
     },
     {
       "id": 4,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 5,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 6,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 7,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Gaps in camera coverage leading to missed incidents.",
+      "challange2": "Delayed response due to poor communication with staff.",
+      "offering1": "High-quality display screens to monitor multiple feeds in real time.",
+      "offering2": "EPABX systems for fast communication with store sections.",
+      "offering3": "AI-powered systems for instant alerts and threat detection.",
+      "offering4": "Emergency call buttons for urgent incidents",
+      "offering5":"Advanced alarm systems for automatic breach alerts."
     }
   ],
-  "imagePath":"/solutionImages/apartment/apartment.png"
+  "imagePath":"/solutionImages/retails/retail.png"
 }

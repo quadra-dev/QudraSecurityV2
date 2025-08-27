@@ -1,92 +1,104 @@
 {
   "areas": [
-    { "id": 1, "name": "Entrance", "top": "80%", "left": "45%" },
-    { "id": 2, "name": "Lobby", "top": "60%", "left": "40%" },
-    { "id": 3, "name": "Indoors", "top": "25%", "left": "38%" },
-    { "id": 4, "name": "Boundary", "top": "35%", "left": "90%" },
-    { "id": 5, "name": "Control Room", "top": "50%", "left": "56%" },
-    { "id": 6, "name": "Parking", "top": "60%", "left": "70%" },
-    { "id": 7, "name": "Lift", "top": "15%", "left": "31%" }
+    { "id": 1, "name": "Entrance", "top": "60%", "left": "70%" },
+    { "id": 2, "name": "Lobby", "top": "70%", "left": "40%" },
+    { "id": 3, "name": "Indoors", "top": "20%", "left": "38%" },
+    { "id": 4, "name": "Boundary", "top": "95%", "left": "40%" },
+    { "id": 5, "name": "Control Room", "top": "32%", "left": "30%" },
+    { "id": 6, "name": "Parking", "top": "65%", "left": "90%" },
+    { "id": 7, "name": "Lift", "top": "15%", "left": "10%" },
+    { "id": 8, "name": "reception", "top": "68%", "left": "15%" }
   ],
 
   "challenges": [
     {
       "id": 1,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Unauthorized entry can allow thieves, intruders, or even armed individuals to access the premises.",
+      "challange2": "Low visibility at night causing theft, intrusion, and other security problems.",
+      "challange3": "No proper records of the vehicle, making investigations difficult if needed.",
+      "offering1": "Night vision CCTV cameras for crystal-clear monitoring in even low light or complete darkness.",
+      "offering2": "Biometric access systems to allow only authorised staff and registered guests to pass fingerprint or facial recognition.",
+      "offering3": "ANPR (Automatic Number Plate Recognition) to automatically log and track every vehicle that enters.",
+      "offering4": "Boom barriers & toll solutions to limit vehicle access and stop unauthorised parking.",
+      "offering5": "Video door phones to verify the entry of visitors before allowing them to enter.",
+      "offering6": "Alarm systems for automatic loud alarms whenever it detects intrusion or suspicious activity."
     },
     {
       "id": 2,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "It becomes difficult to keep the proper check of visitors during the peak hours",
+      "challange2": "Lack of instant communication causing the delay in emergencies .",
+      "offering1": "360° CCTV coverage for monitoring every corner in real-time.",
+      "offering2": "Baggage scanners to detect prohibited or dangerous items.",
+      "offering3": "Metal detectors to screen visitors for weapons or any other dangerous item.",
+      "offering4": "Interactive display panels for sharing live feed, notices, or alerts.",
+      "offering5": "EPABX systems for fast and smooth communication between staff.",
+      "offering6": "Alarm systems for instantly alerting staff during an emergency situation."
     },
     {
       "id": 3,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Guests wandering into staff-only or restricted zones.",
+      "challange2": "Theft or vandalism in less monitored areas",
+      "challange3": "Slow response to disturbances can lead to a critical situation.",
+      "offering1": "Smart CCTV with motion detection for instant alerts on unusual activity.  ",
+      "offering2": "Electronic door locks for secure room and restricted area access.",
+      "offering3": "AI-powered alarm systems that automatically alerts staff with loud alarms whenever it detects something unusual.",
+      "offering4": "Interactive display panels for getting important updates, announcements, or even to alert everybody in an emergency."
     },
     {
       "id": 4,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Unauthorised access through unmonitored points.",
+      "challange2": "Weak surveillance that makes it easy for thieves, intruders, or even armed individuals to enter through the boundary .",
+      "challange3": "No automated gate control for vehicles.",
+      "offering1": "High-resolution CCTV installed along the entire boundary to monitor every point from entry to exit",
+      "offering2": "Motion-detection alarms that detect every movement and give alerts instantly whenever it finds a suspicious movement.",
+      "offering3": "Vandalism-proof cameras which work perfectly fine even after getting damaged.",
+      "offering4": "Boom barriers with ANPR to manage vehicle access and maintain their entry and exit records.",
+      "offering5":"Night vision cameras for 24/7 visibility, even in poor lighting or complete darkness."
     },
     {
       "id": 5,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Due to poor monitoring, even critical emergencies get delayed, causing serious consequences.",
+      "challange2": "Managing several security inputs at the same time can be challenging",
+      "challange3": "No real-time detection of operational issues can lead to delay responses or security lapses.",
+      "offering1": "Centralised security dashboard to control CCTV, alarms, and access systems from one place.",
+      "offering2": "EPABX communication systems for immediate and smooth coordination between departments.",
+      "offering3": "Real-time alerts from security devices for quick action to prevent threats and maintain safety",
+      "offering4": "Emergency lockdown controls to secure the entrance, restrict access, and protect everyone during critical situations",
+      "offering5":"Interactive panels to display a view of live security feeds and alerts."
     },
     {
       "id": 6,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Risk of vehicle theft, break-ins or damage affecting guest and property safety.",
+      "challange2": "Unauthorised vehicles in the parking spaces can lead to a negative experience for guests.",
+      "offering1": "ANPR systems to monitor and record every vehicle entering or leaving for enhanced security.",
+      "offering2": "Boom barriers & toll solutions to prevent unauthorised entry, and control traffic effectively.",
+      "offering3": "Wide-angle night vision CCTV for complete coverage ensuring no corner goes unmonitored.",
+      "offering4": "Motion sensors to detect unusual movement and to instantly alert the security staff to potential threats.",
+      "offering5":"Emergency help buttons  for providing instant assistance to guest and staff"
     },
     {
       "id": 7,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Unauthorised access to guest floors through lifts can put guest’s safety at risk",
+      "challange2": "Damage or vandalism inside lifts can cause lift-operational issues, and can even lead to people get trapped in lift",
+      "challange3": "No quick way to request help during emergencies can escalate risks for guests and staff.",
+      
+      "offering1": "Lift access control with key cards or biometrics so that only authorized guests and staff can reach to their floors",
+      "offering2": "CCTV surveillance with remote monitoring allows you to watch the property in real time even when you are miles away from the property",
+      "offering3": "Emergency call buttons connected to the control room for instant communication during critical situations",
+      "offering4": "Alarm systems for lift emergencies or faults for quick action to protect people if they get trapped in lift"
+    },
+     {
+      "id": 8,
+      "challange1": "Fake check-ins and identity fraud can allow unauthorized individuals to enter and cause harm to guests/staff or property.",
+      "challange2": "Overcrowding in reception areas during peak times can cause chaos, inconvenience, or security breaches.",
+      "challange3": "Slow communication between teams in emergencies can cause delay and even lead to serious consequences.",
+      "offering1": "Video door phones for secure guest and visitor verification, so that guests or staff can confirm identities before letting anyone enter",
+      "offering2": "CCTV surveillance cameras for continuous monitoring, so that every corner is monitored, 24/7.",
+      "offering3": "Biometric attendance systems to allow only authorized staff to enter and track attendance accurately.",
+      "offering4": "EPABX systems for fast and smooth internal communication so that emergencies could be taken care of effectively.",
+      "offering5":"Interactive panels for real-time updates and security alerts, so that everyone stays updated and knows what's happening",
+      "offering6":"Alarm systems for immediate response to threats with loud alarms."
     }
   ],
-  "imagePath":"/solutionImages/apartment/apartment.png"
+  "imagePath":"/solutionImages/hotels/hotel.png"
 }

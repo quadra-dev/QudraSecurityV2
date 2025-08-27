@@ -1,7 +1,7 @@
 import InterestedCard from "@/components/cards/InterestedCard";
 import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
-import data from"@/constants/solutionPage/hotels.json"
+import data from "@/constants/solutionPage/hotels.json";
 
 export default function Hotels() {
   return (
@@ -10,17 +10,16 @@ export default function Hotels() {
         Solution Overview
       </h1>
       <p className="text-center pt-5 px-3 md:px-50">
-        Safety is a top most priority for every property manager, especially in
-        today’s world where we see the rising cases of unauthorised access to
-        theft and emergency situations almost everyday. As cities grow and the
-        number of tourists rises, it has become more essential to find a
-        reliable and advanced solution for security. We provide advanced
-        security solutions for residential, commercial and mixed-use properties
-        at Quadra Security. We have systems in place that protect residents,
-        visitors, and valuable assets while giving you peace of mind 24/7.
+        Security is the most important aspect in the hospitality industry.
+        Guests expect not just comfort and luxury but also the safety that they
+        are secure all the time. Hotels have check-ins, visitors coming and
+        going, and busy lobbies, because of this, they’re more at risk of theft,
+        emergencies, and trespassing. Quadra Security  provides advanced
+        hospitality security solutions designed to safeguard your guests, staff,
+        and property, 24/7.
       </p>
       <div className="pb-25 pt-5">
-        <Buttonfunction data={data}/>
+        <Buttonfunction data={data} />
       </div>
       <InterestedCard />
       <ContactForm />

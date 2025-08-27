@@ -225,7 +225,7 @@ const ContactForm = () => {
             explore our installation service and  talk to our experts for solution catered to  your need 
           </p>
            <Image
-        src="/ContactForm/ContactSvg.png"   // path inside public/ folder
+        src="/contactImages/ContactSvg.png"   // path inside public/ folder
         alt="contact image"
         width={180}       // required
         height={120}      // required
