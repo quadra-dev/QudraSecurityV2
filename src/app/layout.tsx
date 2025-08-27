@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} text-theme-white bg-solution-purple`}
       >
-        <div className="">
+        <div className="sticky top-0 z-[999]">
           <NavigationMenu/>
         </div>
         {children}

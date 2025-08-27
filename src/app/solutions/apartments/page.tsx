@@ -1,8 +1,9 @@
 import InterestedCard from "@/components/cards/InterestedCard";
 import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
+import data from "@/constants/solutionPage/apartments.json"
 
-export default function Home() {
+export default function Apartment() {
   return (
     <div className="h-auto w-screen ">
       <h1 className="text-center text-6xl pt-10 font-bold">
@@ -19,7 +20,7 @@ export default function Home() {
         visitors, and valuable assets while giving you peace of mind 24/7.
       </p>
       <div className="pb-25 pt-5">
-        <Buttonfunction />
+        <Buttonfunction data={data} />
       </div>
       <InterestedCard />
       <ContactForm />

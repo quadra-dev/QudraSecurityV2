@@ -1,0 +1,92 @@
+{
+  "areas": [
+    { "id": 1, "name": "Entrance", "top": "80%", "left": "45%" },
+    { "id": 2, "name": "Lobby", "top": "60%", "left": "40%" },
+    { "id": 3, "name": "Indoors", "top": "25%", "left": "38%" },
+    { "id": 4, "name": "Boundary", "top": "35%", "left": "90%" },
+    { "id": 5, "name": "Control Room", "top": "50%", "left": "56%" },
+    { "id": 6, "name": "Parking", "top": "60%", "left": "70%" },
+    { "id": 7, "name": "Lift", "top": "15%", "left": "31%" }
+  ],
+
+  "challenges": [
+    {
+      "id": 1,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 2,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 3,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 4,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 5,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 6,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    },
+    {
+      "id": 7,
+      "challange1": "this is challange1 entrance",
+      "challange2": "this is challange2",
+      "challange3": "this is challange3",
+      "challange4": "this is challange4",
+      "offering1": "this is offering1",
+      "offering2": "this is offering 2",
+      "offering3": "this is offering 3",
+      "offering4": "this is offering 4"
+    }
+  ],
+  "imagePath":"/solutionImages/apartment/apartment.png"
+}

@@ -4,112 +4,23 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-const areas = [
-  { id: 1, name: "Entrance", top: "80%", left: "45%" },
-  { id: 2, name: "Lobby", top: "60%", left: "40%" },
-  { id: 3, name: "Indoors", top: "25%", left: "38%" },
-  { id: 4, name: "Boundary", top: "35%", left: "90%" },
-  { id: 5, name: "Control Room", top: "50%", left: "56%" },
-  { id: 6, name: "Parking", top: "60%", left: "70%" },
-  { id: 7, name: "Lift", top: "15%", left: "31%" },
-];
-
-const challenges = [
-  {
-    id: 1,
-    challange1: "this is challange1 entrance",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 2,
-    challange1: "this is challange1 lobby",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 3,
-    challange1: "this is challange1 indoors",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 4,
-    challange1: "this is challange1 boundary",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 5,
-    challange1: "this is challange1 control room",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 6,
-    challange1: "this is challange1 parking",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-  {
-    id: 7,
-    challange1: "this is challange1 lift",
-    challange2: "this is challange2",
-    challange3: "this is challange3",
-    challange4: "this is challange4",
-    offering1: "this is offering1",
-    offering2: "this is offering 2",
-    offering3: "this is offering 3",
-    offering4: "this is offering 4",
-  },
-];
-
-export default function ComparisonSection() {
+export default function ComparisonSection(data) {
   const [selected, setSelected] = useState(1);
-  const selectedChallenge = challenges.find((c) => c.id === selected);
+  const selectedChallenge = data.data.challenges.find((c) => c.id === selected);
+  console.log(data.data.areas)
 
   return (
     <div className="p-4 w-full max-w-5xl mx-auto flex flex-col items-center relative">
       {/* Image with buttons */}
       <div className="relative w-full z-10">
         <Image
-          src="/solutionImage/apartmentPage/apartmentImage.png"
+          src={data.data.imagePath}
           alt="Building"
           width={1200}
           height={800}
           className="rounded-[4rem] w-full h-auto object-contain"
         />
-        {areas.map((area) => (
+        {data.data.areas.map((area) => (
           <button
             key={area.id}
             onClick={() => setSelected(area.id)}

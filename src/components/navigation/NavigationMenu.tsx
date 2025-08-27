@@ -41,7 +41,7 @@ const NavigationMenu: React.FC = () => {
                   </li>
                 </React.Fragment>
               ))}
-              <li>
+              <li className="px-0">
                 <OrangeButton />
               </li>
             </ul>
