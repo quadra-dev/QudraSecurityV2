@@ -67,7 +67,7 @@ export default function InterestedCard() {
               label="Most Viewed"
               title="Appartments"
               description="Every Property tells a story, make sure yours is one of safety, not full of regrets"
-              gradient="bg-gradient-to-b from-[#cc970033] to-[#FFD55E]"
+              gradient="bg-[#FFCCE2]"
               hoverBorder="group-hover:border-[#FFD55E]"
             />
  
@@ -77,7 +77,7 @@ export default function InterestedCard() {
             label="POPULAR"
             title="Retail Solution"
             description="Have a complete view of every corner of your shop with our advanced retail security systems."
-            gradient="bg-gradient-to-b from-[#4de5934d] to-[#19BF65]"
+            gradient="bg-[#BCF5D7]"
             hoverBorder="group-hover:border-[#19BF65]"
           />
 
@@ -86,7 +86,7 @@ export default function InterestedCard() {
             label="Video"
             title="Stop the scroll"
             description="Create videos that captivate your audience and drive leads—social videos, product explainers, commercials, and more."
-            gradient="bg-gradient-to-b from-[#FF99EC] to-[#E34DC6]"
+            gradient="bg-[#FFE599]"
             hoverBorder="group-hover:border-[#9E1E85]"
           />
         </div>
