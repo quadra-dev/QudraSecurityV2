@@ -1,7 +1,7 @@
 import InterestedCard from "@/components/cards/InterestedCard";
 import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
-import data from "@/constants/solutionPage/bank.json"
+import data from "@/constants/solutionPage/bank.json";
 
 export default function Bank() {
   return (
@@ -10,14 +10,12 @@ export default function Bank() {
         Solution Overview
       </h1>
       <p className="text-center pt-5 px-3 md:px-50">
-        Safety is a top most priority for every property manager, especially in
-        today’s world where we see the rising cases of unauthorised access to
-        theft and emergency situations almost everyday. As cities grow and the
-        number of tourists rises, it has become more essential to find a
-        reliable and advanced solution for security. We provide advanced
-        security solutions for residential, commercial and mixed-use properties
-        at Quadra Security. We have systems in place that protect residents,
-        visitors, and valuable assets while giving you peace of mind 24/7.
+         Banks are one of the most sensitive institutions, requiring reliable,
+        24/7 security measures to protect assets, staff, and customers. At
+        Quadra Security, we deliver trusted and high-performance bank security
+        solutions that ensure complete protection without compromising on
+        efficiency. From the entrance to the vault, our systems keep every
+        corner under watch
       </p>
       <div className="pb-25 pt-5">
         <Buttonfunction data={data} />

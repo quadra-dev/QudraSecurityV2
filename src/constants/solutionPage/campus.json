@@ -1,92 +1,77 @@
 {
   "areas": [
-    { "id": 1, "name": "Entrance", "top": "80%", "left": "45%" },
-    { "id": 2, "name": "Lobby", "top": "60%", "left": "40%" },
+    { "id": 1, "name": "Entrance", "top": "65%", "left": "60%" },
+    { "id": 2, "name": "Lobby", "top": "45%", "left": "40%" },
     { "id": 3, "name": "Indoors", "top": "25%", "left": "38%" },
     { "id": 4, "name": "Boundary", "top": "35%", "left": "90%" },
-    { "id": 5, "name": "Control Room", "top": "50%", "left": "56%" },
-    { "id": 6, "name": "Parking", "top": "60%", "left": "70%" },
-    { "id": 7, "name": "Lift", "top": "15%", "left": "31%" }
+    { "id": 5, "name": "Control Room", "top": "35%", "left": "20%" },
+    { "id": 6, "name": "Parking", "top": "55%", "left": "30%" }
   ],
 
   "challenges": [
     {
       "id": 1,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Improper tracking of student and staff attendance, leading to inaccurate records.",
+      "challange2": "Risk of thieves, intruders, or even armed individuals to access campus facilities.",
+      "offering1": "Modern biometric attendance systems to log accurate entry times of students and staff.",
+      "offering2": "Night vision cameras to maintain clear video surveillance even in low-light or nighttime conditions.",
+      "offering3": "Boom barriers to control and regulate vehicle entry for safer campus roads.",
+      "offering4": "Industry-standard metal detectors to screen individuals for weapons or prohibited items.",
+      "offering5":"Burglar alarms to detect any intrusion attempt instantly."
     },
     {
       "id": 2,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "When the reception areas or lobby of a campus gets crowded, it becomes difficult to monitor for any suspicious activity or individual.",
+      "challange2": "Identity fraud can happen, people pretending to be students, staff, or visitors.",
+      "offering1": "360-degree cameras that provide coverage to every spot",
+      "offering2": "Vandalism-proof cameras to ensure uninterrupted recording, even in attempts to damage equipment.",
+      "offering3": "Access control systems to allow only authorised visitors, staff, and students to enter.",
+      "offering4": "Boom barriers to prevent unauthorized vehicle entry into campus buildings.",
+      "offering5":"Boom barriers to prevent unauthorized vehicle entry into campus buildings.",
+      "offering6":"Electronic door locks to secure sensitive areas like administrative offices."
     },
     {
       "id": 3,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Limited coverage in classrooms, corridors, and stairwells.",
+      "challange2": "Students engaging in mischievous or unsafe activities without detection.",
+      "challange3": "Delays in responding to emergencies due to lack of evidence or alerts.",
+      "offering1": "High-quality CCTV cameras for clear video monitoring of classrooms and hallways.",
+      "offering2": "Night vision cameras that provide clear visuals during low lighting.",
+      "offering3": "Electronic door locks to restrict access to labs, server rooms, and staff-only areas.",
+      "offering4": "Fish-eye view cameras to capture wide angles in stairways and corridors for complete visibility.",
+      "offering5":"Fire alarms to detect smoke or fire early, to prevent from any damage or harm."
     },
     {
       "id": 4,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Trespassers entering through unsecured points.",
+      "challange2": "Damage to campus property from vandalism or illegal activities.",
+      "offering1": "Burglar alarms that trigger alerts whenever any suspicious or harmful activity is detected.",
+      "offering2": "Night vision cameras to monitor the outer area at all hours.",
+      "offering3": "24/7 CCTV surveillance to maintain continuous security monitoring of the entire boundary.",
+      "offering4": "Vandalism-proof cameras that can resist tampering for uninterrupted coverage.",
+      "offering5":"360-degree cameras to ensure no area of the perimeter is left unwatched."
     },
     {
       "id": 5,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Difficulty coordinating security teams across large campuses.",
+      "challange2": "Delays in responding to incidents due to lack of integrated systems.",
+      "offering1": "High-quality alarm systems for instant notifications of any threat or emergency.",
+      "offering2": "EPABX communication systems to enable quick, clear internal communication between staff.",
+      "offering3": "High-resolution display screens to monitor multiple camera feeds at once.",
+      "offering4": "AI-powered security alerts to automatically detect any suspicious activity",
+      "offering5":"Emergency call buttons for instant help in urgent situations"
     },
     {
       "id": 6,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
-    },
-    {
-      "id": 7,
-      "challange1": "this is challange1 entrance",
-      "challange2": "this is challange2",
-      "challange3": "this is challange3",
-      "challange4": "this is challange4",
-      "offering1": "this is offering1",
-      "offering2": "this is offering 2",
-      "offering3": "this is offering 3",
-      "offering4": "this is offering 4"
+      "challange1": "Vehicle theft or vandalism in open parking areas",
+      "challange2": "Misuse of parking spaces by unauthorised vehicles.",
+      "challange3": "Delayed vehicle identification during emergencies.",
+      "offering1": "ANPR (Automatic Number Plate Recognition) to instantly identify and log every vehicle entering campus.",
+      "offering2": "Boom barriers to control and regulate parking area access.",
+      "offering3": "24/7 CCTV coverage to monitor all parking areas in real time.",
+      "offering4": "Night vision cameras to maintain visibility in dark zones.",
+      "offering5":"Emergency call buttons to let students or staff request immediate assistance."
     }
   ],
-  "imagePath":"/solutionImages/apartment/apartment.png"
+  "imagePath":"/solutionImages/campus/campus.png"
 }
