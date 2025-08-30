@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import ContactFormCarousel from "../carousels/ContactFormCarousel";
 
 export const ContactForm1 = () => {
   const [firstName, setFirstName] = useState("");
@@ -11,8 +12,8 @@ export const ContactForm1 = () => {
   const [service, setService] = useState("");
   const [loading, setLoading] = useState(false);
   return (
-    <div className="w-full md:grid md:grid-cols-[2fr_1fr] items-center justify-center py-5 min-h-screen bg-indigo-800  px-3">
-      <div className="flex items-center justify-center">
+    <div className="w-full flex items-center justify-center py-5 min-h-screen bg-indigo-800  px-3">
+      <div className="flex w-5/8 items-center justify-center">
         <div className="md:w-[50%]">
           <h2 className="font-bold text-5xl text-center p-3">
             Get in Touch Today
@@ -117,7 +118,9 @@ export const ContactForm1 = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="w-3/8 flex items-center justify-center relative">
+        <ContactFormCarousel/>
+      </div>
     </div>
   );
 };
