@@ -3,6 +3,7 @@
 import { JSX, useState } from "react";
 import { toast } from "sonner";
 import Image from "next/image";
+import { div } from "framer-motion/client";
 
 type FormDataType = {
   name: string;
@@ -26,7 +27,9 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -147,7 +150,7 @@ const ContactForm = () => {
     isPhone?: boolean;
   }) => (
     <div>
-      <label className="text-white text-sm font-semibold">{label}</label>
+      {/* <label className="text-white text-sm font-semibold">{label}</label> */}
       <div className="relative">
         {isPhone && (
           <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm font-semibold pointer-events-none">
@@ -213,82 +216,140 @@ const ContactForm = () => {
   );
 
   return (
-    <div className="pt-10 pb-10 bg-gradient-to-b from-[#686CB4] to-[#BCB5F2]">
-      {/* Desktop Layout */}
-      <div className="hidden md:flex   h-[500px] w-[1000px] mx-auto overflow-hidden">
-        {/* Left Panel */}
-        <div className="w-1/2 px-14 py-10 text-white flex flex-col items-center justify-center gap-2">
-          <h1 className="text-4xl font-bold text-center  leading-tight">
-            Get In Touch
-          </h1>
-          <p className="font-sans">
-            explore our installation service and  talk to our experts for solution catered to  your need 
-          </p>
-           <Image
-        src="/contactImages/ContactSvg.png"   // path inside public/ folder
-        alt="contact image"
-        width={180}       // required
-        height={120}      // required
-        className=""
-      />
-      <h2 className="text-2xl">Get a call back<br></br> within 2 hours</h2>
+    <div>
+      <div className="pt-10 pb-10 bg-gradient-to-b from-[#686CB4] to-[#BCB5F2]">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex   h-[500px] w-[1000px] mx-auto overflow-hidden">
+          {/* Left Panel */}
 
-          {/* <div className="space-y-4 text-sm mt-3">
-            <ContactLink icon={<MdEmail className="text-lg" />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
-            <ContactLink icon={<FaInstagram className="text-lg" />} text="quadrasecurity Instagram" href="https://www.instagram.com/quadra_security" />
-            <ContactLink icon={<FaFacebookF className="text-lg" />} text="quadrasecurity Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
-            <ContactLink icon={<FaLocationDot className="text-lg" />} text="quadrasecurity address" />
-          </div> */}
+          {/* Right Panel */}
+          <div className="w-1/2  p-8">
+            <form className="space-y-4 mt-10" onSubmit={handleSubmit}>
+              <InputField
+                label="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+              />
+              <InputField
+                label="Contact"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+                placeholder="Phone number"
+                isPhone
+              />
+              <SelectField
+                label="Service"
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                options={services}
+              />
+              <SelectField
+                label="Area"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                options={cities}
+              />
+              <SubmitButton loading={loading} />
+            </form>
+          </div>
         </div>
 
-        {/* Right Panel */}
-        <div className="w-1/2  p-8">
-          <form className="space-y-4 mt-10" onSubmit={handleSubmit}>
-            <InputField label="Name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
-            <InputField label="Contact" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone number" isPhone />
-            <SelectField label="Service" name="service" value={formData.service} onChange={handleChange} options={services} />
-            <SelectField label="Area" name="city" value={formData.city} onChange={handleChange} options={cities} />
-            <SubmitButton loading={loading} />
-          </form>
-        </div>
-      </div>
+        {/* Mobile Layout */}
+        <div className="md:hidden   px-6 py-8 text-white  mt-6 mx-4">
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl font-bold text-center pb-4">
+              Book Your Service
+            </h1>
+            <p className="font-sans">
+              explore our installation service and talk to our experts for
+              solution catered to your need
+            </p>
+            <Image
+              src="/ContactForm/ContactSvg.png" // path inside public/ folder
+              alt="contact image"
+              width={180} // required
+              height={120} // required
+              className=""
+            />
+            <h2 className="text-2xl font-semibold">
+              Get a call back<br></br> within 2 hours
+            </h2>
+          </div>
 
-      {/* Mobile Layout */}
-      <div className="md:hidden   px-6 py-8 text-white  mt-6 mx-4">
-        <div className="flex flex-col items-center">
-            <h1 className="text-3xl font-bold text-center pb-4">Book Your Service</h1>
-        <p className="font-sans">
-            explore our installation service and  talk to our experts for solution catered to  your need 
-          </p>
-           <Image
-        src="/ContactForm/ContactSvg.png"   // path inside public/ folder
-        alt="contact image"
-        width={180}       // required
-        height={120}      // required
-        className=""
-      />
-      <h2 className="text-2xl font-semibold">Get a call back<br></br> within 2 hours</h2>
-
-        </div>
-        
-
-        {/* <div className="grid grid-cols-2 space-y-2 mt-6 text-sm">
+          {/* <div className="grid grid-cols-2 space-y-2 mt-6 text-sm">
           <ContactLink icon={<MdEmail />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
           <ContactLink icon={<FaInstagram />} text="Instagram" href="https://www.instagram.com/quadra_security" />
           <ContactLink icon={<FaFacebookF />} text="Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
           <ContactLink icon={<FaLocationDot />} text="quadrasecurity address" />
         </div> */}
 
-        <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
-          <InputField label="Name" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
-          <InputField label="Contact" name="mobile" value={formData.mobile} onChange={handleChange} placeholder="Phone number" isPhone />
-          <SelectField label="Service" name="service" value={formData.service} onChange={handleChange} options={services} />
-          <SelectField label="Area" name="city" value={formData.city} onChange={handleChange} options={cities} />
-          <SubmitButton loading={loading} />
-        </form>
+          <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
+            <InputField
+              label="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+            />
+            <InputField
+              label="Contact"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleChange}
+              placeholder="Phone number"
+              isPhone
+            />
+            <SelectField
+              label="Service"
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              options={services}
+            />
+            <SelectField
+              label="Area"
+              name="city"
+              value={formData.city}
+              onChange={handleChange}
+              options={cities}
+            />
+            <SubmitButton loading={loading} />
+          </form>
+        </div>
       </div>
     </div>
   );
 };
 
 export default ContactForm;
+{/* <div className="w-1/2 px-14 py-10 text-white flex flex-col items-center justify-center gap-2">
+  <h1 className="text-4xl font-bold text-center  leading-tight">
+    Get In Touch
+  </h1>
+  <p className="font-sans">
+    explore our installation service and talk to our experts for solution
+    catered to your need
+  </p>
+  <Image
+    src="/contactImages/ContactSvg.png" // path inside public/ folder
+    alt="contact image"
+    width={180} // required
+    height={120} // required
+    className=""
+  />
+  <h2 className="text-2xl">
+    Get a call back<br></br> within 2 hours
+  </h2>
+
+  <div className="space-y-4 text-sm mt-3">
+            <ContactLink icon={<MdEmail className="text-lg" />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
+            <ContactLink icon={<FaInstagram className="text-lg" />} text="quadrasecurity Instagram" href="https://www.instagram.com/quadra_security" />
+            <ContactLink icon={<FaFacebookF className="text-lg" />} text="quadrasecurity Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
+            <ContactLink icon={<FaLocationDot className="text-lg" />} text="quadrasecurity address" />
+          </div> 
+</div> */}
