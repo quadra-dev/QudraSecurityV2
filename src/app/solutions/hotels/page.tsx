@@ -5,7 +5,7 @@ import data from "@/constants/solutionPage/hotels.json";
 
 export default function Hotels() {
   return (
-    <div className="h-auto w-full ">
+    <div className="h-auto w-full pt-10">
       <h1 className="text-center text-6xl pt-10 font-bold">
         Solution Overview
       </h1>

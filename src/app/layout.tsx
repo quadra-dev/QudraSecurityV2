@@ -3,7 +3,6 @@ import "./globals.css";
 import NavigationMenu from "@/components/navigation/NavigationMenu";
 import Footer from "@/components/Footer/Footer";
 
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter", // will hook into Tailwind
@@ -17,14 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} text-theme-white bg-solution-purple`}
-      >
-        <div className="sticky top-0 z-[999]">
-          <NavigationMenu/>
-        </div>
+      <body className={`${inter.variable} text-theme-white bg-solution-purple`}>
+        <NavigationMenu />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

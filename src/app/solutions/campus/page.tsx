@@ -5,7 +5,7 @@ import data from "@/constants/solutionPage/campus.json";
 
 export default function Campus() {
   return (
-    <div className="h-auto w-full ">
+    <div className="h-auto w-full pt-10">
       <h1 className="text-center text-6xl pt-10 font-bold">
         Solution Overview
       </h1>

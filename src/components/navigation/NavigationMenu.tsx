@@ -7,9 +7,9 @@ import OrangeButton from "../buttons/OrangeButton";
 
 const NavigationMenu: React.FC = () => {
   return (
-    <div>
+    <div className="fixed w-full z-[9999] top-0">
       {/* Desktop Navigation */}
-      <nav className="hidden  md:block font-themeFont text-xs sticky z-[9999] top-0">
+      <nav className="hidden w-full md:block font-themeFont text-xs ">
         <div className="flex justify-between [&>*]:px-5 items-center w-full h-auto border-white/20 shadow-xl backdrop-blur-md bg-[#08156B]/10">
           {/* Logo */}
           <div className="aspect-auto h-10">

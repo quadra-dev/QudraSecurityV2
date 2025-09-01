@@ -81,9 +81,9 @@ export const ContactForm1 = () => {
     <div className="w-full flex items-center justify-center py-5 min-h-screen bg-indigo-800  px-3">
       <form
         onSubmit={handleSubmit}
-        className="flex w-5/8 items-center justify-center"
+        className="flex w-full sm:w-5/8 items-center justify-center"
       >
-        <div className="md:w-[50%]">
+        <div className="md:w-[80%] lg:w-[50%]">
           <h2 className="font-bold text-5xl text-center p-3">
             Get in Touch Today
           </h2>
@@ -187,7 +187,7 @@ export const ContactForm1 = () => {
           </div>
         </div>
       </form>
-      <div className="w-3/8 flex items-center justify-center relative">
+      <div className="w-3/8 hidden md:flex items-center  justify-center relative">
         <ContactFormCarousel />
       </div>
     </div>
