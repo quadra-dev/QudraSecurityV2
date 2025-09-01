@@ -1,7 +1,7 @@
 import InterestedCard from "@/components/cards/InterestedCard";
-import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/bank.json";
+import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
 export default function Bank() {
   return (
@@ -21,7 +21,7 @@ export default function Bank() {
         <Buttonfunction data={data} />
       </div>
       <InterestedCard />
-      <ContactForm />
+      <ContactForm1/>
     </div>
   );
 }

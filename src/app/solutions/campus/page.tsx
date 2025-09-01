@@ -2,6 +2,7 @@ import InterestedCard from "@/components/cards/InterestedCard";
 import ContactForm from "@/components/contactForms/Contactform";
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/campus.json";
+import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
 export default function Campus() {
   return (
@@ -22,7 +23,7 @@ export default function Campus() {
         <Buttonfunction data={data} />
       </div>
       <InterestedCard />
-      <ContactForm />
+      <ContactForm1/>
     </div>
   );
 }
