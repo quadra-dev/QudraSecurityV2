@@ -1,8 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import React from "react";
 
-const OrangeButton: React.FC = () => {
+interface OrangeButtonProps {
+  text: string;
+}
+
+const OrangeButton: React.FC<OrangeButtonProps> = ({ text }) => {
   return (
     <motion.button
       className="group flex items-center gap-3 bg-[#FF850B] text-white p-1 rounded-full relative overflow-hidden"
@@ -10,14 +15,14 @@ const OrangeButton: React.FC = () => {
       initial="rest"
       animate="rest"
     >
-      <span className="font-semibold pl-5">Get Your Quotation Today</span>
+      <span className="font-semibold pl-5">{text}</span>
 
       {/* Animated Circle */}
       <motion.div
-        className="relative w-9 h-9 bg-white rounded-full flex items-center justify-center overflow-hidden"
+        className="relative w-9 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden"
         variants={{
           rest: { scale: 1 },
-          hover: { scale: 0.90 },
+          hover: { scale: 0.9 },
         }}
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
       >
@@ -26,20 +31,12 @@ const OrangeButton: React.FC = () => {
           className="absolute text-[#DE6F00]"
           style={{ rotate: -45 }}
           variants={{
-            rest: { 
-              opacity: 1, 
-              x: 0, 
-              y: 0 
-            },
-            hover: { 
-              opacity: 0, 
-              x: 4, 
-              y: -4 
-            }
+            rest: { opacity: 1, x: 0, y: 0 },
+            hover: { opacity: 0, x: 4, y: -4 },
           }}
-          transition={{ 
+          transition={{
             duration: 0.15,
-            ease: "easeOut"
+            ease: "easeOut",
           }}
         >
           <ArrowRight size={24} />
@@ -50,21 +47,13 @@ const OrangeButton: React.FC = () => {
           className="absolute text-[#DE6F00]"
           style={{ rotate: -45 }}
           variants={{
-            rest: { 
-              opacity: 0, 
-              x: -4, 
-              y: 4 
-            },
-            hover: { 
-              opacity: 1, 
-              x: 0, 
-              y: 0 
-            }
+            rest: { opacity: 0, x: -4, y: 4 },
+            hover: { opacity: 1, x: 0, y: 0 },
           }}
-          transition={{ 
+          transition={{
             duration: 0.15,
             delay: 0.1, // Delay to start after first arrow begins leaving
-            ease: "easeOut"
+            ease: "easeOut",
           }}
         >
           <ArrowRight size={24} />
