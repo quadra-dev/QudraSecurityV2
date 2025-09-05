@@ -12,6 +12,15 @@
   .bg-solution-purple {
     background-image: linear-gradient(var(--grad-angle), #380551 0%, #B585E3 38%, #4D00AB 100%);
   }
+  .text-shadow-sm {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+  }
+  .text-shadow-md {
+    text-shadow: 6px 7px 4px rgba(0, 0, 0, 0.47);
+  }
+  .text-shadow-lg {
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.35);
+  }
 }
 
 

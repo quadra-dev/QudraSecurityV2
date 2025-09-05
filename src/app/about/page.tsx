@@ -1,6 +1,6 @@
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 import AboutHero from "@/components/Hero/AboutHero";
-
+import Image from "next/image";
 export default function Contact() {
   return (
     <div>
@@ -18,6 +18,15 @@ export default function Contact() {
             systems, and alarm systems to baggage scanners, biometric devices,
             and other smart security solutions for your complete security
           </p>
+          <p className=" pt-7">
+            Our strength lies in our four core pillars
+          </p>
+          <Image
+          src="/AboutImages/aboutcirculars.svg"
+            alt="about"
+            width={600}                 
+            height={500}
+            className="mx-auto py-4"/>
           <h2 className="font-semibold text-center text-3xl md:text-4xl lg:text-6xl pt-3 ">
             What <span className="text-[#FF850B]">We Offer</span>?{" "}
           </h2>

@@ -1,0 +1,167 @@
+[
+  {
+    "title": "CCTV & Surveillance",
+    "image": "/ServicesImages/servicescardimage1.svg",
+
+    "faqs": [
+      {
+        "question": "1. How does CCTV work?",
+        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+      },
+      {
+        "question": "2. What are the benefits?",
+        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+      },
+      {
+        "question": "3. Is installation easy?",
+        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+      }
+    ]
+  },
+  {
+    "title": "Biometric Systems",
+    "image": "/ServicesImages/servicescardimage2.svg",
+    "faqs": [
+      {
+        "question": "1. What is a biometric system?",
+        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+      },
+      {
+        "question": "2. Why is it used?",
+        "answer": "It ensures accurate identity verification for security and attendance management."
+      },
+      {
+        "question": "3. Can it be integrated?",
+        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+      }
+    ]
+  },
+  {
+    "title": "Video Door Phones",
+    "image": "/ServicesImages/servicescardimage5.svg",
+    "faqs": [
+      {
+        "question": "1. What is a video door phone?",
+        "answer": "It lets you see and talk to visitors before opening the door."
+      },
+      {
+        "question": "2. What features are available?",
+        "answer": "Clear video, two-way communication, and smart unlocking features."
+      },
+      {
+        "question": "3. Is it safe?",
+        "answer": "Yes, it adds an extra layer of security to your home or office."
+      }
+    ]
+  },
+  {
+    "title": "CCTV & Surveillance",
+    "image": "/ServicesImages/servicescardimage1.svg",
+    
+    "faqs": [
+      {
+        "question": "1. How does CCTV work?",
+        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+      },
+      {
+        "question": "2. What are the benefits?",
+        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+      },
+      {
+        "question": "3. Is installation easy?",
+        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+      }
+    ]
+  },
+  {
+    "title": "Biometric Systems",
+    "image": "/ServicesImages/servicescardimage2.svg",
+    "faqs": [
+      {
+        "question": "1. What is a biometric system?",
+        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+      },
+      {
+        "question": "2. Why is it used?",
+        "answer": "It ensures accurate identity verification for security and attendance management."
+      },
+      {
+        "question": "3. Can it be integrated?",
+        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+      }
+    ]
+  },
+  {
+    "title": "Video Door Phones",
+    "image": "/ServicesImages/servicescardimage5.svg",
+    "faqs": [
+      {
+        "question": "1. What is a video door phone?",
+        "answer": "It lets you see and talk to visitors before opening the door."
+      },
+      {
+        "question": "2. What features are available?",
+        "answer": "Clear video, two-way communication, and smart unlocking features."
+      },
+      {
+        "question": "3. Is it safe?",
+        "answer": "Yes, it adds an extra layer of security to your home or office."
+      }
+    ]
+  },
+  {
+    "title": "CCTV & Surveillance",
+    "image": "/ServicesImages/servicescardimage1.svg",
+    
+    "faqs": [
+      {
+        "question": "1. How does CCTV work?",
+        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+      },
+      {
+        "question": "2. What are the benefits?",
+        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+      },
+      {
+        "question": "3. Is installation easy?",
+        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+      }
+    ]
+  },
+  {
+    "title": "Biometric Systems",
+    "image": "/ServicesImages/servicescardimage2.svg",
+    "faqs": [
+      {
+        "question": "1. What is a biometric system?",
+        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+      },
+      {
+        "question": "2. Why is it used?",
+        "answer": "It ensures accurate identity verification for security and attendance management."
+      },
+      {
+        "question": "3. Can it be integrated?",
+        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+      }
+    ]
+  },
+  {
+    "title": "Video Door Phones",
+    "image": "/ServicesImages/servicescardimage5.svg",
+    "faqs": [
+      {
+        "question": "1. What is a video door phone?",
+        "answer": "It lets you see and talk to visitors before opening the door."
+      },
+      {
+        "question": "2. What features are available?",
+        "answer": "Clear video, two-way communication, and smart unlocking features."
+      },
+      {
+        "question": "3. Is it safe?",
+        "answer": "Yes, it adds an extra layer of security to your home or office."
+      }
+    ]
+  }
+]
