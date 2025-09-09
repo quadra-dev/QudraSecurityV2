@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Customized Quotation",
+    "image": "/AboutImages/aboutcarouselimage1.svg",
+    "description": "Security – HD CCTV cameras for clear and detailed images, 24/7, advanced alarm systems, and wireless setups covering every critical zone for complete home and business security."
+  },
+  {
+    "id": 2,
+    "title": "Free Consultation and Site Visit",
+    "image": "/AboutImages/aboutcarouselimage2.svg",
+    "description": "Surveillance – Stay connected with remote access monitoring anytime, anywhere. Get detailed and crystal-clear footage, even in complete darkness with advanced night vision cameras."
+  },
+  {
+    "id": 3,
+    "title": "Affordable Packages",
+    "image": "/AboutImages/aboutcarouselimage3.svg",
+    "description": "We deliver affordable security solutions tailored to each client. From basic home setups to enterprise-grade surveillance, we ensure top value for every budget."
+  },
+  {
+    "id": 4,
+    "title": "Advanced Alarm Systems",
+    "image": "/AboutImages/aboutcarouselimage4.svg",
+    "description": "Our alarm systems integrate seamlessly with CCTV setups, ensuring instant alerts and complete security for homes, offices, and factories."
+  },
+  {
+    "id": 5,
+    "title": "24/7 Remote Monitoring",
+    "image": "/ServicesImages/servicescardimage1.svg",
+    "description": "With advanced software and mobile integration, monitor your property round-the-clock and respond quickly to potential threats."
+  },
+  {
+    "id": 6,
+    "title": "Professional Installation",
+    "image": "/ServicesImages/servicescardimage1.svg",
+    "description": "Our trained experts provide professional installation, ensuring that every corner of your property is secure and system performance is optimal."
+  }
+]
