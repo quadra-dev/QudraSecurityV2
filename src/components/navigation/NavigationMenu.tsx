@@ -10,7 +10,7 @@ const NavigationMenu: React.FC = () => {
     <div className="fixed w-full z-[9999] top-0">
       {/* Desktop Navigation */}
       <nav className="hidden w-full md:block font-themeFont text-xs ">
-        <div className="flex justify-between [&>*]:px-5 items-center w-full h-auto border-white/20 shadow-xl backdrop-blur-md bg-[#08156B]/10">
+        <div className="flex justify-between [&>*]:px-5 items-center w-full h-auto border-white/20 shadow-lg backdrop-blur-md bg-[#08156B]/10">
           {/* Logo */}
           <div className="aspect-auto h-10">
             <Link href="/">
