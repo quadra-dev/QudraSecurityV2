@@ -87,7 +87,7 @@ export default function ComparisonSection(data) {
                   x: -150,
                   transition: { duration: 0.5, ease: "easeInOut" },
                 }}
-                className="flex-1 bg-[#150D15] text-white rounded-3xl shadow-lg p-6 min-h-[320px]"
+                className="flex-1 bg-[#3b1370] text-white rounded-3xl shadow-lg p-6 min-h-[320px]"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <Image
@@ -122,7 +122,7 @@ export default function ComparisonSection(data) {
                   x: 150,
                   transition: { duration: 0.5, ease: "easeInOut" },
                 }}
-                className="flex-1 bg-[#1F150E] text-white rounded-3xl shadow-lg p-6 min-h-[520px]"
+                className="flex-1 bg-[#3b1370] text-white rounded-3xl shadow-lg p-6 min-h-[520px]"
               >
                 <div className="flex items-center gap-2 mb-4">
                   <Image

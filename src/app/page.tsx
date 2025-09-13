@@ -5,6 +5,7 @@ import HomeMarquee from "@/components/Marquee/HomeMarquee";
 import Image from "next/image";
 import Link from "next/link";
 import cardsData from "@/constants/aboutPage/cards.json";
+import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
 export default function Home() {
   const Offerings = [
@@ -71,6 +72,7 @@ export default function Home() {
           Why <span className="text-[#FF850B]">Choose </span> Us
         </h2>
         <AboutPageCarousel cards={cardsData}/>
+        <ContactForm1/>
       </div>
     </div>
   );
