@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import cardsData from "@/constants/aboutPage/cards.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
+import ThreeGridCarousel from "@/components/carousels/ThreeGridCarousel";
 
 export default function Home() {
   const Offerings = [
@@ -58,10 +59,16 @@ export default function Home() {
           Explore <span className="text-[#FF850B]">Our Services</span>
         </h2>
         <p className="text-center pt-3 lg:w-3/4 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas reprehenderit, eos dolorum nobis quidem voluptatibus. Dolores est hic sit. Expedita suscipit maiores modi numquam. Fugit architecto enim eligendi, excepturi expedita corporis perspiciatis eius, dignissimos, qui perferendis eos vitae odit ipsa asperiores! Atque earum vero, soluta rem, vitae modi eum illo fuga tempora cum quos veniam perferendis qui laudantium beatae ab?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          reprehenderit, eos dolorum nobis quidem voluptatibus. Dolores est hic
+          sit. Expedita suscipit maiores modi numquam. Fugit architecto enim
+          eligendi, excepturi expedita corporis perspiciatis eius, dignissimos,
+          qui perferendis eos vitae odit ipsa asperiores! Atque earum vero,
+          soluta rem, vitae modi eum illo fuga tempora cum quos veniam
+          perferendis qui laudantium beatae ab?
         </p>
         <div className="pt-10">
-          <HomePageCarousel/>
+          <HomePageCarousel />
         </div>
         {/* comp 3 */}
         <h2 className="text-5xl pt-15 font-bold text-center">
@@ -71,8 +78,14 @@ export default function Home() {
         <h2 className="text-5xl pt-15 font-bold text-center">
           Why <span className="text-[#FF850B]">Choose </span> Us
         </h2>
-        <AboutPageCarousel cards={cardsData}/>
-        <ContactForm1/>
+        <AboutPageCarousel cards={cardsData} />
+        <div className="min-h-screen w-full flex items-center flex-col justify-center bg-white py-8">
+          <h2 className="md:text-5xl text-3xl pt-15 text-black font-bold pb-10 w-3/4">
+            What our clients are saying
+          </h2>
+          <ThreeGridCarousel />
+        </div>
+        <ContactForm1 />
       </div>
     </div>
   );
