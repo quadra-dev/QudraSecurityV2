@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationMenu from "@/components/navigation/NavigationMenu";
 import Footer from "@/components/Footer/Footer";
+import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +20,8 @@ export default function RootLayout({
       <body className={`${inter.variable} text-theme-white bg-solution-purple`}>
         <NavigationMenu />
         {children}
-        {/* <Footer /> */}
+        <ContactForm1/>
+        <Footer />
       </body>
     </html>
   );

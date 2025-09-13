@@ -1,8 +1,10 @@
+import AboutPageCarousel from "@/components/carousels/AboutPageCarousel";
 import HomePageCarousel from "@/components/carousels/HomePageCarousel";
 import HomeHero from "@/components/Hero/HomeHero";
 import HomeMarquee from "@/components/Marquee/HomeMarquee";
 import Image from "next/image";
 import Link from "next/link";
+import cardsData from "@/constants/aboutPage/cards.json";
 
 export default function Home() {
   const Offerings = [
@@ -65,7 +67,10 @@ export default function Home() {
           Brands <span className="text-[#FF850B]">We Deal</span> In
         </h2>
         <HomeMarquee />
-        <div className="h-screen"></div>
+        <h2 className="text-5xl pt-15 font-bold text-center">
+          Why <span className="text-[#FF850B]">Choose </span> Us
+        </h2>
+        <AboutPageCarousel cards={cardsData}/>
       </div>
     </div>
   );
