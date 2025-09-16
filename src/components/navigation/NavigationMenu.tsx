@@ -30,7 +30,7 @@ const NavigationMenu: React.FC = () => {
               {[
                 { page: "Home", url: "/" },
                 { page: "Services", url: "/services" },
-                { page: "Blogs", url: "/blogs" },
+                { page: "Blogs", url: "/blog" },
                 { page: "About Us", url: "/about" },
                 { page: "Contact Us", url: "/contact" },
                 { page: "Solutions", url: "/solutions/apartments"},
