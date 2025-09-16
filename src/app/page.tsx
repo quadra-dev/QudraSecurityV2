@@ -79,7 +79,18 @@ export default function Home() {
           Why <span className="text-[#FF850B]">Choose </span> Us
         </h2>
         <AboutPageCarousel cards={cardsData} />
+        <h2 className="text-5xl pt-15 font-bold text-center">
+          Our <span className="text-[#FF850B]">Moto </span> 
+        </h2>
+        <Image
+                      src="/AboutImages/aboutcirculars.svg"
+                      alt="about"
+                      width={600}
+                      height={500}
+                      className="mx-auto py-10"
+                    />
         <div className="min-h-screen w-full flex items-center flex-col justify-center bg-white py-8">
+          
           <h2 className="md:text-5xl text-3xl pt-15 text-black font-bold pb-10 w-3/4">
             What our clients are saying
           </h2>
