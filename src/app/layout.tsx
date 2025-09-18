@@ -20,6 +20,7 @@ export default function RootLayout({
         <NavigationMenu />
         {children}
         {/* <Footer /> */}
+        <Footer/>
       </body>
     </html>
   );
