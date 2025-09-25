@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function AboutHero() {
   const MotionImage = motion(Image);
   return (
-    <div className="h-auto w-full  bg-gradient-to-b from-[#040630] to-[#1F07DE] pt-15 ">
+    <div className="h-auto w-full  bg-gradient-to-b from-[#040630] to-[rgb(31,7,222)] pt-15 ">
       <section className="flex flex-col md:flex-row items-center justify-between px-8 py-16">
         <div className="flex-1 text-center md:text-left space-y-6 pl-15">
           <h1 className="text-4xl md:text-8xl font-bold text-[#B7D3FF] text-shadow-md">
