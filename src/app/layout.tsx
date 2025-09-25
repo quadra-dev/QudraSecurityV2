@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={`${inter.variable} text-theme-white bg-gradient-to-b from-purple-950 to-purple-600`}>
         <NavigationMenu />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
