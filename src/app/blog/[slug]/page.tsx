@@ -29,7 +29,7 @@ export default async function PostPage({ params }: Props) {
         />
       )}
 
-      <div className="mt-6 text-gray-800">
+      <div className="mt-6 text-white">
         <PortableTextRenderer value={post.content} />
       </div>
 
