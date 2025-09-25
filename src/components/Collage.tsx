@@ -39,7 +39,7 @@ const Collage: FC<CollageProps> = ({ collage }) => {
                 loading="lazy"
               />
               {img.caption && (
-                <div className="absolute bottom-0 left-0 right-0 p-2 text-sm bg-black bg-opacity-40 text-white">
+                <div className="absolute bottom-0 left-0 right-0 p-2 text-sm bg-blue bg-opacity-20 text-white">
                   {img.caption}
                 </div>
               )}
