@@ -10,7 +10,7 @@ type Props = {
 const PostCard: FC<Props> = ({ post }) => {
   return (
     <article
-      className="bg-gradient-to-b from-purple-900 via-purple-800 to-purple-700 rounded-lg overflow-hidden shadow-md transition-transform duration-300 ease-in-out 
+      className="bg-white/5 border border-white/10 rounded-lg overflow-hidden shadow-md transition-transform duration-300 ease-in-out 
         hover:scale-105 hover:shadow-xl"
     >
       {post.coverImage && (
