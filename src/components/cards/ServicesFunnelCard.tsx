@@ -18,9 +18,10 @@ export default function StrategyCard() {
   const isInView = useInView(imageRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="flex flex-col md:flex-row py-10">
+    <div className="flex flex-col md:flex-row py-10 px-4">
       {/* Main Card */}
-      <div className="bg-[#0D0544] text-white px-6 mt-6 rounded-2xl shadow-xl flex flex-col md:flex-row w-full md:w-[600px] mx-auto md:mx-auto h-auto md:h-80">
+      <div className="bg-[#0D0544] text-white px-6 mt-6 rounded-2xl shadow-xl 
+                  flex flex-col md:flex-row w-full max-w-3xl mx-auto h-auto md:h-80">
         
         {/* Left Content */}
         <div className="w-full md:w-1/2 flex flex-col justify-center pr-4 py-4">

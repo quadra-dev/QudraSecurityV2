@@ -2,11 +2,11 @@
   {
     "title": "CCTV & Surveillance",
     "image": "/ServicesImages/servicescardimage1.svg",
-
+    "paragraph": "At Quadra Security, we specialize in delivering state-of-the-art CCTV and surveillance solutions designed to protect what matters most. Our systems combine advanced high-definition cameras, intelligent video analytics, and remote monitoring capabilities to ensure complete visibility and control over your premises—whether residential, commercial, or industrial. From smart IP-based surveillance networks to 4G and solar-powered cameras for remote areas, we offer customized solutions tailored to your security needs. Every installation is backed by expert design, seamless integration, and dedicated after-sales support, giving you real-time assurance, 24×7 peace of mind, and a safer environment for all.", 
     "faqs": [
       {
-        "question": "1. How does CCTV work?",
-        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+        "question": "1. How does Quadra Security’s CCTV solution operate? ",
+        "answer": "Our CCTV systems integrate HD/IP cameras, NVRs, and cloud connectivity to provide real-time monitoring and smart analytics. Footage can be accessed remotely via secure mobile or desktop dashboards for complete situational awareness"
       },
       {
         "question": "2. What are the benefits?",
@@ -21,6 +21,7 @@
   {
     "title": "Biometric Systems",
     "image": "/ServicesImages/servicescardimage2.svg",
+    "paragraph": "We provide advanced biometric access control solutions that ensure seamless and secure identity management. from consultation and site assessment to installation, integration, and maintenance. Our team delivers high-precision fingerprint, facial, and iris recognition systems that enhance access control, attendance management, and overall security efficiency. We specialize in deploying customized biometric setups for offices, industries, institutions, and housing societies, ensuring seamless integration with existing infrastructure. With end-to-end service support, regular health checks, and expert guidance, we make biometric access simple, reliable, and future-ready for every client. ",
     "faqs": [
       {
         "question": "1. What is a biometric system?",
@@ -39,6 +40,7 @@
   {
     "title": "ANPR",
     "image": "/ServicesImages/servicecardimage3.svg",
+    "paragraph": "Quadra Security provides end-to-end Automatic Number Plate Recognition (ANPR) camera solutions designed to enhance traffic management and access control. Our services include system design, installation, configuration, and maintenance of advanced ANPR cameras capable of capturing and recognizing vehicle plates with high accuracy — even in low-light or high-speed conditions. We integrate ANPR systems with boom barriers, parking management software, and security databases to automate entry and exit operations. From toll plazas and gated communities to corporate campuses and logistics hubs, we deliver fully customized ANPR solutions that improve efficiency, ensure compliance, and strengthen on-site security. ",
     "faqs": [
       {
         "question": "1. What is a video door phone?",
@@ -57,6 +59,7 @@
   {
     "title": "EPABX Systems",
     "image": "/ServicesImages/servicescardimage4.svg",
+    "paragraph": "We deliver comprehensive EPABX (Electronic Private Automatic Branch Exchange) system solutions that streamline internal and external communication for organizations of all sizes. Our services cover consultation, system design, installation, configuration, and ongoing maintenance to ensure seamless connectivity across departments. Whether it’s a small office setup or a large multi-branch enterprise, we provide both analog and IP-based EPABX systems with features like call forwarding, IVR, voicemail, conferencing, and remote extensions. With our expert integration and technical support, businesses benefit from enhanced communication efficiency, reduced costs, and a reliable, scalable voice network.",
     
     "faqs": [
       {
@@ -76,6 +79,7 @@
   {
     "title": "Interactive Display Panels  ",
     "image": "/ServicesImages/servicescardimage5.svg",
+    "paragraph": "Quadra Security offers complete Interactive Display Panel solutions designed to transform communication, collaboration, and learning experiences. Our services include consultation, installation, integration, and post-installation support for a wide range of smart touch-enabled panels. Ideal for classrooms, conference rooms, and command centers, these systems enable real t ime annotation, wireless sharing, and multimedia interaction. We provide top-tier panels from leading brands along with custom mounting, networking, and setup assistance. With our end-to-end service approach, we help institutions and businesses create dynamic, technology-driven environments that foster engagement and productivity. ",
     "faqs": [
       {
         "question": "1. What is a biometric system?",
@@ -94,6 +98,7 @@
   {
     "title": "Video Door Phones",
     "image": "/ServicesImages/servicescardimage6.svg",
+    "paragraph": "We provides professional Video Door Phone (VDP) solutions that combine convenience, safety, and modern design for residential and commercial spaces. Our services include product selection, installation, configuration, and integration with existing access control or surveillance systems. From single-door units to multi-apartment setups, we deliver customized VDP solutions with features like two-way communication, video recording, and remote unlocking. With high-quality devices and expert support, we ensure that every entry point is secure, every visitor is verified, and every client enjoys enhanced peace of mind and control over their property. ",
     "faqs": [
       {
         "question": "1. What is a video door phone?",
@@ -112,6 +117,7 @@
   {
     "title": "Baggage Scanners",
     "image": "/ServicesImages/servicescardimage7.svg",
+    "paragraph": "Quadra Security provides comprehensive Baggage Scanning System solutions to ensure secure and efficient screening of luggage, parcels, and goods. Our services include system supply, installation, calibration, operator training, and preventive maintenance to guarantee optimal performance. Equipped with advanced X-ray imaging and threat detection technology, our scanners deliver high resolution images for accurate inspection in airports, metro stations, hotels, offices, and government institutions. With end-to-end service support and compliance with international safety standards, we help organizations strengthen their security infrastructure and streamline entry-point operations. ",
     
     "faqs": [
       {
@@ -131,6 +137,7 @@
   {
     "title": "Alarm Systems",
     "image": "/ServicesImages/servicescardimage8.svg",
+    "paragraph": "Quadra Security provides complete Alarm System solutions that offer instant detection and response against fire, intrusion, and emergencies. Our services include system design, installation, integration, and maintenance of advanced wired and wireless alarm systems equipped with motion, smoke, gas, and vibration sensors. We tailor every setup to meet the unique needs of homes, offices, industries, and commercial spaces, ensuring reliable protection and real-time alerts. With expert configuration, 24×7 support, and integration with CCTV and access control systems, we help you create a safer and smarter environment for people and property. ",
     "faqs": [
       {
         "question": "1. What is a biometric system?",
@@ -149,6 +156,7 @@
   {
     "title": "Metal Detectors",
     "image": "/ServicesImages/servicescardimage9.svg",
+    "paragraph": "Quadra Security offers reliable Metal Detection System services designed to enhance safety and security at entry and exit points. We provide complete solutions, including supply, installation, calibration, and maintenance of both hand-held and walk-through metal detectors. Our systems are engineered for high sensitivity, fast detection, and durability, making them ideal for offices, factories, schools, event venues, and government facilities. With expert setup and regular performance checks, we ensure precise threat detection, smooth visitor screening, and uninterrupted protection across all checkpoints. ",
     "faqs": [
       {
         "question": "1. What is a video door phone?",
@@ -166,6 +174,7 @@
   },{
     "title": "Boom Barriers & Toll Solutions",
     "image": "/ServicesImages/servicescardimage10.svg",
+    "paragraph": "We deliver comprehensive Boom Barrier and Toll Management Solutions designed for efficient vehicle control and automated access. Our services include supply, installation, integration, and maintenance of heavy-duty automatic boom barriers, toll collection systems, and RFID-based entry setups. Whether for residential societies, industrial complexes, corporate campuses, or highway tolls, we provide tailor-made solutions that ensure smooth traffic flow, enhanced security, and reduced manual intervention. With advanced automation, real-time monitoring, and reliable after-sales support, we help clients achieve faster, safer, and smarter vehicle management across all entry and exit points. ",
 
     "faqs": [
       {
@@ -185,6 +194,7 @@
   {
     "title": "Electronic Door Locks",
     "image": "/ServicesImages/servicescardimage11.svg",
+    "paragraph": "Quadra Security offers advanced Electronic Door Lock solutions that combine convenience, security, and smart control for residential, commercial, and industrial applications. Our services include expert consultation, installation, integration, and maintenance of digital locks powered by PIN, RFID, f ingerprint, or mobile app access. We specialize in providing keyless entry systems that seamlessly integrate with biometric and access control setups, ensuring both safety and ease of use. With reliable technology, premium hardware, and responsive after-sales service, we help clients enhance entry security while maintaining a modern, user-friendly experience.",
     "faqs": [
       {
         "question": "1. What is a biometric system?",
@@ -203,6 +213,7 @@
   {
     "title": "Access Control Systems",
     "image": "/ServicesImages/servicescardimage12.svg",
+    "paragraph": "We offer end-to-end Access Control System solutions designed to manage and monitor entry across secure zones efficiently. Our services cover system design, installation, configuration, and integration with biometric, RFID, and smart card technologies. We provide customized setups for offices, industries, educational institutions, and residential complexes — ensuring controlled access, real t ime tracking, and detailed reporting. With advanced software integration and round-the-clock technical support, we help organizations safeguard sensitive areas, prevent unauthorized entry, and maintain a smooth flow of authorized movement within their premises. ",
     "faqs": [
       {
         "question": "1. What is a video door phone?",
