@@ -8,9 +8,16 @@ export default function StrategyCard() {
   const [active, setActive] = useState<string | null>(null);
 
   const items = [
-    { label: "Threat Response", comment: "Quick actions to mitigate risks." },
-    { label: "Access Control", comment: "Manage entry and permissions securely." },
-    { label: "Surveillance", comment: "Monitor activities and detect anomalies." },
+    { label: "Threat Response - Act ", 
+    comment: "Smart alarms and integrated alerts enable instant action to prevent damage or intrusion" },
+    {
+      label: " Access Control - Manage",
+      comment: "Biometric and RFID solutions secure entry points and ensure authorized access. ",
+    },
+    {
+      label: " Surveillance - Monitor",
+      comment: "Advanced CCTV and surveillance systems provide 24×7 visibility and early threat detection",
+    },
   ];
 
   // Ref + inView for image animation
@@ -20,9 +27,10 @@ export default function StrategyCard() {
   return (
     <div className="flex flex-col md:flex-row py-10 px-4">
       {/* Main Card */}
-      <div className="bg-[#0D0544] text-white px-6 mt-6 rounded-2xl shadow-xl 
-                  flex flex-col md:flex-row w-full max-w-3xl mx-auto h-auto md:h-80">
-        
+      <div
+        className="bg-[#0D0544] text-white px-6 mt-6 rounded-2xl shadow-xl 
+                  flex flex-col md:flex-row w-full max-w-3xl mx-auto h-auto md:h-80"
+      >
         {/* Left Content */}
         <div className="w-full md:w-1/2 flex flex-col justify-center pr-4 py-4">
           <div className="flex items-center gap-2 mb-2">
@@ -33,10 +41,8 @@ export default function StrategyCard() {
             Strategy to ensure <br /> your complete <br /> safety solution...
           </h2>
           <p className="text-sm text-gray-300 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quis
-            delectus assumenda quidem quibusdam rerum vero veniam architecto,
-            consectetur tempora voluptates libero commodi quo aperiam ab, numquam
-            beatae culpa consequuntur!
+            At Quadra Security, we follow a clear, layered strategy to deliver
+            360° protection combining smart technology with expert execution.
           </p>
         </div>
 
