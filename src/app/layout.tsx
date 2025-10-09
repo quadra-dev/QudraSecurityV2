@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={`${inter.variable} text-theme-white bg-indigo-700`}>
         <NavigationBar/>
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
