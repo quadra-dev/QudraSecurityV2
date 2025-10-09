@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 import Link from "next/link";
+
 export default function About() {
   const members = [
     {
@@ -72,9 +73,12 @@ export default function About() {
                 Protecting What Matters Most.
               </h1>
               <p className="mt-6 text-lg text-gray-200">
-                Maximize Your Potential with Our Enterprise Technology
-                Solutions. Let us help you unlock the full potential of your
-                business with our innovative solutions.
+                At Quadra Security, we go beyond products — we deliver complete
+                electronic security and automation solutions that protect homes,
+                businesses, and institutions. With years of expertise in CCTV,
+                biometric systems, access control, alarm systems, and smart
+                surveillance, our mission is to ensure safety, reliability, and
+                peace of mind for every client.
               </p>
               <Link href="/contact">
                 <button className="px-4 py-3 bg-[#434CFF] text-white rounded-3xl shadow-md hover:bg-yellow-600 flex gap-2 mt-6">
@@ -99,6 +103,72 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* 🔹 INSERTED NEW ABOUT CONTENT SECTION HERE 🔹 */}
+       {/* Quadra Security Infographic Section */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
+      Why Choose Quadra Security
+    </h2>
+
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {[
+        {
+          title: "Customized Quotation",
+          desc: "Every project is unique — and so are its security needs. We offer customized quotations based on your property type, scale, and budget.",
+          icon: "/AboutImages/aboutsvg1.svg",
+        },
+        {
+          title: "Free Consultation & Site Visit",
+          desc: "We provide a free on-site survey and consultation to identify risks and recommend the right mix of cameras and systems.",
+          icon: "/AboutImages/aboutsvg2.svg",
+        },
+        {
+          title: "Transparent Pricing",
+          desc: "No hidden charges. Clear, upfront pricing for installations, ensuring you always know what you’re paying for.",
+          icon: "/AboutImages/aboutsvg3.svg",
+        },
+        {
+          title: "Skilled Technicians",
+          desc: "Trained professionals ensure seamless installation, optimal camera placement, and reliable integration.",
+          icon: "/AboutImages/aboutsvg4.svg",
+        },
+        {
+          title: "Customized Security Solutions",
+          desc: "From smart surveillance to automation, we design security ecosystems for homes, offices, and industries.",
+          icon: "/AboutImages/aboutsvg5.svg",
+        },
+        {
+          title: "24×7 Customer Support",
+          desc: "Our dedicated support team provides continuous maintenance and assistance to ensure smooth operation.",
+          icon: "/AboutImages/aboutsvg6.svg",
+        },
+      ].map((card, index) => (
+        <div
+          key={index}
+          className="p-6 rounded-2xl shadow-md bg-white border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center"
+        >
+          <div className="mb-4">
+            <img
+              src={card.icon}
+              alt={card.title}
+              width={64}
+              height={64}
+              className="mx-auto"
+            />
+          </div>
+          <h3 className="text-xl font-semibold mb-2 text-indigo-700">
+            {card.title}
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+        {/* 🔹 END OF NEW INSERTED SECTION 🔹 */}
 
         {/* Testimonial Section */}
         <section className="bg-purple-700 text-white py-16">
@@ -135,33 +205,40 @@ export default function About() {
           />
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-12">
-              They like how we structure their business models
+              They Like How We Structure Their Security Strategy
             </h2>
             <div className="grid md:grid-cols-2 gap-12 text-left">
               <div className="bg-[#F4BABA] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">Define the strategy</h3>
                 <p className="text-gray-800 mt-2">
-                  A clear and well-defined strategy is essential for achieving
-                  success in your business, outlines goals, and provides a
-                  roadmap for achieving them.
+                  Every strong security plan begins with a clear strategy. We
+                  start by understanding your site, your risks, and your goals —
+                  then design a structured roadmap that aligns advanced
+                  technologies like CCTV, VDP, biometric access, and alarm
+                  systems into one cohesive protection framework.
                 </p>
               </div>
               <div className="bg-[#EFD073] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">
-                  Re-structure business model
+                  Structure the Security Model
                 </h3>
                 <p className="text-gray-800 mt-2">
-                  Re-structuring can help you streamline operations, improve
-                  efficiency, and drive growth. A strategic re-structure can be
-                  powerful for success.
+                  Security requirements evolve with time — and so should your
+                  system. We help you upgrade and optimize your existing setup
+                  to improve coverage, integrate smart features, and enhance
+                  overall reliability. From analog to IP-based solutions, our
+                  strategic restructuring ensures your infrastructure grows with
+                  your needs.
                 </p>
               </div>
               <div className="bg-[#98F1AE] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">Improve Performance</h3>
                 <p className="text-gray-800 mt-2">
-                  Improving performance is key to achieving success and
-                  enhancing business skills. There are many strategies that can
-                  drive improvement.
+                  Our focus is on long-term performance. Through proper
+                  installation, calibration, and preventive maintenance, we make
+                  sure every device — whether it’s a camera, biometric scanner,
+                  or door lock — operates at peak efficiency. Consistent
+                  performance means consistent safety.
                 </p>
               </div>
               <div className="bg-[#C062EF] p-4 rounded-lg shadow-xl">
@@ -169,9 +246,11 @@ export default function About() {
                   Testing and evaluation
                 </h3>
                 <p className="text-gray-800 mt-2">
-                  This results in higher quality outcomes, increased customer
-                  satisfaction, and the ability to compete in a demanding
-                  market.
+                  Every Quadra Security project goes through rigorous testing
+                  and real-world evaluation. We verify system connectivity,
+                  camera angles, storage reliability, and alert responsiveness —
+                  ensuring the entire setup performs flawlessly under any
+                  condition. Because in security, precision matters.
                 </p>
               </div>
             </div>
@@ -210,7 +289,7 @@ export default function About() {
         </section>
 
         {/* Team Section */}
-        <section className="py-5bg-gradient-to-b from-fuchsia-200 to-fushia-100 pb-10">
+        <section className="py-5 bg-gradient-to-b from-fuchsia-200 to-fushia-100 pb-10">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-12">Meet Our Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-10">
@@ -223,8 +302,8 @@ export default function About() {
                   <Image
                     src={member.img}
                     alt={`Team member ${member.id}`}
-                    width={member.size?.width || 180} // fallback to 180 if not provided
-                    height={member.size?.height || 180} // fallback to 180 if not provided
+                    width={member.size?.width || 180}
+                    height={member.size?.height || 180}
                     className="rounded-lg shadow-lg object-fill"
                   />
                   <p className="mt-4 font-medium">{member.name}</p>

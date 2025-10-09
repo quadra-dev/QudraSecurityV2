@@ -9,12 +9,12 @@
         "answer": "Our CCTV systems integrate HD/IP cameras, NVRs, and cloud connectivity to provide real-time monitoring and smart analytics. Footage can be accessed remotely via secure mobile or desktop dashboards for complete situational awareness"
       },
       {
-        "question": "2. What are the benefits?",
-        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+        "question": "2. What makes your CCTV setup more reliable than regular systems?",
+        "answer": "We deploy advanced AI-enabled cameras with motion detection, night vision, and intrusion alerts — ensuring 24×7 protection and data integrity even during power or network fluctuations."
       },
       {
-        "question": "3. Is installation easy?",
-        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+        "question": "3. Can CCTV be integrated with other security systems?",
+        "answer": "Yes. We specialize in integrating CCTV with access control, alarm systems, and ANPR cameras for unified security management and event-based automation. "
       }
     ]
   },
@@ -24,16 +24,16 @@
     "paragraph": "We provide advanced biometric access control solutions that ensure seamless and secure identity management. from consultation and site assessment to installation, integration, and maintenance. Our team delivers high-precision fingerprint, facial, and iris recognition systems that enhance access control, attendance management, and overall security efficiency. We specialize in deploying customized biometric setups for offices, industries, institutions, and housing societies, ensuring seamless integration with existing infrastructure. With end-to-end service support, regular health checks, and expert guidance, we make biometric access simple, reliable, and future-ready for every client. ",
     "faqs": [
       {
-        "question": "1. What is a biometric system?",
-        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+        "question": "1. What biometric technologies do you deploy? ",
+        "answer": "We provide cutting-edge fingerprint, face, palm, and iris recognition systems with anti-spoofing algorithms for secure and frictionless access."
       },
       {
-        "question": "2. Why is it used?",
-        "answer": "It ensures accurate identity verification for security and attendance management."
+        "question": "2. How do biometric systems enhance operational efficiency?",
+        "answer": "Our systems automate attendance tracking, eliminate proxy access, and generate instant reports — improving workforce accountability and administrative accuracy. "
       },
       {
-        "question": "3. Can it be integrated?",
-        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+        "question": "3. Can they be managed centrally across multiple locations? ",
+        "answer": "Absolutely. Our cloud-based control panel enables centralized user management, remote configuration, and live monitoring across all branches. "
       }
     ]
   },
@@ -43,16 +43,16 @@
     "paragraph": "Quadra Security provides end-to-end Automatic Number Plate Recognition (ANPR) camera solutions designed to enhance traffic management and access control. Our services include system design, installation, configuration, and maintenance of advanced ANPR cameras capable of capturing and recognizing vehicle plates with high accuracy — even in low-light or high-speed conditions. We integrate ANPR systems with boom barriers, parking management software, and security databases to automate entry and exit operations. From toll plazas and gated communities to corporate campuses and logistics hubs, we deliver fully customized ANPR solutions that improve efficiency, ensure compliance, and strengthen on-site security. ",
     "faqs": [
       {
-        "question": "1. What is a video door phone?",
-        "answer": "It lets you see and talk to visitors before opening the door."
+        "question": "1. How accurate are your ANPR systems in real-world conditions?",
+        "answer": "Our ANPR cameras use AI-powered OCR algorithms to capture number plates in diverse lighting and speed conditions with over 95% accuracy. "
       },
       {
-        "question": "2. What features are available?",
-        "answer": "Clear video, two-way communication, and smart unlocking features."
+        "question": "2. Can ANPR data be used for automation and record-keeping? ",
+        "answer": "Yes. The data seamlessly integrates with toll, parking, and gate management systems for automated entry, billing, and audit trails. "
       },
       {
-        "question": "3. Is it safe?",
-        "answer": "Yes, it adds an extra layer of security to your home or office."
+        "question": "3. Do you provide customized ANPR deployments? ",
+        "answer": "Yes. From standalone gates to highway-scale networks, we design ANPR systems customized for vehicle type, lane width, and throughput volume."
       }
     ]
   },
@@ -63,17 +63,16 @@
     
     "faqs": [
       {
-        "question": "1. How does CCTV work?",
-        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+        "question": "1. What makes your EPABX solutions efficient for modern businesses? ",
+        "answer": "We deliver hybrid EPABX systems that support both analog and VoIP networks, ensuring smooth internal communication and scalability for growing teams. "
       },
       {
-        "question": "2. What are the benefits?",
-        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+        "question": "2. Can the system integrate with CRM or intercom networks? ",
+        "answer": "Yes. Our EPABX setups can be integrated with CRMs, intercoms, and call analytics software to streamline customer engagement and operations."
       },
       {
-        "question": "3. Is installation easy?",
-        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
-      }
+        "question": "3. Do you offer remote maintenance or upgrades? ",
+        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely." }
     ]
   },
   {
@@ -82,16 +81,16 @@
     "paragraph": "Quadra Security offers complete Interactive Display Panel solutions designed to transform communication, collaboration, and learning experiences. Our services include consultation, installation, integration, and post-installation support for a wide range of smart touch-enabled panels. Ideal for classrooms, conference rooms, and command centers, these systems enable real t ime annotation, wireless sharing, and multimedia interaction. We provide top-tier panels from leading brands along with custom mounting, networking, and setup assistance. With our end-to-end service approach, we help institutions and businesses create dynamic, technology-driven environments that foster engagement and productivity. ",
     "faqs": [
       {
-        "question": "1. What is a biometric system?",
-        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+        "question": "1. Do you handle integration with AV and conferencing systems? ",
+        "answer": "Yes. We integrate display panels with microphones, cameras, and conferencing tools like Zoom, Teams, and Google Meet for a unified setup."
       },
       {
-        "question": "2. Why is it used?",
-        "answer": "It ensures accurate identity verification for security and attendance management."
+        "question": "2. Can you customize installations for different environments? ",
+        "answer": "Absolutely. We provide tailored mounting, cabling, and calibration solutions to suit classrooms, boardrooms, and control centers. "
       },
       {
-        "question": "3. Can it be integrated?",
-        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+        "question": "3. Do you provide complete installation and support services? ",
+        "answer": "Absolutely. Quadra Security provides end-to-end services including delivery, installation, configuration, and after-sales maintenance to ensure smooth operation and long-term reliability. "
       }
     ]
   },
@@ -101,16 +100,16 @@
     "paragraph": "We provides professional Video Door Phone (VDP) solutions that combine convenience, safety, and modern design for residential and commercial spaces. Our services include product selection, installation, configuration, and integration with existing access control or surveillance systems. From single-door units to multi-apartment setups, we deliver customized VDP solutions with features like two-way communication, video recording, and remote unlocking. With high-quality devices and expert support, we ensure that every entry point is secure, every visitor is verified, and every client enjoys enhanced peace of mind and control over their property. ",
     "faqs": [
       {
-        "question": "1. What is a video door phone?",
-        "answer": "It lets you see and talk to visitors before opening the door."
+        "question": "1. What advanced features do your Video Door Phones offer? ",
+        "answer": "Our VDPs support two-way video calling, remote unlocking, visitor snapshots, and app-based control via Wi-Fi or 4G connectivity."
       },
       {
-        "question": "2. What features are available?",
-        "answer": "Clear video, two-way communication, and smart unlocking features."
+        "question": "2. Can they integrate with access control and CCTV? ",
+        "answer": "Yes. We create unified entry systems where your VDP, door lock, and CCTV work together for intelligent visitor management. "
       },
       {
-        "question": "3. Is it safe?",
-        "answer": "Yes, it adds an extra layer of security to your home or office."
+        "question": "3. Are they suitable for multi-apartment and commercial setups?",
+        "answer": "Definitely. We design scalable IP-based VDP systems for high-rise buildings, gated communities, and office premises. "
       }
     ]
   },
@@ -121,16 +120,16 @@
     
     "faqs": [
       {
-        "question": "1. How does CCTV work?",
-        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+        "question": "1. What technology ensures high detection accuracy in your scanners? ",
+        "answer": "Our scanners use dual-energy X-ray technology to identify metallic, organic, and mixed materials with clear color-coded imaging. "
       },
       {
-        "question": "2. What are the benefits?",
-        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+        "question": "2. Do your systems comply with global security standards? ",
+        "answer": "Yes. All baggage scanners comply with BIS and international aviation safety standards for threat detection and operator safety. "
       },
       {
-        "question": "3. Is installation easy?",
-        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+        "question": "3. Do you provide operational training and AMC support?",
+        "answer": "Absolutely. We provide certified operator training, preventive maintenance, and rapid-response AMC services. "
       }
     ]
   },
@@ -140,16 +139,16 @@
     "paragraph": "Quadra Security provides complete Alarm System solutions that offer instant detection and response against fire, intrusion, and emergencies. Our services include system design, installation, integration, and maintenance of advanced wired and wireless alarm systems equipped with motion, smoke, gas, and vibration sensors. We tailor every setup to meet the unique needs of homes, offices, industries, and commercial spaces, ensuring reliable protection and real-time alerts. With expert configuration, 24×7 support, and integration with CCTV and access control systems, we help you create a safer and smarter environment for people and property. ",
     "faqs": [
       {
-        "question": "1. What is a biometric system?",
-        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+        "question": "1. What types of alarm systems do you offer? ",
+        "answer": "We install smart intrusion, panic, and fire alarm systems that detect abnormal activity and trigger instant local and remote alerts. "
       },
       {
-        "question": "2. Why is it used?",
-        "answer": "It ensures accurate identity verification for security and attendance management."
+        "question": "2. How do your alarm systems communicate during emergencies?",
+        "answer": "Our alarms support GSM, Wi-Fi, and IP communication, sending real-time alerts to users and security centers. "
       },
       {
-        "question": "3. Can it be integrated?",
-        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+        "question": "3. Can alarm systems integrate with CCTV or access control? ",
+        "answer": "Yes. We enable intelligent linkage where alarms trigger automated camera recording or access lockdown."
       }
     ]
   },
@@ -159,16 +158,16 @@
     "paragraph": "Quadra Security offers reliable Metal Detection System services designed to enhance safety and security at entry and exit points. We provide complete solutions, including supply, installation, calibration, and maintenance of both hand-held and walk-through metal detectors. Our systems are engineered for high sensitivity, fast detection, and durability, making them ideal for offices, factories, schools, event venues, and government facilities. With expert setup and regular performance checks, we ensure precise threat detection, smooth visitor screening, and uninterrupted protection across all checkpoints. ",
     "faqs": [
       {
-        "question": "1. What is a video door phone?",
-        "answer": "It lets you see and talk to visitors before opening the door."
+        "question": "1. What range of metal detectors do you supply and service?",
+        "answer": "We offer high-sensitivity walk-through and hand-held detectors that can differentiate between ferrous and non-ferrous metals. "
       },
       {
-        "question": "2. What features are available?",
-        "answer": "Clear video, two-way communication, and smart unlocking features."
+        "question": "2. How do you ensure accuracy and reliability? ",
+        "answer": "Our devices undergo regular calibration and are designed with multi-zone detection and adjustable sensitivity for precision screening. "
       },
       {
-        "question": "3. Is it safe?",
-        "answer": "Yes, it adds an extra layer of security to your home or office."
+        "question": "3. Can they be integrated with alarm or access control systems? ",
+        "answer": "Yes. They can trigger alarms or access restrictions when linked with your existing security network. "
       }
     ]
   },{
@@ -178,16 +177,16 @@
 
     "faqs": [
       {
-        "question": "1. How does CCTV work?",
-        "answer": "CCTV captures and records video footage for monitoring and security purposes."
+        "question": "1. What differentiates your boom barrier systems?",
+        "answer": "We use industrial-grade motors with fast response times and weather-resistant designs for 24×7 operation in high-traffic areas. "
       },
       {
-        "question": "2. What are the benefits?",
-        "answer": "It improves safety, prevents theft, and provides evidence in case of incidents."
+        "question": "2. Can your barriers be automated or IoT-enabled?",
+        "answer": "Yes. Our solutions support RFID, ANPR, and IoT-based remote control for smart and contactless access management. "
       },
       {
-        "question": "3. Is installation easy?",
-        "answer": "Yes, modern CCTV systems are simple to install and can be monitored remotely."
+        "question": "3. Do you provide toll integration and monitoring? ",
+        "answer": "Absolutely. We implement integrated toll management software for seamless entry recording, billing, and reporting. "
       }
     ]
   },
@@ -197,16 +196,16 @@
     "paragraph": "Quadra Security offers advanced Electronic Door Lock solutions that combine convenience, security, and smart control for residential, commercial, and industrial applications. Our services include expert consultation, installation, integration, and maintenance of digital locks powered by PIN, RFID, f ingerprint, or mobile app access. We specialize in providing keyless entry systems that seamlessly integrate with biometric and access control setups, ensuring both safety and ease of use. With reliable technology, premium hardware, and responsive after-sales service, we help clients enhance entry security while maintaining a modern, user-friendly experience.",
     "faqs": [
       {
-        "question": "1. What is a biometric system?",
-        "answer": "It identifies people based on fingerprints, face, or iris recognition."
+        "question": "1. What security features do your smart locks include? ",
+        "answer": "Our digital locks feature PIN, RFID, fingerprint, and mobile app access, with tamper alarms and auto lock functionality. "
       },
       {
-        "question": "2. Why is it used?",
-        "answer": "It ensures accurate identity verification for security and attendance management."
+        "question": "2. Can they be connected to smart home or office automation? ",
+        "answer": "Yes. We integrate locks with IoT and smart automation systems for remote monitoring and control. "
       },
       {
-        "question": "3. Can it be integrated?",
-        "answer": "Yes, biometric systems can be integrated with access control and HR systems."
+        "question": "3. What after-sales support do you provide? ",
+        "answer": "We offer installation, warranty, software updates, and prompt on-site assistance to ensure long-term reliability."
       }
     ]
   },
@@ -216,16 +215,16 @@
     "paragraph": "We offer end-to-end Access Control System solutions designed to manage and monitor entry across secure zones efficiently. Our services cover system design, installation, configuration, and integration with biometric, RFID, and smart card technologies. We provide customized setups for offices, industries, educational institutions, and residential complexes — ensuring controlled access, real t ime tracking, and detailed reporting. With advanced software integration and round-the-clock technical support, we help organizations safeguard sensitive areas, prevent unauthorized entry, and maintain a smooth flow of authorized movement within their premises. ",
     "faqs": [
       {
-        "question": "1. What is a video door phone?",
-        "answer": "It lets you see and talk to visitors before opening the door."
+        "question": "1. How do your access control systems strengthen security? ",
+        "answer": "We deploy RFID, biometric, and facial access systems that log every entry and exit, ensuring traceability and eliminating unauthorized access. "
       },
       {
-        "question": "2. What features are available?",
-        "answer": "Clear video, two-way communication, and smart unlocking features."
+        "question": "2. Can your systems handle multi-location access networks?",
+        "answer": "Yes. Our centralized management software allows real-time control and reporting across multiple sites or branches. "
       },
       {
-        "question": "3. Is it safe?",
-        "answer": "Yes, it adds an extra layer of security to your home or office."
+        "question": "3. Are they compatible with time attendance or HR systems? ",
+        "answer": "Completely. We integrate access data with ERP, payroll, and HR software for unified workforce management. "
       }
     ]
   }

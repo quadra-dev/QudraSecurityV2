@@ -161,3 +161,33 @@
   }
 }
 
+/* Scrollable content styling */
+.scrollable-content {
+  scrollbar-width: thin;
+  scrollbar-color: #9c12b8 #ffffff1a; /* thumb and track colors for Firefox */
+  direction: rtl; /* Moves scrollbar to the left side */
+  padding-left: 1rem; /* Keeps text from touching the scrollbar */
+}
+
+.scrollable-content > * {
+  direction: ltr; /* Restores normal text direction for the content */
+}
+
+/* Chrome / Edge / Safari */
+.scrollable-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ec4899, #bd0dd4);
+  border-radius: 10px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #f472b6, #d815a1);
+}

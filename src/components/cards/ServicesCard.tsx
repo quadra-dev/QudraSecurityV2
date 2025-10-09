@@ -159,31 +159,10 @@ export default function ServiceCard({
                 ))}
               </div>
             )}
-
             {activeTab === 0 && (
-              <div className="text-white text-lg relative overflow-hidden transition-all duration-500 ease-in-out">
-                {/* Wrapper with animated height */}
-                <motion.div
-                  animate={{ height: isExpanded ? "auto" : 120 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="overflow-hidden"
-                >
-                  <p className="leading-relaxed">{data}</p>
-                </motion.div>
-
-                {/* Gradient fade effect (shows only when collapsed) */}
-                {!isExpanded && (
-                  <div className="absolute bottom-10 left-0 w-full h-20 pointer-events-none" />
-                )}
-
-                {/* Read More / Show Less button */}
-                <div className="mt-4">
-                  <button
-                    onClick={() => setIsExpanded(!isExpanded)}
-                    className="text-pink-100 font-semibold hover:text-yellow-300 transition-colors focus:outline-none"
-                  >
-                    {isExpanded ? "Read Less" : "Read More"}
-                  </button>
+              <div className="relative text-white text-lg h-[270px] overflow-hidden ">
+                <div className="scrollable-content h-full overflow-y-scroll pr-2">
+                  <p className="leading-relaxed bg-violet-400/10 rounded-2xl pl-3">{data}</p>
                 </div>
               </div>
             )}
