@@ -1,241 +1,185 @@
+// app/page.tsx (App Router) or pages/index.tsx (Pages Router)
 import Image from "next/image";
-import { ContactForm1 } from "@/components/contactForms/ContactForm1";
-import Link from "next/link";
-export default function AboutPage() {
-  const members = [
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+export default function Home() {
+  const words = [
     {
-      id: 1,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
+      text: "Build",
     },
     {
-      id: 2,
-      name: "Jiyanshi Batra",
-      role: "CEO & Co-Founder",
-      img: "",
-      size: { width: 100, height: 180 },
+      text: "Safe",
     },
     {
-      id: 3,
-      name: "Jiyanshi Batra",
-      role: "Director",
-      img: "",
-      size: { width: 100, height: 180 },
+      text: "Future",
     },
     {
-      id: 4,
-      name: "Jiyanshi Batra",
-      role: "HR Manager",
-      img: "",
-      size: { width: 100, height: 180 },
+      text: "with",
     },
     {
-      id: 5,
-      name: "Jiyanshi Batra",
-      role: "Technical Head",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
+      text: "Quadra",
+      className: "text-gray-500 dark:text-blue-500",
+    }, 
     {
-      id: 6,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 7,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 8,
-      name: "Aryan Raj",
-      role: "Digital",
-      img: "/AboutImages/teammember1.jpg",
-      size: { width: 100, height: 100 },
+      text: "Security",
+      className: "text-indigo-400 dark:text-blue-500",
     },
   ];
   return (
-    <div>
-      <main className="bg-white text-gray-900">
-        {/* Hero Section */}
-        <section className="relative  bg-gradient-to-b from-blue-900 to-indigo-700 text-white">
-          <div className="container mx-auto px-6 pt-28 pb-20 flex flex-col md:flex-row items-center gap-10">
-            <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Building Trust Through Advanced Security: Our Commitment to
-                Protecting What Matters Most.
-              </h1>
-              <p className="mt-6 text-lg text-gray-200">
-                Maximize Your Potential with Our Enterprise Technology
-                Solutions. Let us help you unlock the full potential of your
-                business with our innovative solutions.
-              </p>
-              <Link href="/contact">
-                <button className="px-4 py-3 bg-[#434CFF] text-white rounded-3xl shadow-md hover:bg-yellow-600 flex gap-2 mt-6">
-                  Explore More
-                  <img
-                    src="/ServicesImages/LinkArrow.svg"
-                    alt="icon"
-                    width={30}
-                    height={30}
-                  />
-                </button>
-              </Link>
-            </div>
-            <div className="md:w-1/2">
-              <Image
-                src="/AboutImages/AboutUsimg5.jpg"
-                alt="Team working"
-                width={550}
-                height={300}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
+    <main className="bg-white text-neutral-900 font-sans">
+      {/* Hero Section */}
+      <section className="text-center py-10">
+        <div className="flex flex-col items-center justify-center h-[25rem] bg-gradient-to-b from-blue-900 to-indigo-700 px-6">
+          <p className="text-black dark:text-neutral-200 text-base  mb-10">
+            The road to freedom starts from here
+          </p>
+          <TypewriterEffect words={words} />
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
+            <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+              Join now
+            </button>
+            <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+              Signup
+            </button>
           </div>
-        </section>
+        </div>
 
-        {/* Testimonial Section */}
-        <section className="bg-purple-700 text-white py-16">
-          <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
+        {/* Images Row */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto py-8">
+          <div className="text-left">
             <Image
-              src="/AboutImages/AboutUsimg6.webp"
-              alt="Client photo"
-              width={100}
-              height={100}
-              className="rounded-full border-4 border-white"
+              src="/lamp1.jpg"
+              alt="Lamp Design 1"
+              width={400}
+              height={400}
+              className="w-full h-auto object-cover"
             />
-            <div>
-              <p className="text-lg italic max-w-2xl">
-                “Working with <span className="font-bold">Ruffleyo</span> helped
-                us realize projects that are creative and researchable. Their
-                work is always excellent, we enjoy how they build all the study
-                cases and make them like a puzzle. Then, we have the product
-                like magic”
-              </p>
-              <p className="mt-4 font-semibold">Jacon Somber</p>
-              <p className="text-sm text-gray-200">Founder of Numina Studio</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-10 bg-white">
-          <Image
-            src="/AboutImages/AboutUsimgCircular.svg"
-            alt="about"
-            width={450}
-            height={350}
-            className="mx-auto py-4"
-          />
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-12">
-              They like how we structure their business models
-            </h2>
-            <div className="grid md:grid-cols-2 gap-12 text-left">
-              <div className="bg-[#F4BABA] p-4 rounded-lg shadow-xl">
-                <h3 className="font-semibold text-lg">Define the strategy</h3>
-                <p className="text-gray-800 mt-2">
-                  A clear and well-defined strategy is essential for achieving
-                  success in your business, outlines goals, and provides a
-                  roadmap for achieving them.
-                </p>
-              </div>
-              <div className="bg-[#EFD073] p-4 rounded-lg shadow-xl">
-                <h3 className="font-semibold text-lg">
-                  Re-structure business model
-                </h3>
-                <p className="text-gray-800 mt-2">
-                  Re-structuring can help you streamline operations, improve
-                  efficiency, and drive growth. A strategic re-structure can be
-                  powerful for success.
-                </p>
-              </div>
-              <div className="bg-[#98F1AE] p-4 rounded-lg shadow-xl">
-                <h3 className="font-semibold text-lg">Improve Performance</h3>
-                <p className="text-gray-800 mt-2">
-                  Improving performance is key to achieving success and
-                  enhancing business skills. There are many strategies that can
-                  drive improvement.
-                </p>
-              </div>
-              <div className="bg-[#C062EF] p-4 rounded-lg shadow-xl">
-                <h3 className="font-semibold text-lg">
-                  Testing and evaluation
-                </h3>
-                <p className="text-gray-800 mt-2">
-                  This results in higher quality outcomes, increased customer
-                  satisfaction, and the ability to compete in a demanding
-                  market.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-b from-fuchsia-300 to-fushia-200">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-12">
-              We have succeeded in increasing various company services with
-              innovations and product improvement
-            </h2>
-            <div className="flex justify-center gap-20">
-              <div>
-                <p className="text-4xl font-bold text-purple-700">300+</p>
-                <p className="text-gray-600 mt-2">Enterprise collaboration</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-purple-700">180+</p>
-                <p className="text-gray-600 mt-2">
-                  Projects & product innovations
-                </p>
-              </div>
-            </div>
-            <div className="mt-12 rounded-xl ">
-              <Image
-                src="/AboutImages/aboutcarouselimage1.svg"
-                alt="Team meeting"
-                width={350}
-                height={200}
-                className="rounded-xl  mx-auto  "
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-5bg-gradient-to-b from-fuchsia-200 to-fushia-100 pb-10">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-12">Meet Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-              We work according to the specialization and expertise of the team,
-              knowledge, and project needs in the global market
+            <p className="mt-2 text-sm text-black">
+              We understand that true quality isn’t just about craftsmanship.
             </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-              {members.map((member) => (
-                <div key={member.id} className="flex flex-col items-center">
-                  <Image
-                    src={member.img}
-                    alt={`Team member ${member.id}`}
-                    width={member.size?.width || 180} // fallback to 180 if not provided
-                    height={member.size?.height || 180} // fallback to 180 if not provided
-                    className="rounded-lg shadow-lg object-fill"
-                  />
-                  <p className="mt-4 font-medium">{member.name}</p>
-                  <p className="text-sm text-gray-500">{member.role}</p>
-                </div>
-              ))}
-            </div>
           </div>
-        </section>
-      </main>
-      <ContactForm1 />
-    </div>
+          <div>
+            <Image
+              src="/lamp2.jpg"
+              alt="Lamp Design 2"
+              width={400}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <div className="text-left">
+            <Image
+              src="/lamp3.jpg"
+              alt="Lamp Design 3"
+              width={400}
+              height={400}
+              className="w-full h-auto object-cover"
+            />
+            <p className="mt-2 text-sm text-black">
+              Designed for those who appreciate the finer things in life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Legacy Section */}
+      <section className="max-w-3xl mx-auto text-center py-16">
+        <p className="text-lg leading-relaxed">
+          WITH A LEGACY BUILT ON PRECISION AND QUALITY, WE REMAIN COMMITTED TO
+          SHOWCASING THE KNOW-HOW OF BRITISH CRAFTSMANSHIP
+        </p>
+      </section>
+
+      {/* Material Showcase */}
+      <section className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto py-16 px-6">
+        <div>
+          <Image
+            src="/lamp4.jpg"
+            alt="Silvered Oxidised Brass"
+            width={500}
+            height={500}
+            className="w-full h-auto object-cover"
+          />
+          <p className="mt-2 text-sm text-black uppercase">
+            Silvered Oxidised Brass
+          </p>
+        </div>
+        <div className="grid grid-cols-3 gap-4">
+          <Image
+            src="/material1.jpg"
+            alt="Material 1"
+            width={200}
+            height={200}
+            className="w-full h-auto object-cover"
+          />
+          <Image
+            src="/material2.jpg"
+            alt="Material 2"
+            width={200}
+            height={200}
+            className="w-full h-auto object-cover"
+          />
+          <Image
+            src="/material3.jpg"
+            alt="Material 3"
+            width={200}
+            height={200}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Process Steps */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <h2 className="text-3xl font-bold mb-12 uppercase">
+          Overview of the Process Steps
+        </h2>
+
+        <div className="grid md:grid-cols-5 gap-8 text-sm leading-relaxed">
+          <div>
+            <h3 className="font-semibold">01</h3>
+            <p>Material Preparation</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">02</h3>
+            <p>Filament Installation</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">03</h3>
+            <p>Gas Filling</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">04</h3>
+            <p>Sealing and Testing</p>
+          </div>
+          <div>
+            <h3 className="font-semibold">05</h3>
+            <p>Packaging and Distribution</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Subscribe + Footer */}
+      <footer className="bg-neutral-100 border-t py-12 text-sm px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+          <div>
+            <p className="mb-4">
+              Don’t Miss Out On Our Latest Updates And Exclusive Offers
+            </p>
+            <button className="px-6 py-2 border border-neutral-900 hover:bg-neutral-900 hover:text-white transition">
+              Subscribe
+            </button>
+          </div>
+          <div className="flex flex-col md:items-end">
+            <p>9 Cloudesley Road, London, N1 0FH</p>
+            <p>+44 (0) 20 7686 8700</p>
+            <p className="mt-2 uppercase tracking-wide">Made in England</p>
+          </div>
+        </div>
+
+        <h1 className="text-6xl md:text-7xl font-bold text-center mt-16">
+          LUMINATE
+        </h1>
+      </footer>
+    </main>
   );
 }
