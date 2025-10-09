@@ -62,10 +62,10 @@ export default async function PostPage({ params }: Props) {
   }
 
   return (
-    <div className=" bg-gradient-to-b pt-10 from-[#1c012b] via-[#29033a] to-[#320443] text-gray-100">
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-10">
+    <div className=" bg-gradient-to-b pt-10 from-[#191970] via-[#082567] to-[#000080] relative text-gray-100">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12  md:py-16 grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-10">
         {/* ===== MAIN CONTENT ===== */}
-        <section>
+        <section className="bg-white/5 shadow-2xl p-10 rounded-3xl">
           {/* ===== Header ===== */}
           <header className="text-center mb-10 md:mb-14 animate-fadeIn">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 leading-tight bg-white bg-clip-text text-transparent drop-shadow-md">
@@ -111,8 +111,8 @@ export default async function PostPage({ params }: Props) {
         </section>
 
         {/* ===== SIDEBAR (Desktop) ===== */}
-        <aside className="hidden lg:flex flex-col gap-6 animate-fadeIn sticky top-20 h-fit">
-          <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text mb-3">
+        <aside className="hidden lg:flex flex-col gap-6 animate-fadeIn sticky top-30 h-fit">
+          <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] bg-clip-text mb-3">
             More Blogs
           </h3>
 
@@ -121,7 +121,7 @@ export default async function PostPage({ params }: Props) {
               <Link
                 key={p._id}
                 href={`/blog/${p.slug.current}`}
-                className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-pink-400/40 hover:bg-[#360a52]/50 transition-all duration-300 backdrop-blur-sm shadow-md"
+                className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41]/50 transition-all duration-300 backdrop-blur-sm shadow-md"
               >
                 <div className="flex items-center gap-3">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -133,7 +133,7 @@ export default async function PostPage({ params }: Props) {
                     />
                   )}
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-200 group-hover:text-pink-300 transition-colors duration-300">
+                    <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
                       {p.title.length > 50 ? p.title.slice(0, 50) + "..." : p.title}
                     </h4>
                     {p.subtitle && (
@@ -143,7 +143,7 @@ export default async function PostPage({ params }: Props) {
                     )}
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 transition-all duration-500 group-hover:w-full"></div>
+                <div className="absolute bottom-0 left-2 w-0 h-[2px] bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] transition-all duration-500 group-hover:w-[95%]"></div>
               </Link>
             ))}
           </div>
@@ -153,7 +153,7 @@ export default async function PostPage({ params }: Props) {
       {/* ===== MORE BLOGS GRID (Mobile / Tablet) ===== */}
       {related.length > 0 && (
         <section className="block lg:hidden mt-16 px-6 animate-fadeUp">
-          <h2 className="text-center text-2xl font-bold mb-8 text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text">
+          <h2 className="text-center text-2xl font-bold mb-8 text-transparent bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] bg-clip-text">
             More Blogs
           </h2>
           <div className="grid gap-8 sm:grid-cols-2">
@@ -171,7 +171,7 @@ export default async function PostPage({ params }: Props) {
                     className="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition-transform duration-300"
                   />
                 )}
-                <h3 className="text-lg font-semibold text-gray-200 mb-1 group-hover:text-pink-300 transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-gray-200 mb-1 group-hover:text-indigo-300 transition-colors duration-300">
                   {p.title.length > 60 ? p.title.slice(0, 60) + "..." : p.title}
                 </h3>
                 {p.subtitle && (

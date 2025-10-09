@@ -34,7 +34,7 @@ const PostCard: FC<Props> = ({ post }) => {
         <div className="mt-3">
           <Link
             href={`/blog/${post.slug.current}`}
-            className="inline-block bg-white text-purple-800 px-3 py-1 rounded-full text-xs"
+            className="inline-block bg-white text-blue-800 px-3 py-1 rounded-full text-xs"
           >
             Read More
           </Link>

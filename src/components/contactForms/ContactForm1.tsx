@@ -78,7 +78,7 @@ export const ContactForm1 = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center py-5 min-h-screen bg-indigo-800  px-3">
+    <div className="w-full flex items-center justify-center py-5 min-h-screen bg-gradient-to-b from-[#191970] via-[#082567] to-[#000080]  px-3">
       <form
         onSubmit={handleSubmit}
         className="flex w-full sm:w-5/8 items-center justify-center"

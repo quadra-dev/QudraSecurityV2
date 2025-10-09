@@ -80,7 +80,7 @@ export default function BlogPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#3a065a] to-[#240034] text-white text-lg">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-[#191970] via-[#082567] to-[#000080] text-white text-lg">
         Loading blogs...
       </div>
     );
@@ -96,7 +96,7 @@ export default function BlogPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#3a065a] via-[#2d0044] to-[#240034] text-white">
+    <main className="min-h-screen bg-gradient-to-b from-[#191970] via-[#082567] to-[#000080] text-white">
       {/* HERO SECTION */}
       {heroPost && (
         <section className="relative overflow-hidden">
@@ -121,7 +121,7 @@ export default function BlogPage() {
               )}
               <Link
                 href={`/blog/${heroPost.slug?.current}`}
-                className="px-6 py-3 bg-white text-purple-900 font-semibold rounded-full hover:bg-purple-100 transition"
+                className="px-6 py-3 bg-white text-blue-900 font-semibold rounded-full hover:bg-blue-100 transition"
               >
                 Read Full Post →
               </Link>
@@ -157,7 +157,7 @@ export default function BlogPage() {
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-purple-600 hover:bg-purple-500 transition flex items-center justify-center"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-500 transition flex items-center justify-center"
                     aria-label="Search"
                   >
                     <svg
@@ -196,8 +196,8 @@ export default function BlogPage() {
                     onClick={() => handleCategoryClick(category)}
                     className={`px-4 py-2 rounded-full text-sm border transition-all ${
                       activeCategory === category
-                        ? "bg-purple-600 text-white border-purple-500"
-                        : "bg-white/5 hover:bg-purple-700/40 border-white/10"
+                        ? "bg-blue-600 text-white border-blue-500"
+                        : "bg-white/5 hover:bg-blue-700/40 border-white/10"
                     }`}
                   >
                     {category}
@@ -216,7 +216,7 @@ export default function BlogPage() {
                     <span className="mx-2">in</span>
                   )}
                   {activeCategory && (
-                    <span className="text-purple-400 font-semibold">
+                    <span className="text-blue-400 font-semibold">
                       {activeCategory}
                     </span>
                   )}
@@ -243,7 +243,7 @@ export default function BlogPage() {
                   </p>
                   <button
                     onClick={clearFilters}
-                    className="px-6 py-2 bg-purple-600 hover:bg-purple-500 rounded-full transition"
+                    className="px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-full transition"
                   >
                     Clear Filters
                   </button>
@@ -254,7 +254,7 @@ export default function BlogPage() {
 
           {/* SIDEBAR */}
           <aside className="hidden lg:flex flex-col gap-6 animate-fadeIn sticky top-20 h-fit">
-            <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text mb-3">
+            <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] bg-clip-text mb-3">
               More Blogs
             </h3>
 
@@ -263,7 +263,7 @@ export default function BlogPage() {
                 <Link
                   key={p._id}
                   href={`/blog/${p.slug.current}`}
-                  className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-pink-400/40 hover:bg-[#360a52]/50 transition-all duration-300 backdrop-blur-sm shadow-md"
+                  className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41] transition-all duration-300 backdrop-blur-sm shadow-md"
                 >
                   <div className="flex items-center gap-3">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -279,7 +279,7 @@ export default function BlogPage() {
                       />
                     )}
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-200 group-hover:text-pink-300 transition-colors duration-300">
+                      <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
                         {p.title.length > 50
                           ? p.title.slice(0, 50) + "..."
                           : p.title}
@@ -291,7 +291,7 @@ export default function BlogPage() {
                       )}
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 transition-all duration-500 group-hover:w-full"></div>
+                  <div className="absolute bottom-0 left-2 w-0 h-[2px] bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] transition-all duration-500 group-hover:w-[95%]"></div>
                 </Link>
               ))}
               <motion.div
@@ -307,7 +307,7 @@ export default function BlogPage() {
                     (tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 hover:bg-purple-700/50 hover:text-white cursor-pointer transition"
+                        className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 hover:bg-blue-700/50 hover:text-white cursor-pointer transition"
                       >
                         #{tag}
                       </span>

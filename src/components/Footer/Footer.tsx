@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-t from-[#1c012b] via-[#2c0140] to-[#3b0153]
+    <footer className="bg-gradient-to-t from-[#151560] via-[#071e54] to-[#050560]
 
 
  text-white pt-12 pb-8 px-6 font-[family-name:var(--font-urbanist)]">
@@ -39,10 +39,10 @@ export default function Footer() {
           <p className="text-sm text-gray-300 mb-3 italic">Protecting What Matters Most</p>
           <div className="space-y-2 text-sm text-gray-300">
             <p className="flex items-center gap-2">
-              <FaLocationDot className="text-purple-400" /> Gurugram, Delhi NCR, Noida
+              <FaLocationDot className="text-indigo-400" /> Gurugram, Delhi NCR, Noida
             </p>
             <p className="flex items-center gap-2">
-              <MdEmail className="text-purple-400" />
+              <MdEmail className="text-indigo-400" />
               <a
                 href="mailto:accounts@quadrasecurity.com"
                 className="hover:text-white transition"
@@ -54,7 +54,7 @@ export default function Footer() {
               href="https://maps.app.goo.gl/UHFq6mFBaGgDoGm76"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-sm text-purple-300 hover:text-white transition"
+              className="inline-flex items-center gap-1 text-sm text-indigo-300 hover:text-white transition"
             >
               <FaMapMarkerAlt /> View on Google Maps
             </a>
