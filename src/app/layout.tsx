@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} text-theme-white  bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082]`}>
+      <body className={`${inter.variable} overflow-x-hidden text-theme-white  bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082]`}>
         <NavigationBar/>
         {children}
         <Footer />

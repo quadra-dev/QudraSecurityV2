@@ -108,7 +108,7 @@ export default function ServiceCard({
             height: isExpanded ? "auto" : "fit-content", // 👈 shrink back smoothly
           }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-gradient-to-b from-[#cf99e0] to-[#9a50c8] rounded-2xl shadow-2xl 
+          className="bg-[#360a50]/30 rounded-2xl shadow-2xl 
   p-6 flex flex-col md:flex-row items-center gap-6 flex-1 relative min-h-[320px] transition-all duration-500 ease-in-out overflow-hidden"
         >
           {/* Top-left Tab Buttons */}
@@ -162,7 +162,7 @@ export default function ServiceCard({
             {activeTab === 0 && (
               <div className="relative text-white text-lg h-[270px] overflow-hidden ">
                 <div className="scrollable-content h-full overflow-y-scroll pr-2">
-                  <p className="leading-relaxed bg-violet-400/10 rounded-2xl pl-3">{data}</p>
+                  <p className="leading-relaxed  rounded-2xl pl-3">{data}</p>
                 </div>
               </div>
             )}

@@ -27,7 +27,7 @@ export default function AboutHero() {
   ];
   const MotionImage = motion(Image);
   return (
-    <div className="h-auto w-full  bg-gradient-to-b from-blue-900 to-indigo-700 pt-15 ">
+    <div className="h-auto  w-full  bg-gradient-to-b from-[#191970] via-[#082567] to-[#000080] pt-15 ">
       <section className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 py-12 md:py-16">
 
         {/* <div className="flex-1 text-center md:text-left space-y-6 pl-15">
@@ -59,7 +59,7 @@ export default function AboutHero() {
             transition={{ duration: 1.1, ease: "easeOut" }}
           />
         </div> */}
-        <div className="flex flex-col items-center justify-center h-[25rem] bg-gradient-to-b from-blue-900 to-indigo-700 mx-auto ">
+        <div className="flex flex-col items-center justify-center h-[25rem] bg-transparent mx-auto ">
          
           <TypewriterEffect words={words}  />
           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
