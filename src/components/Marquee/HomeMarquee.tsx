@@ -3,41 +3,26 @@
 import React from "react";
 import MarqueeItem from "./MarqueeItem";
 
-
+//hawk vision and western digital left
 const HomeMarquee: React.FC = () => {
   const upperMarquee: string[] = [
-    "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
+    "/HomeImages/HomeMarqueeImage/CPPlusLogo.webp",
+     "/HomeImages/HomeMarqueeImage/prama.png",
+     "/HomeImages/HomeMarqueeImage/Hikvision.png",
+     "/HomeImages/HomeMarqueeImage/beetel.png",
+     "/HomeImages/HomeMarqueeImage/daichi.png",
+     "/HomeImages/HomeMarqueeImage/dlink-Photoroom.png",
+     "/HomeImages/HomeMarqueeImage/essl.png",
+     "/HomeImages/HomeMarqueeImage/godrej.png",
+     "/HomeImages/HomeMarqueeImage/tenda.png",
+     "/HomeImages/HomeMarqueeImage/consistent.png",
   ];
 
-  const lowerMarquee: string[] = [
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-     "/HomeImages/CPPlusLogo.webp",
-  ];
 
   return (
     <div className="container mx-auto">
         
       <MarqueeItem images={upperMarquee} from="0%" to="-100%" />
-      <MarqueeItem images={lowerMarquee} from="-100%" to="0%" />
     </div>
   );
 };

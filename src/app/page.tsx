@@ -7,6 +7,7 @@ import Link from "next/link";
 import cardsData from "@/constants/aboutPage/cards.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 import ThreeGridCarousel from "@/components/carousels/ThreeGridCarousel";
+import WhyChooseUs from "@/components/cards/WhyChooseUs";
 
 export default function Home() {
   const Offerings = [
@@ -77,7 +78,7 @@ export default function Home() {
           Brands <span className="text-[#FF850B]">We Deal</span> In
         </h2>
         <HomeMarquee />
-        <h2 className="text-5xl pt-15 font-bold text-center">
+        {/* <h2 className="text-5xl pt-15 font-bold text-center">
           Why <span className="text-[#FF850B]">Choose </span> Us
         </h2>
         <AboutPageCarousel cards={cardsData} />
@@ -90,7 +91,8 @@ export default function Home() {
           width={600}
           height={500}
           className="mx-auto py-10"
-        />
+        /> */}
+        <WhyChooseUs/>
         <div className="min-h-screen w-full flex items-center flex-col justify-center bg-white py-8">
           <h2 className="md:text-5xl text-3xl pt-15 text-black font-bold pb-10 w-3/4">
             What our clients are saying
