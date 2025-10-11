@@ -187,8 +187,16 @@ export const ContactForm1 = () => {
           </div>
         </div>
       </form>
-      <div className="w-3/8 hidden md:flex items-center  justify-center relative">
-        <ContactFormCarousel />
+      <div className="w-3/8 hidden  md:flex items-center  justify-center relative">
+        <Image
+          src="/ContactImages/contactussvg.svg"
+          alt="Contact Us"
+          width={600}
+          height={600}
+          className="px-auto pt-20"
+        />
+
+        {/* <ContactFormCarousel /> */}
       </div>
     </div>
   );
