@@ -2,18 +2,21 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 interface OrangeButtonProps {
   text: string;
 }
 
 const OrangeButton: React.FC<OrangeButtonProps> = ({ text }) => {
+   const router = useRouter();
   return (
     <motion.button
-      className="group flex items-center gap-3 bg-[#FF850B] text-white p-1 rounded-full relative overflow-hidden"
+      className="group flex items-center gap-3 cursor-pointer bg-[#FF850B] text-white p-1 rounded-full relative overflow-hidden"
       whileHover="hover"
       initial="rest"
       animate="rest"
+      onClick={() => router.push("/contact")}
     >
       <span className="font-semibold pl-5">{text}</span>
 

@@ -194,7 +194,7 @@ export default function Navbar() {
 
       {/* DESKTOP DROPDOWN (hover) */}
       <AnimatePresence>
-        {activeMenu && (
+        {activeMenu==="Solutions" && (
           <>
             <motion.div
               className="fixed top-[64px] left-0 w-full bottom-0 bg-black bg-opacity-40 z-30"

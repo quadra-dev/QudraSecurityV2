@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import OrangeButton from "@/components/buttons/OrangeButton";
-import HomeHeroImage from "./HomeHeroImage";
+import SiteVisitForm from "../contactForms/SiteVisitForm";
 
 export default function HomeHero() {
   return (
@@ -12,7 +12,7 @@ export default function HomeHero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
-        className="relative z-10 w-full lg:w-1/2 space-y-6 text-center md:text-left"
+        className="relative lg:pl-10 z-10 w-full lg:w-1/2 space-y-6 text-center md:text-left"
       >
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -52,12 +52,12 @@ export default function HomeHero() {
         transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
         className="relative z-10 mt-12 md:mt-0 w-full lg:w-1/2 flex justify-center md:justify-end"
       >
-        <div className="relative group w-[80%] sm:w-[70%] md:w-[90%] max-w-[600px]">
+        <div className="relative group w-[90%] sm:w-[70%] md:w-[90%] max-w-[600px]">
           {/* Glowing border effect */}
-          <div className="absolute -inset-6 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-all duration-700"></div>
+          {/* <div className="absolute -inset-6 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full blur-3xl opacity-30  transition-all duration-700"></div> */}
 
           {/* Hero Image */}
-          <HomeHeroImage />
+          <SiteVisitForm/>
         </div>
       </motion.div>
     </section>
