@@ -3,64 +3,6 @@ import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 import Link from "next/link";
 
 export default function About() {
-  const members = [
-    {
-      id: 1,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 2,
-      name: "Jiyanshi Batra",
-      role: "CEO & Co-Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 3,
-      name: "Jiyanshi Batra",
-      role: "Director",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 4,
-      name: "Jiyanshi Batra",
-      role: "HR Manager",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 5,
-      name: "Jiyanshi Batra",
-      role: "Technical Head",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 6,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 7,
-      name: "Jiyanshi Batra",
-      role: "CEO & Founder",
-      img: "",
-      size: { width: 100, height: 180 },
-    },
-    {
-      id: 8,
-      name: "Aryan Raj",
-      role: "Digital",
-      img: "/AboutImages/teammember1.jpg",
-      size: { width: 100, height: 100 },
-    },
-  ];
   return (
     <div>
       <main className="bg-white text-gray-900">
@@ -193,6 +135,37 @@ export default function About() {
             </div>
           </div>
         </section>
+        {/* Stats Section */}
+        <section className="py-20 bg-gradient-to-b from-fuchsia-300 to-fushia-200">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold mb-12">
+              We have succeeded in increasing various company services with
+              innovations and product improvement
+            </h2>
+            <div className="flex justify-center gap-20">
+              <div>
+                <p className="text-4xl font-bold text-purple-700">300+</p>
+                <p className="text-gray-600 mt-2">Enterprise collaboration</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-purple-700">180+</p>
+                <p className="text-gray-600 mt-2">
+                  Projects & product innovations
+                </p>
+              </div>
+            </div>
+            <div className="mt-12 rounded-xl ">
+              <Image
+                src="/AboutImages/aboutcarouselimage1.svg"
+                alt="Team meeting"
+                width={350}
+                height={200}
+                className="rounded-xl  mx-auto  "
+              />
+            </div>
+          </div>
+        </section>
+
 
         {/* Features Section */}
         <section className="py-10 bg-white">
@@ -257,62 +230,8 @@ export default function About() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-b from-fuchsia-300 to-fushia-200">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-12">
-              We have succeeded in increasing various company services with
-              innovations and product improvement
-            </h2>
-            <div className="flex justify-center gap-20">
-              <div>
-                <p className="text-4xl font-bold text-purple-700">300+</p>
-                <p className="text-gray-600 mt-2">Enterprise collaboration</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-purple-700">180+</p>
-                <p className="text-gray-600 mt-2">
-                  Projects & product innovations
-                </p>
-              </div>
-            </div>
-            <div className="mt-12 rounded-xl ">
-              <Image
-                src="/AboutImages/aboutcarouselimage1.svg"
-                alt="Team meeting"
-                width={350}
-                height={200}
-                className="rounded-xl  mx-auto  "
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-5 bg-gradient-to-b from-fuchsia-200 to-fushia-100 pb-10">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-12">Meet Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-              We work according to the specialization and expertise of the team,
-              knowledge, and project needs in the global market
-            </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
-              {members.map((member) => (
-                <div key={member.id} className="flex flex-col items-center">
-                  <Image
-                    src={member.img}
-                    alt={`Team member ${member.id}`}
-                    width={member.size?.width || 180}
-                    height={member.size?.height || 180}
-                    className="rounded-lg shadow-lg object-fill"
-                  />
-                  <p className="mt-4 font-medium">{member.name}</p>
-                  <p className="text-sm text-gray-500">{member.role}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        
+        
       </main>
       <ContactForm1 />
     </div>
