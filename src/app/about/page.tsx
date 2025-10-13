@@ -112,29 +112,7 @@ export default function About() {
 
         {/* 🔹 END OF NEW INSERTED SECTION 🔹 */}
 
-        {/* Testimonial Section */}
-        <section className="bg-purple-700 text-white py-16">
-          <div className="container mx-auto px-6 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
-            <Image
-              src="/AboutImages/AboutUsimg6.webp"
-              alt="Client photo"
-              width={100}
-              height={100}
-              className="rounded-full border-4 border-white"
-            />
-            <div>
-              <p className="text-lg italic max-w-2xl">
-                “Working with <span className="font-bold">Ruffleyo</span> helped
-                us realize projects that are creative and researchable. Their
-                work is always excellent, we enjoy how they build all the study
-                cases and make them like a puzzle. Then, we have the product
-                like magic”
-              </p>
-              <p className="mt-4 font-semibold">Jacon Somber</p>
-              <p className="text-sm text-gray-200">Founder of Numina Studio</p>
-            </div>
-          </div>
-        </section>
+        
         {/* Stats Section */}
         <section className="py-20 bg-gradient-to-b from-fuchsia-300 to-fushia-200">
           <div className="container mx-auto px-6 text-center">
