@@ -19,11 +19,11 @@ export default function ServicesPage() {
             dotSvg="/ServicesImages/glowingdot.svg"
           />
         ))}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div className="w-full md:w-[600px]">
             <ServicesFunnelCard />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
