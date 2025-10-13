@@ -11,31 +11,39 @@ import WhyChooseUs from "@/components/cards/WhyChooseUs";
 
 export default function Home() {
   const Offerings = [
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
-    "/HomeImages/WhatWeOfferImage1.png",
+    "/HomeImages/WhatWeOffer/Apartments.png",
+    "/HomeImages/WhatWeOffer/Retail.png",
+    "/HomeImages/WhatWeOffer/Campus.png",
+    "/HomeImages/WhatWeOffer/Hotel.png",
+    "/HomeImages/WhatWeOffer/Bank.png",
+  ];
+  const links = [
+    "/solutions/apartments",
+    "/solutions/retail",
+    "/solutions/campus",
+    "/solutions/hotels",
+    "/solutions/retail",
   ];
   return (
     <div>
       <HomeHero />
 
-      <div
-        className="w-full min-h-screen bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082]"
-      >
+      <div className="w-full min-h-screen bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082]">
         {/* comp 1 */}
         <h2 className="text-5xl pt-15 font-bold text-center">
           What <span className="text-[#FF850B]">We Offer</span>?
         </h2>
-        <p className="text-center pt-3 lg:w-3/4 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa eveniet
-          aspernatur nostrum itaque excepturi omnis nulla commodi necessitatibus
-          doloribus doloremque! Consequatur ullam error nostrum, perspiciatis
-          nemo non ipsa laboriosam eos.
+        <p className=" pt-3  p-3 lg:w-3/4 mx-auto">
+          At <b>Quadra Security</b>, we provide professional{" "}
+          <b>CCTV installation</b>, <b>ANPR systems</b>, <b>EPABX</b>,{" "}
+          <b>boom barriers</b>, <b>video door phones</b>, and{" "}
+          <b>interactive display panels</b> across <b>Gurgaon, Delhi NCR</b>,
+          and beyond. Our customized security solutions ensure reliable
+          protection for <b>apartments, banks, hotels, campuses, resorts</b>,
+          and other commercial or residential spaces. Secure your premises with
+          trusted experts.
         </p>
+
         <div className="flex p-10 gap-5 justify-center flex-wrap">
           {Offerings.map((Offering, idx) => {
             return (
@@ -44,11 +52,11 @@ export default function Home() {
                   src={Offering}
                   key={idx}
                   alt="offering"
-                  width={150}
-                  height={150}
+                  width={200}
+                  height={200}
                 />
                 <Link
-                  href="/contact"
+                  href={links[idx]}
                   className="absolute bottom-5 hover:underline text-sm font-semibold text-[#2D1212] hover:text-[#D83C15] text-center w-full"
                 >
                   View More
@@ -58,17 +66,22 @@ export default function Home() {
           })}
         </div>
         {/* comp 2 */}
-        <h2 className="text-5xl pt-15 font-bold text-center">
+        <h2 className="text-5xl  pt-15 font-bold text-center">
           Explore <span className="text-[#FF850B]">Our Services</span>
         </h2>
-        <p className="text-center pt-3 lg:w-3/4 mx-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          reprehenderit, eos dolorum nobis quidem voluptatibus. Dolores est hic
-          sit. Expedita suscipit maiores modi numquam. Fugit architecto enim
-          eligendi, excepturi expedita corporis perspiciatis eius, dignissimos,
-          qui perferendis eos vitae odit ipsa asperiores! Atque earum vero,
-          soluta rem, vitae modi eum illo fuga tempora cum quos veniam
-          perferendis qui laudantium beatae ab?
+        <p className=" pt-3 p-3 lg:w-3/4 mx-auto">
+          Discover comprehensive <b>security and surveillance</b> solutions with{" "}
+          <b>Quadra Security</b>, your trusted partner for{" "}
+          <b>CCTV installation</b>, <b>ANPR systems</b>, <b>EPABX setups</b>,{" "}
+          <b>boom and toll barriers</b>, <b>video door phones</b>, and{" "}
+          <b>interactive display panels</b>. We deliver end-to-end,
+          high-performance systems tailored for{" "}
+          <b>apartments, banks, hotels, campuses, resorts</b>, and{" "}
+          <b>corporate offices</b>. Serving <b>Gurgaon, Delhi NCR</b>, and
+          nearby regions, our expert team ensures seamless installation,
+          integration, and maintenance — helping you create a safer, smarter,
+          and more connected environment for both residential and commercial
+          spaces.
         </p>
         <div className="pt-10">
           <HomePageCarousel />
@@ -92,7 +105,7 @@ export default function Home() {
           height={500}
           className="mx-auto py-10"
         /> */}
-        <WhyChooseUs/>
+        <WhyChooseUs />
         <div className="min-h-screen w-full flex items-center flex-col justify-center bg-white py-8">
           <h2 className="md:text-5xl text-3xl pt-15 text-black font-bold pb-10 w-3/4">
             What our clients are saying

@@ -37,10 +37,10 @@ const MarqueeItem: React.FC<MarqueeItemProps> = ({ images, from, to }) => {
         initial={{ x: from }}
         animate={{ x: to }}
         transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-        className="flex flex-shrink-0 gap-20 ml-20" // 👈 spacing added here
+        className="flex flex-shrink-0  md:gap-20 ml-20" // 👈 spacing added here
       >
         {images.map((src, index) => (
-          <div key={index} className="h-40 w-56 relative">
+          <div key={index} className="w-5 h-10 md:h-40 md:w-56 relative">
             <Image
               src={src}
               alt={`marquee-${index}`}
