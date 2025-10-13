@@ -114,7 +114,7 @@ export default function About() {
 
         
         {/* Stats Section */}
-        <section className="py-20 bg-gradient-to-b from-fuchsia-300 to-fushia-200">
+        <section className="py-20 bg-gradient-to-b from-blue-300 via-indigo-100 to-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-12">
               We have succeeded in increasing various company services with
@@ -132,7 +132,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="mt-12 rounded-xl ">
+            <div className="mt-6 rounded-xl ">
               <Image
                 src="/AboutImages/aboutcarouselimage1.svg"
                 alt="Team meeting"
@@ -146,7 +146,7 @@ export default function About() {
 
 
         {/* Features Section */}
-        <section className="py-10 bg-white">
+        <section className="py-5 bg-white">
           <Image
             src="/AboutImages/AboutUsimgCircular.svg"
             alt="about"
