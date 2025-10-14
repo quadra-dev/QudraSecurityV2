@@ -14,7 +14,7 @@ const FaqCard: React.FC<FaqCardProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-[#171A86]/20 hover:bg-[#171A86]/50 rounded-2xl m-2 p-4 mx-auto border-gray-300 w-[90%]">
+    <div className="bg-[#000080] hover:bg-[#02026f] rounded-2xl m-2 p-4 mx-auto border-gray-300 w-[90%]">
       {/* Question Row */}
       <div
         className="flex justify-between items-center cursor-pointer"

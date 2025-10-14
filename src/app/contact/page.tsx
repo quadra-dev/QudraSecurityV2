@@ -5,11 +5,11 @@ export default function Contact() {
   return (
     <div className="h-auto w-full ">
       <ContactForm1 />
-      <div>
-        <h2 className="text-5xl font-bold text-center p-5">
+      <div className="bg-white">
+        <h2 className="text-5xl text-gray-900 font-bold text-center p-5">
           Frequently Asked Questions
         </h2>
-        <div className=" flex flex-col items-center justify-center  p-6">
+        <div className="bg-white flex flex-col items-center justify-center  p-6">
           <FaqCard
             question=" How does Quadra Security’s CCTV solution operate?"
             answer="Our CCTV systems integrate HD/IP cameras, NVRs, and cloud connectivity to provide real-time 
