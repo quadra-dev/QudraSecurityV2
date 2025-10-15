@@ -161,9 +161,9 @@ export default function ServiceCard({
             )}
             {activeTab === 0 && (
               <div className="relative text-white text-lg h-[270px] overflow-hidden ">
-                <div className="scrollable-content h-full overflow-y-scroll pr-2">
-                  <p className="leading-relaxed  rounded-2xl pl-3">{data}</p>
-                </div>
+                <div className="scrollable-content h-full overflow-y-scroll pr-2 no-scrollbar">
+  <p className="leading-relaxed rounded-2xl pl-3">{data}</p>
+</div>
               </div>
             )}
           </div>

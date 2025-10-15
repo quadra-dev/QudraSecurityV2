@@ -191,3 +191,14 @@
 .scrollable-content::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #f472b6, #d815a1);
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* for Internet Explorer, Edge */
+  scrollbar-width: none;     /* for Firefox */
+}
+.scrollable-content {
+  scroll-behavior: smooth;
+}
