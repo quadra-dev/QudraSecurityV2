@@ -8,7 +8,7 @@ export default function ServicesPage() {
   return (
     <div>
       <ServicesHero />
-      <div className="space-y-12 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082] min-h-screen">
+      <div className="space-y-12 px-4 py-20 sm:px-6 md:px-8 bg-gradient-to-b from-[#1d002e] via-[#2e0152] to-[#4b0082] min-h-screen">
         {services.map((service, index) => (
           <ServiceCard
             key={index}
