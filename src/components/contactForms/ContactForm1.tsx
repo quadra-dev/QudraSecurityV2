@@ -189,11 +189,11 @@ export const ContactForm1 = () => {
       </form>
       <div className="w-3/8 hidden  md:flex items-center  justify-center relative">
         <Image
-          src="/ContactImages/contactussvg.svg"
+          src="/ContactImages/contactusgraphic.png"
           alt="Contact Us"
           width={600}
           height={600}
-          className="px-auto pt-20"
+          className="pr-25 pt-20"
         />
 
         {/* <ContactFormCarousel /> */}
