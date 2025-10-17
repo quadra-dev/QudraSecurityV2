@@ -57,7 +57,7 @@ export default function ServiceCard({
   };
 
   return (
-    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto px-4 py-6">
+    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto px-4 py-6 ">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-white">{title}</h2>
 
@@ -113,7 +113,7 @@ export default function ServiceCard({
         >
           {/* Top-left Tab Buttons */}
           <div className="absolute top-4 left-4 flex gap-4 text-sm md:text-lg">
-            {["Tab", "FAQs"].map((tab, index) => (
+            {["Tab"].map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
@@ -137,7 +137,7 @@ export default function ServiceCard({
 
           {/* Content Area */}
           <div className="flex-1 w-full mt-10 text-sm md:text-base">
-            {activeTab === 1 && (
+            {/* {activeTab === 1 && (
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <div key={index} className="border-b border-white/30 pb-2">
@@ -158,12 +158,10 @@ export default function ServiceCard({
                   </div>
                 ))}
               </div>
-            )}
+            )} */}
             {activeTab === 0 && (
-              <div className="relative text-white text-lg h-[270px] overflow-hidden ">
-                <div className="scrollable-content h-full overflow-y-scroll pr-2 no-scrollbar">
-  <p className="leading-relaxed rounded-2xl pl-3">{data}</p>
-</div>
+              <div className="relative text-white text-lg h-[270px] overflow-hidden">
+                <p className="leading-relaxed rounded-2xl pl-3">{data}</p>
               </div>
             )}
           </div>
