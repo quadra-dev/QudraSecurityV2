@@ -194,7 +194,7 @@ export default function Navbar() {
 
       {/* DESKTOP DROPDOWN (hover) */}
       <AnimatePresence>
-        {activeMenu==="Solutions" && (
+        {activeMenu === "Solutions" && (
           <>
             <motion.div
               className="fixed top-[64px] left-0 w-full bottom-0 bg-black bg-opacity-40 z-30"
@@ -216,81 +216,83 @@ export default function Navbar() {
               <div className="w-full  p-8">
                 {/* <div className="text-white text-2xl">{activeMenu}</div> */}
 
-                {
-                  activeMenu === "Solutions" &&
+                {activeMenu === "Solutions" && (
                   <div className="w-2/3 flex h-full">
-                  {SolutionItems.map((item, idx) => (
-                    <div key={idx} className="relative w- cursor-pointer">
-                      <InterestedCardItem
-                        description={item.description}
-                        gradient={item.gradient}
-                        hoverBorder={item.hoverBorder}
-                        href={item.href}
-                        label={item.label}
-                        title={item.tittle}
-                        image={item.image}
-                      />
+                    {SolutionItems.map((item, idx) => (
+                      <div key={idx} className="relative w- cursor-pointer">
+                        <InterestedCardItem
+                          description={item.description}
+                          gradient={item.gradient}
+                          hoverBorder={item.hoverBorder}
+                          href={item.href}
+                          label={item.label}
+                          title={item.tittle}
+                          image={item.image}
+                        />
+                      </div>
+                    ))}
+
+                    <div className="w-1/3 ml-5 mt-3 pl-4 border-l-2 border-white">
+                      <ul className="text-3xl flex flex-col text-white justify-evenly h-[45vh]">
+                        <li className="text-lg translate-x-1 text-orange-400">
+                          All Solutions
+                        </li>
+                        <li className="group flex  items-center hover:text-white ">
+                          <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <ArrowRight />
+                          </div>
+                          <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
+                            <Link href="/solutions/apartments">Apartments</Link>
+                          </div>
+                        </li>
+                        <li className="group flex  items-center hover:text-white ">
+                          <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <ArrowRight />
+                          </div>
+                          <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
+                            <Link href="/solutions/bank">Banks</Link>
+                          </div>
+                        </li>
+                        <li className="group flex  items-center hover:text-white ">
+                          <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <ArrowRight />
+                          </div>
+                          <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
+                            <Link href="/solutions/campus">Campuses</Link>
+                          </div>
+                        </li>
+                        <li className="group flex  items-center hover:text-white ">
+                          <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <ArrowRight />
+                          </div>
+                          <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
+                            <Link href="/solutions/hotels">Hotels</Link>
+                          </div>
+                        </li>
+                        <li className="group flex  items-center hover:text-white ">
+                          <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                            <ArrowRight />
+                          </div>
+                          <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
+                            <Link href="/solutions/retail">Retail</Link>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
-                  ))}
-                  
-                  <div className="w-1/3 ml-5 mt-3 pl-4 border-l-2 border-white">
-                    <ul className="text-3xl flex flex-col text-white justify-evenly h-[45vh]">
-                      <li className="text-lg translate-x-1 text-orange-400">All Solutions</li>
-                      <li className="group flex  items-center hover:text-white ">
-                        <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                          <ArrowRight />
-                        </div>
-                        <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
-                          <Link href="/solutions/apartments">Apartments</Link>
-                        </div>
-                      </li>
-                      <li className="group flex  items-center hover:text-white ">
-                        <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                          <ArrowRight />
-                        </div>
-                        <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
-                          <Link href="/solutions/bank">Banks</Link>
-                        </div>
-                      </li>
-                      <li className="group flex  items-center hover:text-white ">
-                        <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                          <ArrowRight />
-                        </div>
-                        <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
-                          <Link href="/solutions/campus">Campuses</Link>
-                        </div>
-                      </li>
-                      <li className="group flex  items-center hover:text-white ">
-                        <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                          <ArrowRight />
-                        </div>
-                        <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
-                          <Link href="/solutions/hotels">Hotels</Link>
-                        </div>
-                      </li>
-                      <li className="group flex  items-center hover:text-white ">
-                        <div className="opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                          <ArrowRight />
-                        </div>
-                        <div className="group-hover:translate-x-2 -translate-x-5 transform transition-transform duration-500">
-                          <Link href="/solutions/retail">Retail</Link>
-                        </div>
-                      </li>
-                    </ul>
                   </div>
-                </div>
-                }
+                )}
               </div>
             </motion.div>
           </>
         )}
       </AnimatePresence>
 
+      
       {/* MOBILE SLIDING PANEL */}
       <AnimatePresence>
         {mobileOpen && (
           <>
-            {/* backdrop for mobile panel */}
+            {/* backdrop */}
             <motion.div
               className="fixed inset-0 bg-black/40 z-40"
               initial={{ opacity: 0 }}
@@ -300,6 +302,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             />
 
+            {/* side panel */}
             <motion.aside
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
@@ -307,50 +310,70 @@ export default function Navbar() {
               transition={{ duration: 0.38, ease: "easeInOut" }}
               className="fixed -top-[64px] left-0 bottom-0 w-full bg-[#08156B] text-white z-40 flex flex-col p-6"
             >
-              {/* menu items with expand */}
-              <nav className="flex-1  overflow-auto mt-40">
-                <ul className="space-y-4">
-                  {menuItems.map((item, idx) => (
-                    <li key={idx}>
-                      <button
-                        className="w-full flex justify-between items-center text-left text-lg font-medium"
-                        onClick={() =>
-                          setExpandedItem(
-                            expandedItem === item.page ? null : item.page
-                          )
-                        }
-                      >
-                        <span>{item.page}</span>
-                        <span className="text-2xl">
-                          {expandedItem === item.page ? "−" : "+"}
-                        </span>
-                      </button>
-
-                      <AnimatePresence>
-                        {expandedItem === item.page && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.28 }}
+              {/* menu items */}
+              <nav className="flex-1 overflow-auto mt-35">
+                <ul className="space-y-3">
+                  {menuItems.map((item, idx) => {
+                    if (item.page === "Solutions") {
+                      // Solutions dropdown
+                      return (
+                        <li key={idx}>
+                          <button
+                            className="w-full flex justify-between items-center text-left text-lg font-medium"
+                            onClick={() =>
+                              setExpandedItem(
+                                expandedItem === "Solutions"
+                                  ? null
+                                  : "Solutions"
+                              )
+                            }
                           >
-                            <div className="pl-4 py-2 text-sm text-gray-300">
-                              <div className="mb-2">
-                                {item.page} Section Content
-                              </div>
-                              <Link
-                                href={item.url}
-                                onClick={() => setMobileOpen(false)}
-                                className="inline-block underline text-sm"
+                            <span>{item.page}</span>
+                            <span className="text-2xl">
+                              {expandedItem === "Solutions" ? "−" : "+"}
+                            </span>
+                          </button>
+
+                          <AnimatePresence>
+                            {expandedItem === "Solutions" && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
                               >
-                                Go to {item.page}
-                              </Link>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </li>
-                  ))}
+                                <div className="pl-4 py-2 text-sm text-gray-300 space-y-3">
+                                  {SolutionItems.map((sol, sIdx) => (
+                                    <Link
+                                      key={sIdx}
+                                      href={sol.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="block hover:text-orange-400 transition"
+                                    >
+                                      {sol.tittle}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </li>
+                      );
+                    } else {
+                      // Direct redirect for all other menu items
+                      return (
+                        <li key={idx}>
+                          <Link
+                            href={item.url}
+                            onClick={() => setMobileOpen(false)}
+                            className="block text-lg font-medium hover:text-orange-400 transition"
+                          >
+                            {item.page}
+                          </Link>
+                        </li>
+                      );
+                    }
+                  })}
                 </ul>
               </nav>
 
