@@ -7,7 +7,7 @@ const deletingSpeed = 70;
 const delayBetweenWords = 1500; // pause after typing a word
 
 export default function TypeWriter() {
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
   const [index, setIndex] = useState(0); // which word
   const [subIndex, setSubIndex] = useState(0); // which letter
   const [deleting, setDeleting] = useState(false);

@@ -2,7 +2,7 @@
 import services from "@/constants/servicePage/cards.json";
 import ServiceCard from "@/components/cards/ServicesCard";
 import ServicesHero from "@/components/Hero/ServicesHero";
-import ServicesFunnelCard from "@/components/cards/ServicesFunnelCard";
+
 
 export default function ServicesPage() {
   return (

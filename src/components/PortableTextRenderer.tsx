@@ -1,57 +1,110 @@
-// components/PortableTextRenderer.tsx
-'use client'
+import React, { ReactNode } from "react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
+import Image from "next/image";
+import { urlFor } from "@/sanity/lib/image";
 
-import { PortableText, PortableTextComponents } from '@portabletext/react';
-import { urlFor } from '@/sanity/lib/image';
+// EXPORTED TYPES: These are the definitive type definitions for the project
+export interface SanityAsset {
+  _type: "image";
+  asset: {
+    _ref: string;
+  };
+  caption?: string;
+  alt?: string;
+}
 
+export interface PortableTextMarkDefinition {
+  href: string;
+  _key: string;
+  _type: string;
+}
+
+export interface PortableTextBlock {
+  _key: string;
+  _type: string;
+  children: { text: string }[];
+  markDefs: PortableTextMarkDefinition[]; // Using the strict exported type here
+}
+// End of EXPORTED TYPES
+
+// Define the custom components object
 const components: PortableTextComponents = {
   types: {
-    image: ({ value }: any) => {
-      if (!value || !value.asset) return null;
+    image: ({ value }: { value: SanityAsset }) => {
+      if (!value?.asset?._ref) {
+        return null;
+      }
+
+      const imageUrl = urlFor(value).auto("format").fit("max").url();
+      const caption = value.caption || value.alt;
 
       return (
-        <img
-          src={urlFor(value).width(400).auto('format').url()}
-          alt={value?.caption ?? ''}
-          className="my-4 mx-auto rounded"
-        />
+        <figure className="my-8 rounded-lg overflow-hidden">
+          <div
+            className="relative w-full h-auto"
+            style={{ minHeight: "300px" }}
+          >
+            <Image
+              src={imageUrl}
+              alt={caption || "Content image"}
+              fill
+              className="object-contain"
+              sizes="(max-width: 800px) 100vw, 800px"
+              loading="lazy"
+            />
+          </div>
+          {caption && (
+            <figcaption className="mt-2 text-center text-sm text-gray-500">
+              {caption}
+            </figcaption>
+          )}
+        </figure>
       );
     },
   },
+
   marks: {
-    link: ({ children, value }: any) => {
-      const href = value?.href || '';
-      const external = href && href.startsWith('http');
+    link: ({
+      value,
+      children,
+    }: {
+      value?: { href?: string };
+      children: ReactNode;
+    }) => {
+      const href = value?.href || "#";
       return (
         <a
           href={href}
-          target={external ? '_blank' : undefined}
-          rel={external ? 'noopener noreferrer' : undefined}
-          className="text-blue-400 underline"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 underline hover:text-blue-800 transition"
         >
           {children}
         </a>
       );
     },
   },
-  list: {
-    bullet: ({ children }: any) => (
-      <ul className="list-disc ml-6 space-y-1">{children}</ul>
-    ),
-    number: ({ children }: any) => (
-      <ol className="list-decimal ml-6 space-y-1">{children}</ol>
-    ),
-  },
+
   block: {
-    h2: ({ children }: any) => (
-      <h2 className="text-2xl font-semibold my-4">{children}</h2>
+    h1: ({ children }: { children?: ReactNode }) => (
+      <h1 className="text-4xl font-bold my-4">{children}</h1>
     ),
-    normal: ({ children }: any) => (
-      <p className="my-3 leading-7">{children}</p>
+    h2: ({ children }: { children?: ReactNode }) => (
+      <h2 className="text-3xl font-bold my-4">{children}</h2>
     ),
   },
 };
 
-export default function PortableTextRenderer({ value }: { value: any }) {
-  return <PortableText value={value || []} components={components} />;
+export default function PortableTextRenderer({
+  content,
+}: {
+  content: PortableTextBlock[];
+}) {
+  if (!content) return null;
+
+  return (
+    <div className="prose max-w-none">
+      <PortableText value={content} components={components} />
+    </div>
+  );
 }

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import ContactFormCarousel from "../carousels/ContactFormCarousel";
 import { toast } from "sonner";
 
 export const ContactForm1 = () => {

@@ -11,7 +11,11 @@
 // }
 // lib/image.ts
 import imageUrlBuilder from '@sanity/image-url';
-import { client } from './client';
+// 1. IMPORT the specific type for a Sanity image source
+import { SanityImageSource } from "@sanity/image-url/lib/types/types"; 
+import { client } from './client'; // Assuming './client' exports the Sanity client instance
 
 const builder = imageUrlBuilder(client);
-export const urlFor = (source: any) => builder.image(source);
+
+// 2. Use the specific imported type instead of 'any'
+export const urlFor = (source: SanityImageSource) => builder.image(source);

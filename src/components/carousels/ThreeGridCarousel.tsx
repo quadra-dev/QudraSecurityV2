@@ -15,7 +15,7 @@ interface CarouselProps {
   items: Item[];
   direction: "vertical" | "horizontal";
   index: number;
-  paused: boolean;
+  _paused: boolean;
   setPaused: (value: boolean) => void;
   showOverlay?: boolean;
   gradient?: string;
@@ -25,7 +25,7 @@ const Carousel: React.FC<CarouselProps> = ({
   items,
   direction,
   index,
-  paused,
+  _paused,
   setPaused,
   showOverlay = false,
   gradient = "from-black/50 to-transparent",
@@ -129,7 +129,7 @@ export default function ThreeGridCarousel() {
           items={verticalItems}
           direction="vertical"
           index={index}
-          paused={paused}
+          _paused={paused}
           setPaused={setPaused}
           showOverlay
           gradient="from-green-400 to-transparent"
@@ -142,7 +142,7 @@ export default function ThreeGridCarousel() {
           items={horizontalItems1}
           direction="horizontal"
           index={index}
-          paused={paused}
+          _paused={paused}
           setPaused={setPaused}
           showOverlay
           gradient="from-pink-500 to-transparent"
@@ -155,7 +155,7 @@ export default function ThreeGridCarousel() {
           items={horizontalItems2}
           direction="horizontal"
           index={index}
-          paused={paused}
+          _paused={paused}
           setPaused={setPaused}
           showOverlay
           gradient="from-yellow-400 to-transparent"

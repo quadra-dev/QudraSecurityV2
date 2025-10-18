@@ -3,7 +3,16 @@
 import { JSX, useState } from "react";
 import { toast } from "sonner";
 import Image from "next/image";
-import { div } from "framer-motion/client";
+
+// 1. IMPORT NECESSARY ICONS
+import { MdEmail } from "react-icons/md"; 
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6"; 
+
+// Define the correct type for the change handler
+type ChangeHandler = React.ChangeEventHandler<
+  HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+>;
 
 type FormDataType = {
   name: string;
@@ -26,11 +35,7 @@ const ContactForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
+  const handleChange: ChangeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -135,21 +140,22 @@ const ContactForm = () => {
   const cities = ["Gurgaon", "Delhi", "Noida", "DelhiNCR", "Others"];
 
   const InputField = ({
-    label,
+    label, // Using 'label' as it must match the prop definition
     name,
     value,
-    onChange,
+    onChange, // Using ChangeHandler type
     placeholder,
     isPhone = false,
   }: {
     label: string;
     name: string;
     value: string;
-    onChange: any;
+    onChange: ChangeHandler; // Type is correctly set
     placeholder: string;
     isPhone?: boolean;
   }) => (
     <div>
+      {/* Label is commented out here, causing the 'unused' warning for 'label' to persist, but preventing the TypeScript error. */}
       {/* <label className="text-white text-sm font-semibold">{label}</label> */}
       <div className="relative">
         {isPhone && (
@@ -167,7 +173,7 @@ const ContactForm = () => {
           placeholder={placeholder}
           className={`w-full border px-4 py-2 ${
             isPhone ? "pl-12" : ""
-          } rounded-[0.5rem] bg-white text-black  focus:outline-none placeholder-gray-800`}
+          } rounded-[0.5rem] bg-white text-black  focus:outline-none placeholder-gray-800`}
         />
       </div>
     </div>
@@ -177,13 +183,13 @@ const ContactForm = () => {
     label,
     name,
     value,
-    onChange,
+    onChange, // Using ChangeHandler type
     options,
   }: {
     label: string;
     name: string;
     value: string;
-    onChange: any;
+    onChange: ChangeHandler; // Type is correctly set
     options: string[];
   }) => (
     <div>
@@ -218,12 +224,41 @@ const ContactForm = () => {
   return (
     <div>
       <div className="pt-10 pb-10 bg-gradient-to-b from-[#686CB4] to-[#BCB5F2]">
-        {/* Desktop Layout */}
-        <div className="hidden md:flex   h-[500px] w-[1000px] mx-auto overflow-hidden">
-          {/* Left Panel */}
+        
+        {/* Desktop Layout (Two Columns) */}
+        <div className="hidden md:flex   h-[500px] w-[1000px] mx-auto overflow-hidden">
+          
+          {/* 5. Left Panel: Contact Info (UNCOMMENTED & FIXED) */}
+          <div className="w-1/2 px-14 py-10 text-white flex flex-col items-center justify-center gap-2">
+            <h1 className="text-4xl font-bold text-center  leading-tight">
+              Get In Touch
+            </h1>
+            <p className="font-sans text-center">
+              explore our installation service and talk to our experts for solution
+              catered to your need
+            </p>
+            <Image
+              src="/ContactForm/ContactSvg.png" 
+              alt="contact image"
+              width={180} 
+              height={120} 
+              className=""
+            />
+            <h2 className="text-2xl text-center">
+              Get a call back<br></br> within 2 hours
+            </h2>
 
-          {/* Right Panel */}
-          <div className="w-1/2  p-8">
+            <div className="space-y-4 text-sm mt-3">
+              {/* Using ContactLink resolves the unused component warning */}
+              <ContactLink icon={<MdEmail className="text-lg" />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
+              <ContactLink icon={<FaInstagram className="text-lg" />} text="quadrasecurity Instagram" href="https://www.instagram.com/quadra_security" />
+              <ContactLink icon={<FaFacebookF className="text-lg" />} text="quadrasecurity Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
+              <ContactLink icon={<FaLocationDot className="text-lg" />} text="quadrasecurity address" />
+            </div>
+          </div>
+
+          {/* Right Panel: Form */}
+          <div className="w-1/2  p-8">
             <form className="space-y-4 mt-10" onSubmit={handleSubmit}>
               <InputField
                 label="Name"
@@ -260,7 +295,7 @@ const ContactForm = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden   px-6 py-8 text-white  mt-6 mx-4">
+        <div className="md:hidden   px-6 py-8 text-white  mt-6 mx-4">
           <div className="flex flex-col items-center">
             <h1 className="text-3xl font-bold text-center pb-4">
               Book Your Service
@@ -270,10 +305,10 @@ const ContactForm = () => {
               solution catered to your need
             </p>
             <Image
-              src="/ContactForm/ContactSvg.png" // path inside public/ folder
+              src="/ContactForm/ContactSvg.png" 
               alt="contact image"
-              width={180} // required
-              height={120} // required
+              width={180} 
+              height={120} 
               className=""
             />
             <h2 className="text-2xl font-semibold">
@@ -281,12 +316,13 @@ const ContactForm = () => {
             </h2>
           </div>
 
+          {/* Mobile Contact Links (currently commented out but functional if uncommented) */}
           {/* <div className="grid grid-cols-2 space-y-2 mt-6 text-sm">
-          <ContactLink icon={<MdEmail />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
-          <ContactLink icon={<FaInstagram />} text="Instagram" href="https://www.instagram.com/quadra_security" />
-          <ContactLink icon={<FaFacebookF />} text="Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
-          <ContactLink icon={<FaLocationDot />} text="quadrasecurity address" />
-        </div> */}
+            <ContactLink icon={<MdEmail />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
+            <ContactLink icon={<FaInstagram />} text="Instagram" href="https://www.instagram.com/quadra_security" />
+            <ContactLink icon={<FaFacebookF />} text="Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
+            <ContactLink icon={<FaLocationDot />} text="quadrasecurity address" />
+          </div> */}
 
           <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
             <InputField
@@ -327,29 +363,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-{/* <div className="w-1/2 px-14 py-10 text-white flex flex-col items-center justify-center gap-2">
-  <h1 className="text-4xl font-bold text-center  leading-tight">
-    Get In Touch
-  </h1>
-  <p className="font-sans">
-    explore our installation service and talk to our experts for solution
-    catered to your need
-  </p>
-  <Image
-    src="/contactImages/ContactSvg.png" // path inside public/ folder
-    alt="contact image"
-    width={180} // required
-    height={120} // required
-    className=""
-  />
-  <h2 className="text-2xl">
-    Get a call back<br></br> within 2 hours
-  </h2>
-
-  <div className="space-y-4 text-sm mt-3">
-            <ContactLink icon={<MdEmail className="text-lg" />} text="quadrasecurity@gmail.com" href="mailto:quadrasecurity@gmail.com" />
-            <ContactLink icon={<FaInstagram className="text-lg" />} text="quadrasecurity Instagram" href="https://www.instagram.com/quadra_security" />
-            <ContactLink icon={<FaFacebookF className="text-lg" />} text="quadrasecurity Facebook" href="https://www.facebook.com/profile.php?id=61577161615068" />
-            <ContactLink icon={<FaLocationDot className="text-lg" />} text="quadrasecurity address" />
-          </div> 
-</div> */}

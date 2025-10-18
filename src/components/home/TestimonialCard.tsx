@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
 

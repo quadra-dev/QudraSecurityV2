@@ -22,7 +22,7 @@ export default function StrategyCard() {
 
   // Ref + inView for image animation
   const imageRef = useRef(null);
-  const isInView = useInView(imageRef, { once: true, margin: "-100px" });
+  // const isInView = useInView(imageRef, { once: true, margin: "-100px" });
 
   return (
     <div className="flex flex-col md:flex-row py-10 px-4">

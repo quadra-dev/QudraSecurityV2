@@ -5,7 +5,6 @@ import OrangeButton from "../buttons/OrangeButton";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { div } from "framer-motion/client";
 import { ArrowRight } from "lucide-react";
 
 type CardProps = {
