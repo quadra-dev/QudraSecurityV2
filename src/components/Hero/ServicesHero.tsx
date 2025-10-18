@@ -27,8 +27,8 @@ export default function AboutHero() {
   ];
   const MotionImage = motion(Image);
   return (
-    <div className="h-auto  w-full  bg-gradient-to-b from-[#1d1de5] via-[#0e3ba4] to-[#09095c] pt-15 ">
-      <section className="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 py-12 md:py-16">
+    <div className="h-auto md: w-full bg-gradient-to-b from-[#1d1de5] via-[#0e3ba4] to-[#09095c] pt-15 ">
+      <section className=" flex flex-col  md:flex-row items-center justify-between px-4 sm:px-8 py-2 md:py-5">
 
         {/* <div className="flex-1 text-center md:text-left space-y-6 pl-15">
           <h1 className="text-4xl md:text-8xl font-bold text-[#B7D3FF] text-shadow-md">
@@ -69,7 +69,7 @@ export default function AboutHero() {
                 alt="dot"
                 width={350} // required in next/image
                 height={350}
-                className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 "
+                className="w-48 h-48 hidden sm:w-64 sm:h-64  md:w-80 md:h-80 "
                 initial={{ scale: 0 }}
                 animate={{ scale: 1.2 }}
                 transition={{ duration: 1.1, ease: "easeOut",delay:3.4 }}
