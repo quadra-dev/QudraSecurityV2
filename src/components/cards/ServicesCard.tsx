@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 type FAQ = {
   question: string;
@@ -41,7 +41,7 @@ export default function ServiceCard({
     if (!cardRef.current) return;
 
     const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         if (entry.contentRect.height) {
           setLineHeight(entry.contentRect.height);
         }
@@ -168,7 +168,9 @@ export default function ServiceCard({
 
           {/* Image Section */}
           <div className="flex-1 flex justify-center items-center">
-            <img
+            <Image
+            height={400}
+            width={400}
               src={image}
               alt={title}
               className="w-full max-w-[220px] md:max-w-xs rounded-lg object-contain "

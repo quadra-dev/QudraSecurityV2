@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { FaCheck } from "react-icons/fa";
 
 const images = [
@@ -44,7 +43,7 @@ export default function ContactFormCarousel() {
                         <FaCheck className="text-white text-2xl " />
                     </div>
                     <div className="text-lg px-3 flex items-center">
-                        Custom solutions for each property's unique needs
+                        Custom solutions for each property unique needs
                     </div>
                 </div>
                 <div className="flex flex-row w-full">

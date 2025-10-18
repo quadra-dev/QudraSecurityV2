@@ -1,5 +1,5 @@
 import InterestedCard from "@/components/cards/InterestedCard";
-import ContactForm from "@/components/contactForms/Contactform";
+
 import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/apartments.json"
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";

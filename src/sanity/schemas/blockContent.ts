@@ -1,5 +1,7 @@
 // studio/schemas/blockContent.ts
-export default {
+
+// Assign the schema configuration to a named variable
+const blockContentSchema = {
   name: 'blockContent',
   title: 'Block Content',
   type: 'array',
@@ -50,4 +52,7 @@ export default {
       ]
     }
   ]
-}
+};
+
+// Export the named variable as the module default
+export default blockContentSchema;

@@ -25,7 +25,7 @@ export default function About() {
               <Link href="/contact">
                 <button className="px-4 py-3 bg-[#434CFF] text-white rounded-3xl shadow-md hover:bg-yellow-600 flex gap-2 mt-6">
                   Explore More
-                  <img
+                  <Image
                     src="/ServicesImages/LinkArrow.svg"
                     alt="icon"
                     width={30}
@@ -92,7 +92,7 @@ export default function About() {
           className="p-6 rounded-2xl shadow-md bg-white border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center"
         >
           <div className="mb-4">
-            <img
+            <Image
               src={card.icon}
               alt={card.title}
               width={64}

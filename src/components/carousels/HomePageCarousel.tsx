@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { ArrowLeft, ArrowRight } from "lucide-react"; // <-- Make sure you have this import!
 
 const slides = [
   {
@@ -95,7 +96,7 @@ export default function Carousel() {
   }, [current]);
 
   return (
-    <div className="relative w-[70%] hover:scale-[102%] transition:scale duration-300  mx-auto h-[500px] overflow-hidden rounded-lg shadow-sm">
+    <div className="relative w-[70%] hover:scale-[102%] transition:scale duration-300  mx-auto h-[500px] overflow-hidden rounded-lg shadow-sm">
       {/* Tabs at top */}
       {/* <div className="absolute top-4 left-4 flex gap-4 z-20">
         {slides.map((slide, index) => (
@@ -163,8 +164,21 @@ export default function Carousel() {
         </div>
       </div>
 
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 z-50 -translate-y-1/2 p-3 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+      >
+        <ArrowLeft size={24} />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 z-50 -translate-y-1/2 p-3 rounded-full bg-black/30 text-white hover:bg-black/50 transition-colors"
+      >
+        <ArrowRight size={24} />
+      </button>
+
       {/* Navigation dots */}
-      <div className="absolute bottom-4 left-[20%] -translate-x-[50%] flex  gap-2 z-50">
+      <div className="absolute bottom-4 left-[20%] -translate-x-[50%] flex  gap-2 z-50">
         {slides.map((_, index) => (
           <button
             key={index}
