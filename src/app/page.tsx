@@ -43,7 +43,7 @@ export default function Home() {
                 transition={{ duration: 0.1 }}
               >
                 <h1 className="md:hidden text-white text-center text-xl font-semibold px-4">
-                  Your Trusted Partner for CCTV, Biometric & Security Systems in Gurgao`
+                  Your Trusted Partner for CCTV, Biometric & Security Systems in Gurugram
                 </h1>
                 <h1 className="hidden md:block text-white lg:text-5xl font-semibold">
                   Complete Security Solutions for Your <br /> Home & Office in
