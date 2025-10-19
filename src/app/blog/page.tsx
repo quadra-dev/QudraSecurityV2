@@ -2,51 +2,78 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ChangeEvent } from "react";
 import { client } from "@/sanity/lib/client";
 import { POSTS_PAGED } from "@/sanity/lib/sanity.queries";
 import PostCard from "@/components/cards/BlogCard";
 import { urlFor } from "@/sanity/lib/image";
 
+interface SanityImage {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+}
+
+
+interface Post {
+  _id: string;
+  title: string;
+  slug: {
+    _type: "slug";
+    current: string;
+  };
+  excerpt: string;
+  subtitle?: string;
+  coverImage?: SanityImage;
+  categories?: string[];
+  publishedAt: string;
+}
+
 export default function BlogPage() {
-  const [posts, setPosts] = useState<any[]>([]);
-  const [filteredPosts, setFilteredPosts] = useState<any[]>([]);
-  const [heroPost, setHeroPost] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [posts, setPosts] = useState<Post[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
+  const [heroPost, setHeroPost] = useState<Post | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
   useEffect(() => {
     async function fetchPosts() {
-      // Fetch posts with categories populated
-      const query =
-        POSTS_PAGED(0, 9) +
-        `{
-        ...,
-        "categories": categories[]->title
-      }`;
-      const data = await client.fetch(query);
-      setPosts(data);
-      setFilteredPosts(data);
-      setHeroPost(data[0]);
-      setLoading(false);
+      try {
+        const query =
+          POSTS_PAGED(0, 9) +
+          `{
+            ...,
+            "categories": categories[]->title
+          }`;
+
+        const data: Post[] = await client.fetch(query);
+        setPosts(data);
+        setFilteredPosts(data);
+        setHeroPost(data[0]);
+      } catch (error) {
+        console.error("Failed to fetch posts:", error);
+      } finally {
+        setLoading(false);
+      }
     }
+
     fetchPosts();
   }, []);
 
   // Filter posts by search query and category
   useEffect(() => {
     const filtered = posts.filter((post) => {
-      // Check if post matches search query
       const matchesSearch = searchQuery
         ? post.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
           post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())
         : true;
 
-      // Check if post matches selected category
       const matchesCategory = activeCategory
         ? post.categories?.some(
-            (category: string) => category === activeCategory
+            (category) => category === activeCategory
           )
         : true;
 
@@ -56,23 +83,14 @@ export default function BlogPage() {
     setFilteredPosts(filtered);
   }, [searchQuery, activeCategory, posts]);
 
-  // Handle category selection
   const handleCategoryClick = (category: string) => {
-    if (activeCategory === category) {
-      // If clicking the same category, deselect it
-      setActiveCategory(null);
-    } else {
-      // Select the new category
-      setActiveCategory(category);
-    }
+    setActiveCategory((prev) => (prev === category ? null : category));
   };
 
-  // Handle search input change
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 
-  // Clear all filters
   const clearFilters = () => {
     setSearchQuery("");
     setActiveCategory(null);
@@ -101,11 +119,13 @@ export default function BlogPage() {
       {heroPost && (
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-black/40 z-10" />
-          <img
-            src={urlFor(heroPost.coverImage).width(2000).auto("format").url()}
-            alt={heroPost.title}
-            className="absolute inset-0 w-full h-full object-cover opacity-70"
-          />
+          {heroPost.coverImage && (
+            <img
+              src={urlFor(heroPost.coverImage).width(2000).auto("format").url()}
+              alt={heroPost.title}
+              className="absolute inset-0 w-full h-full object-cover opacity-70"
+            />
+          )}
           <div className="relative z-20 max-w-6xl mx-auto px-6 py-32">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -144,7 +164,6 @@ export default function BlogPage() {
               className="space-y-4"
             >
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                {/* Search Form */}
                 <form
                   onSubmit={(e) => e.preventDefault()}
                   className="flex w-full sm:w-auto bg-white/10 backdrop-blur-md rounded-full overflow-hidden border border-white/10"
@@ -177,7 +196,6 @@ export default function BlogPage() {
                   </button>
                 </form>
 
-                {/* Clear Filters Button */}
                 {(searchQuery || activeCategory) && (
                   <button
                     onClick={clearFilters}
@@ -205,12 +223,11 @@ export default function BlogPage() {
                 ))}
               </div>
 
-              {/* Active Filters Display */}
               {(searchQuery || activeCategory) && (
                 <div className="text-sm text-gray-300">
                   Showing results for:
                   {searchQuery && (
-                    <span className="ml-2 text-white">"{searchQuery}"</span>
+                    <span className="ml-2 text-white">&quot;{searchQuery}&quot;</span>
                   )}
                   {searchQuery && activeCategory && (
                     <span className="mx-2">in</span>
@@ -234,7 +251,7 @@ export default function BlogPage() {
             >
               {filteredPosts.length > 0 ? (
                 filteredPosts
-                  .filter((p) => p._id !== heroPost?._id) // Exclude hero post from grid
+                  .filter((p) => p._id !== heroPost?._id)
                   .map((p) => <PostCard key={p._id} post={p} />)
               ) : (
                 <div className="col-span-full text-center py-12">
@@ -266,7 +283,6 @@ export default function BlogPage() {
                   className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41] transition-all duration-300 backdrop-blur-sm shadow-md"
                 >
                   <div className="flex items-center gap-3">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     {p.coverImage && (
                       <img
                         src={urlFor(p.coverImage)
@@ -281,7 +297,7 @@ export default function BlogPage() {
                     <div>
                       <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
                         {p.title.length > 50
-                          ? p.title.slice(0, 50) + "..."
+                          ? `${p.title.slice(0, 50)}...`
                           : p.title}
                       </h4>
                       {p.subtitle && (
@@ -291,9 +307,10 @@ export default function BlogPage() {
                       )}
                     </div>
                   </div>
-                  <div className="absolute bottom-0 left-2 w-0 h-[2px] bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] transition-all duration-500 group-hover:w-[95%]"></div>
+                  <div className="absolute bottom-0 left-2 w-0 h-[2px] bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] transition-all duration-500 group-hover:w-[95%]" />
                 </Link>
               ))}
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

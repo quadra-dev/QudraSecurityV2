@@ -1,11 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/display-name */
+/* eslint-disable @typescript-eslint/require-await */
+
 import { client } from "@/sanity/lib/client";
 import { POST_BY_SLUG, POSTS_PAGED } from "@/sanity/lib/sanity.queries";
 import { urlFor } from "@/sanity/lib/image";
 import Collage from "@/components/Collage";
-import PostCard from "@/components/cards/BlogCard";
 import { PortableText } from "@portabletext/react";
 import Link from "next/link";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
@@ -14,19 +17,25 @@ type Post = {
   _id: string;
   title: string;
   subtitle?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   coverImage?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   collage?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   content?: any;
-  slug: { current: string };
+
+  slug: { current: string; _type?: "slug" };
 };
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
+
 
 // ✅ Metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post: Post | null = await client.fetch(POST_BY_SLUG, { slug: params.slug });
+  const { slug } = await params; // ✅ await the promise
+  const post: Post | null = await client.fetch(POST_BY_SLUG, { slug });
 
   if (!post) {
     return {
@@ -48,7 +57,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // 🧠 Page Component
 export default async function PostPage({ params }: Props) {
-  const slug = params.slug;
+  const {slug} = await params;
   const post: Post | null = await client.fetch(POST_BY_SLUG, { slug });
   const otherPosts: Post[] = await client.fetch(POSTS_PAGED(0, 8));
   const related = otherPosts.filter((p) => p.slug.current !== slug);
@@ -127,14 +136,20 @@ export default async function PostPage({ params }: Props) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   {p.coverImage && (
                     <img
-                      src={urlFor(p.coverImage).width(100).height(80).auto("format").url()}
+                      src={urlFor(p.coverImage)
+                        .width(100)
+                        .height(80)
+                        .auto("format")
+                        .url()}
                       alt={p.title}
                       className="w-20 h-16 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
                     />
                   )}
                   <div>
                     <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
-                      {p.title.length > 50 ? p.title.slice(0, 50) + "..." : p.title}
+                      {p.title.length > 50
+                        ? p.title.slice(0, 50) + "..."
+                        : p.title}
                     </h4>
                     {p.subtitle && (
                       <p className="text-xs text-gray-400 italic line-clamp-2">
@@ -166,7 +181,11 @@ export default async function PostPage({ params }: Props) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 {p.coverImage && (
                   <img
-                    src={urlFor(p.coverImage).width(600).height(400).auto("format").url()}
+                    src={urlFor(p.coverImage)
+                      .width(600)
+                      .height(400)
+                      .auto("format")
+                      .url()}
                     alt={p.title}
                     className="w-full h-40 object-cover rounded-xl mb-3 group-hover:scale-105 transition-transform duration-300"
                   />
@@ -175,7 +194,9 @@ export default async function PostPage({ params }: Props) {
                   {p.title.length > 60 ? p.title.slice(0, 60) + "..." : p.title}
                 </h3>
                 {p.subtitle && (
-                  <p className="text-sm text-gray-400 italic line-clamp-2">{p.subtitle}</p>
+                  <p className="text-sm text-gray-400 italic line-clamp-2">
+                    {p.subtitle}
+                  </p>
                 )}
               </Link>
             ))}

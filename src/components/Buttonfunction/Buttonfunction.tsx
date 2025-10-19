@@ -4,15 +4,33 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ComparisonSection(data) {
-  const [selected, setSelected] = useState(1);
-  const selectedChallenge = data.data.challenges.find((c) => c.id === selected);
+// ✅ Define prop types (exact shape your component expects)
+type ComparisonSectionProps = {
+  data: {
+    imagePath: string;
+    areas: {
+      id: number;
+      name: string;
+      top: string;
+      left: string;
+    }[];
+    challenges: {
+      id: number;
+      // allow any number of dynamic challenge/offering keys
+      [key: string]: string | number | boolean | undefined;
+    }[];
+  };
+};
 
-  // Extract dynamic points
-  const getPoints = (obj, type) => {
+export default function ComparisonSection({ data }: ComparisonSectionProps) {
+  const [selected, setSelected] = useState(1);
+  const selectedChallenge = data.challenges.find((c) => c.id === selected);
+
+  // ✅ Typed helper function
+  const getPoints = (obj: Record<string, unknown>, type: string): string[] => {
     return Object.keys(obj)
-      .filter((key) => key.startsWith(type) && obj[key]) // filter challenge/offering keys that are not empty
-      .map((key) => obj[key]); // return values only
+      .filter((key) => key.startsWith(type) && typeof obj[key] === "string" && obj[key])
+      .map((key) => obj[key] as string);
   };
 
   const challengePoints = selectedChallenge
@@ -27,13 +45,13 @@ export default function ComparisonSection(data) {
       {/* Image with buttons */}
       <div className="relative w-full z-10">
         <Image
-          src={data.data.imagePath}
+          src={data.imagePath}
           alt="Building"
           width={1200}
           height={800}
           className="rounded-[4rem] w-full h-auto object-contain"
         />
-        {data.data.areas.map((area) => (
+        {data.areas.map((area) => (
           <button
             key={area.id}
             onClick={() => setSelected(area.id)}

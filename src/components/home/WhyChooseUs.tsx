@@ -5,6 +5,7 @@ import { ShieldCheck, Users, Wrench, Camera, Headset, Zap } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import type { Variants } from "framer-motion";
 
 // Hook to detect mobile view
 const useIsMobile = () => {
@@ -18,7 +19,7 @@ const useIsMobile = () => {
   return isMobile;
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
@@ -28,7 +29,7 @@ const itemVariants = {
 };
 
 const WhyChooseUs = () => {
-  const isMobile = useIsMobile();
+  const _isMobile = useIsMobile();
 
   const features = [
     {

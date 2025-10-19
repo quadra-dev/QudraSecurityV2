@@ -1,10 +1,11 @@
 "use client";
+import type { SVGProps } from "react";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 // Reusable Button component
-function ScrollButton({ text, Svg }: { text: string; Svg: React.FC }) {
+function ScrollButton({ text, Svg }: { text: string; Svg: React.FC<SVGProps<SVGSVGElement>> }) {
   return (
     <button className="flex w-full items-center  gap-2 px-4 py-3  bg-white/10 backdrop-blur-md rounded-full shadow-md hover:bg-white/20 transition">
       <Svg className="w-5 h-5" />

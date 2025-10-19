@@ -1,24 +1,21 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { ShieldCheck, Users, Wrench, Camera, Headset, Zap } from "lucide-react";
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import React from "react";
+import { motion, Variants } from "framer-motion";
 
-// Hook to detect mobile view
-const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return isMobile;
-};
+// const useIsMobile = () => {
+//   const [isMobile, setIsMobile] = useState(false);
+//   useEffect(() => {
+//     const handleResize = () => setIsMobile(window.innerWidth < 768);
+//     handleResize();
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+//   return isMobile;
+// };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (i: number) => ({
     opacity: 1,
@@ -27,8 +24,8 @@ const itemVariants = {
   }),
 };
 
-const WhyChooseUs = () => {
-  const isMobile = useIsMobile();
+const WhyChooseUs: React.FC = () => {
+  // const isMobile = useIsMobile();
 
   const features = [
     {
@@ -64,22 +61,10 @@ const WhyChooseUs = () => {
   ];
 
   const motto = [
-    {
-      keyword: "Security",
-      desc: "We safeguard your space with the most reliable security technology.",
-    },
-    {
-      keyword: "Safety",
-      desc: "Your family, staff, and property deserve protection you can trust.",
-    },
-    {
-      keyword: "Surveillance",
-      desc: "Eyes everywhere — smart cameras with real-time monitoring.",
-    },
-    {
-      keyword: "Support",
-      desc: "We’re with you before, during, and after installation.",
-    },
+    { keyword: "Security", desc: "We safeguard your space with the most reliable security technology." },
+    { keyword: "Safety", desc: "Your family, staff, and property deserve protection you can trust." },
+    { keyword: "Surveillance", desc: "Eyes everywhere — smart cameras with real-time monitoring." },
+    { keyword: "Support", desc: "We’re with you before, during, and after installation." },
   ];
 
   return (
@@ -87,12 +72,12 @@ const WhyChooseUs = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
-      className="w-screen flex flex-col items-center justify-center gap-y-10  px-4 py-10"
+      className="w-screen flex flex-col items-center justify-center gap-y-10 px-4 py-10"
     >
       {/* Title */}
       <div className="flex items-center space-x-4 mb-2">
-        <h2 className="text-5xl  font-bold text-center">
-          Why <span className="text-[#FF850B]">Choose </span> Us
+        <h2 className="text-5xl font-bold text-center">
+          Why <span className="text-[#FF850B]">Choose</span> Us
         </h2>
       </div>
 
@@ -121,23 +106,10 @@ const WhyChooseUs = () => {
 
       {/* Our Motto */}
       <div className="flex flex-col items-center gap-y-6 mt-8 max-w-4xl w-full">
-        <h2 className="text-5xl  font-bold text-center">
-          Our <span className="text-[#FF850B]">Moto </span>
+        <h2 className="text-5xl font-bold text-center">
+          Our <span className="text-[#FF850B]">Motto</span>
         </h2>
 
-        {/* Optional Illustration */}
-        {/* <div className="relative w-full h-64 md:h-80">
-          <Image
-            src="/illustrations/security-motto.png" // Replace with the generated image path
-            alt="Security Motto Illustration"
-             width={600}
-    height={300}
-            objectFit="contain"
-            className="rounded-xl"
-          />
-        </div> */}
-
-        {/* Motto Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           {motto.map((item, index) => (
             <motion.div
@@ -149,7 +121,7 @@ const WhyChooseUs = () => {
               viewport={{ once: true }}
               className="bg-white/10 p-4 rounded-xl border border-white/20"
             >
-              <h3 className="text-[#FF850B]text-lg font-bold mb-1">{item.keyword}</h3>
+              <h3 className="text-[#FF850B] text-lg font-bold mb-1">{item.keyword}</h3>
               <p className="text-white/80 text-sm">{item.desc}</p>
             </motion.div>
           ))}
