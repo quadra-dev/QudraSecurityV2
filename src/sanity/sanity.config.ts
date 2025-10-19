@@ -1,21 +1,3 @@
-// sanity/sanity.config.ts
-// import { defineConfig } from 'sanity'
-// import { structureTool } from 'sanity/structure'
-// import blog from '@/sanity/schemas/blog'
-// import author from '@/sanity/schemas/author' // optional but nice to have
-// import blockContent from '@/sanity/schemas/blockContent'
-
-// export default defineConfig({
-//   name: 'default',
-//   title: 'QuadraSecurity Blog',
-//   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!, // placeholder
-//   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,      // placeholder
-//   plugins: [structureTool()],
-//   schema: {
-//     types: [blog, author, blockContent],
-//   },
-// })
-// sanity/sanity.config.ts
 import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision'; // Optional but very useful plugin
