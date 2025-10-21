@@ -26,10 +26,10 @@ export default function Footer() {
         <div className="space-y-3">
           <h3 className="font-semibold text-lg mb-4 uppercase tracking-wide text-gray-200">Our Services</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link href="/services#aboveCctv" className="hover:text-white transition">CCTV & Surveillance</Link></li>
-            <li><Link href="/services#Cctv" className="hover:text-white transition">Biometric Systems</Link></li>
-            <li><Link href="/services#Biometric" className="hover:text-white transition">ANPR</Link></li>
-            <li><Link href="/services#ANPR" className="hover:text-white transition">EPABX Systems</Link></li>
+            <li><Link href="/services#cctv-surveillance" className="hover:text-white transition">CCTV & Surveillance</Link></li>
+            <li><Link href="/services#biometric-systems" className="hover:text-white transition">Biometric Systems</Link></li>
+            <li><Link href="/services#anpr" className="hover:text-white transition">ANPR</Link></li>
+            <li><Link href="/services#epabx-systems" className="hover:text-white transition">EPABX Systems</Link></li>
             <li><Link href="/services" className="hover:text-white transition">View All →</Link></li>
           </ul>
         </div>

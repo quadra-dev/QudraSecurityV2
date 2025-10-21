@@ -27,7 +27,7 @@ export default function AboutHero() {
   ];
   const MotionImage = motion(Image);
   return (
-    <div className="h-auto md: w-full bg-gradient-to-b from-[#1d1de5] via-[#0e3ba4] to-[#09095c] pt-15 ">
+    <div className=" hidden md:block h-auto w-full bg-gradient-to-b from-[#1d1de5] via-[#0e3ba4] to-[#09095c] pt-15 ">
       <section className=" flex flex-col  md:flex-row items-center justify-between px-4 sm:px-8 py-2 md:py-5">
 
         {/* <div className="flex-1 text-center md:text-left space-y-6 pl-15">

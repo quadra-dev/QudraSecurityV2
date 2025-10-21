@@ -23,7 +23,8 @@ export default function ServiceCard({
   image,
   dotSvg,
   data,
-}: ServiceCardProps) {
+  id,
+}: ServiceCardProps & {id:string}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<number>(0);
   const [hoveredTab, setHoveredTab] = useState<number | null>(null);
@@ -57,7 +58,7 @@ export default function ServiceCard({
   };
 
   return (
-    <div className="flex flex-col gap-6 w-full max-w-4xl mx-auto px-4 py-6 ">
+    <div id={id} className="flex flex-col gap-6 w-full max-w-4xl mx-auto px-4 py-6 ">
       {/* Title */}
       <h2 className="text-2xl md:text-3xl font-bold text-white">{title}</h2>
 

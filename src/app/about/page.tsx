@@ -146,7 +146,7 @@ export default function About() {
 
 
         {/* Features Section */}
-        <section className="py-5 bg-white">
+        <section className="py-5 bg-white ">
           <Image
             src="/AboutImages/AboutUsimgCircular.svg"
             alt="about"
@@ -154,12 +154,12 @@ export default function About() {
             height={350}
             className="mx-auto py-4"
           />
-          <div className="container mx-auto px-6 text-center">
+          <div className="container mx-auto px-6 text-center pb-16">
             <h2 className="text-3xl font-bold mb-12">
               They Like How We Structure Their Security Strategy
             </h2>
             <div className="grid md:grid-cols-2 gap-12 text-left">
-              <div className="bg-[#F4BABA] p-4 rounded-lg shadow-xl">
+              <div className="bg-[#FFCCE2] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">Define the strategy</h3>
                 <p className="text-gray-800 mt-2">
                   Every strong security plan begins with a clear strategy. We
@@ -169,7 +169,7 @@ export default function About() {
                   systems into one cohesive protection framework.
                 </p>
               </div>
-              <div className="bg-[#EFD073] p-4 rounded-lg shadow-xl">
+              <div className="bg-[#BCF5D7] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">
                   Structure the Security Model
                 </h3>
@@ -182,7 +182,7 @@ export default function About() {
                   your needs.
                 </p>
               </div>
-              <div className="bg-[#98F1AE] p-4 rounded-lg shadow-xl">
+              <div className="bg-[#FFE599] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">Improve Performance</h3>
                 <p className="text-gray-800 mt-2">
                   Our focus is on long-term performance. Through proper
@@ -192,7 +192,7 @@ export default function About() {
                   performance means consistent safety.
                 </p>
               </div>
-              <div className="bg-[#C062EF] p-4 rounded-lg shadow-xl">
+              <div className="bg-[#c062ef9b] p-4 rounded-lg shadow-xl">
                 <h3 className="font-semibold text-lg">
                   Testing and evaluation
                 </h3>
