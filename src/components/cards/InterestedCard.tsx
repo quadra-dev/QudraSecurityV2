@@ -63,7 +63,7 @@ export default function InterestedCard() {
         <div className="grid md:grid-cols-3 gap-4">
 
             <InterestedCardItem
-              href="/seo/"
+              href="/solutions/apartments"
               label="Most Viewed"
               title="Appartments"
               description="Every Property tells a story, make sure yours is one of safety, not full of regrets"
@@ -73,7 +73,7 @@ export default function InterestedCard() {
  
 
           <InterestedCardItem
-            href="/demand-gen/"
+            href="/solutions/retail"
             label="POPULAR"
             title="Retail Solution"
             description="Have a complete view of every corner of your shop with our advanced retail security systems."
@@ -82,10 +82,10 @@ export default function InterestedCard() {
           />
 
           <InterestedCardItem
-            href="/video-services/"
-            label="Video"
-            title="Stop the scroll"
-            description="Create videos that captivate your audience and drive leads—social videos, product explainers, commercials, and more."
+            href="/solutions/bank"
+            label="Secure Banking"
+            title="Bank Solution"
+            description="Protect your bank’s assets, staff, and customers with intelligent surveillance and access control systems designed for 24/7 reliability."
             gradient="bg-[#FFE599]"
             hoverBorder="group-hover:border-[#FFD55E]"
           />
