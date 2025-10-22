@@ -23,41 +23,51 @@ export default function SiteVisitForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitting(true);
 
     const fullPhone = `+91${formData.phone.trim()}`;
     const isValidPhone = /^\+91[6-9][0-9]{9}$/.test(fullPhone);
-    if (!isValidPhone) {
-      toast.error("Please enter a valid 10-digit Indian mobile number");
-      setSubmitting(false);
-      return;
-    }
-
     const nameRegex = /^[A-Za-z\s]+$/;
+
+    // --- Validation ---
     if (!nameRegex.test(formData.name.trim())) {
       toast.error("Please enter a valid name (letters and spaces only)");
-      setSubmitting(false);
       return;
     }
 
+    if (!isValidPhone) {
+      toast.error("Please enter a valid 10-digit Indian mobile number");
+      return;
+    }
+
+    if (!formData.service || !formData.area) {
+      toast.error("Please select both service and area");
+      return;
+    }
+
+    setSubmitting(true);
+
     try {
+      const payload = { ...formData, phone: fullPhone };
+      console.log("📤 Sending payload:", payload);
+
       const response = await fetch("/api/site-visit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, phone: fullPhone }),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
+      console.log("✅ API response:", result);
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         toast.success("We will contact you soon!");
         setFormData({ name: "", phone: "", service: "", area: "" });
       } else {
-        toast.error(result.error || "Something went wrong");
+        toast.error(result.message || "Something went wrong. Try again!");
       }
     } catch (error) {
-      console.error(error);
-      toast.error("Submission failed");
+      console.error("❌ Submission failed:", error);
+      toast.error("Error submitting form. Please try again later.");
     } finally {
       setSubmitting(false);
     }
@@ -72,7 +82,7 @@ export default function SiteVisitForm() {
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="relative w-full shadow-xl max-w-md rounded-3xl bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] backdrop-blur-lg border border-white/20  p-[1px]"
+      className="relative w-full shadow-xl max-w-md rounded-3xl bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] backdrop-blur-lg border border-white/20 p-[1px]"
     >
       {/* Inner container */}
       <div className="relative bg-gradient-to-b from-white/95 to-white/90 rounded-3xl p-6 md:p-8">
@@ -93,6 +103,7 @@ export default function SiteVisitForm() {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Name */}
           <motion.input
             whileFocus={{ scale: 1 }}
             type="text"
@@ -104,6 +115,7 @@ export default function SiteVisitForm() {
             required
           />
 
+          {/* Phone */}
           <div className="relative w-full">
             <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-medium text-sm pointer-events-none">
               +91
@@ -121,6 +133,7 @@ export default function SiteVisitForm() {
             />
           </div>
 
+          {/* Service */}
           <motion.select
             whileFocus={{ scale: 1 }}
             name="service"
@@ -148,6 +161,7 @@ export default function SiteVisitForm() {
             <option value="electronic-door-locks">Electronic Door Locks</option>
           </motion.select>
 
+          {/* Area */}
           <motion.select
             whileFocus={{ scale: 1 }}
             name="area"
@@ -166,8 +180,9 @@ export default function SiteVisitForm() {
             <option value="Others">Others</option>
           </motion.select>
 
+          {/* Submit Button */}
           <motion.button
-            whileHover={{ scale: 1}}
+            whileHover={{ scale: 1 }}
             whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={submitting}
@@ -184,5 +199,3 @@ export default function SiteVisitForm() {
     </motion.div>
   );
 }
-
-
