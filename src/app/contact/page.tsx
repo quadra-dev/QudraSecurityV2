@@ -1,6 +1,19 @@
 import FaqCard from "@/components/Accordion/FaqCard";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Contact Quadra Security — Book Free Site Visit",
+  description: "Contact Quadra Security to book a free site visit, request a quotation, or get support for CCTV and access control installations in Gurugram.",
+  alternates: { canonical: "https://www.quadrasecurity.com/contact-us" },
+  openGraph: {
+    title: "Contact Quadra Security",
+    description: "Book a free site visit for CCTV installation and security consultation.",
+    url: "https://www.quadrasecurity.com/contact-us",
+    images: [{ url: "https://www.quadrasecurity.com/og/contact-og.png", width: 1200, height: 630 }],
+  }
+};
+
+
 export default function Contact() {
   return (
     <div className="h-auto w-full ">

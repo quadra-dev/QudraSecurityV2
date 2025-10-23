@@ -4,6 +4,32 @@ import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/campus.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Campus Security Solutions — Quadra Security",
+  description:
+    "Intelligent campus security systems: CCTV, access control, intercoms, and visitor management to ensure a safe educational environment.",
+  alternates: { canonical: "https://www.quadrasecurity.com/solutions/campus" },
+  openGraph: {
+    title: "Campus Security Solutions — Quadra Security",
+    description:
+      "CCTV, access control, and monitoring solutions designed for educational institutions.",
+    url: "https://www.quadrasecurity.com/solutions/campus",
+    images: [
+      {
+        url: "https://www.quadrasecurity.com/og/campus-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Quadra Security - Campus Security Solutions",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
+};
+
 export default function Campus() {
   return (
     <div className="h-auto w-full pt-10">

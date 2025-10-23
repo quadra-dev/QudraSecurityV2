@@ -4,6 +4,25 @@ import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/apartments.json"
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Apartment Security Solutions — Quadra Security",
+  description: "Advanced security solutions for apartments: CCTV, access control, intercoms and ANPR. Protect residents 24/7.",
+  alternates: { canonical: "https://www.quadrasecurity.in/solutions/apartments" },
+  openGraph: {
+    title: "Apartment Security Solutions — Quadra Security",
+    description: "Advanced security solutions for apartments: CCTV, access control, intercoms and ANPR.",
+    url: "https://www.quadrasecurity.in/solutions/apartments",
+    images: [{ url: "https://www.quadrasecurity.in/og/apartments-og.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+};
+
+
 export default function Apartment() {
   return (
     <div className="h-auto w-full pt-10">

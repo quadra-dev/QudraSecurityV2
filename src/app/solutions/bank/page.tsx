@@ -3,6 +3,33 @@ import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/bank.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Bank Security Solutions — Quadra Security",
+  description:
+    "Comprehensive security systems for banks: high-definition CCTV, alarm systems, access control, and vault monitoring to protect assets and staff.",
+  alternates: { canonical: "https://www.quadrasecurity.com/solutions/bank" },
+  openGraph: {
+    title: "Bank Security Solutions — Quadra Security",
+    description:
+      "Comprehensive security systems for banks: CCTV, alarms, access control, and vault monitoring.",
+    url: "https://www.quadrasecurity.com/solutions/bank",
+    images: [
+      {
+        url: "https://www.quadrasecurity.com/og/bank-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Quadra Security - Bank Security Systems",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
+};
+
+
 export default function Bank() {
   return (
     <div className="h-auto w-full pt-10">

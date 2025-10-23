@@ -2,6 +2,23 @@ import Image from "next/image";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 import Link from "next/link";
 
+export const metadata = {
+  title: "About Quadra Security — Trusted Security Experts",
+  description: "Learn about Quadra Security, our team, and commitment to delivering CCTV, biometric, and access control solutions across Gurugram.",
+  alternates: { canonical: "https://www.quadrasecurity.com/about" },
+  openGraph: {
+    title: "About Quadra Security",
+    description: "Learn about Quadra Security, our team, and commitment to delivering CCTV, biometric, and access control solutions across Gurugram.",
+    url: "https://www.quadrasecurity.com/about",
+    images: [{ url: "https://www.quadrasecurity.com/og/about-og.png", width: 1200, height: 630, alt: "About Quadra Security" }],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
 export default function About() {
   return (
     <div>
@@ -23,7 +40,7 @@ export default function About() {
                 peace of mind for every client.
               </p>
               <Link href="/contact">
-                <button className="px-4 py-3 bg-[#434CFF] text-white rounded-3xl shadow-md hover:bg-yellow-600 flex gap-2 mt-6">
+                <button className="px-4 py-3 bg-[#fe9000] text-white rounded-3xl shadow-md hover:scale-[1.1] hover: transition: transform 1000ms ease-out flex gap-2 mt-6">
                   Explore More
                   <Image
                     src="/ServicesImages/LinkArrow.svg"
@@ -34,14 +51,16 @@ export default function About() {
                 </button>
               </Link>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 ">
+            
               <Image
                 src="/AboutImages/AboutUsimg5.jpg"
                 alt="Team working"
                 width={550}
                 height={300}
-                className="rounded-lg shadow-lg"
+                className=" mx-auto rounded-lg shadow-lg"
               />
+              <p className="text-center mt-6">Our team with <strong>Ashish P Dhakkan</strong> sir (Founder - Prama Hikvision) </p>
             </div>
           </div>
         </section>
