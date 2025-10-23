@@ -4,6 +4,33 @@ import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/hotels.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Hotel Security Solutions — Quadra Security",
+  description:
+    "Smart security solutions for hotels: CCTV, electronic locks, fire safety systems, and 24/7 monitoring to protect guests and staff.",
+  alternates: { canonical: "https://www.quadrasecurity.com/solutions/hotels" },
+  openGraph: {
+    title: "Hotel Security Solutions — Quadra Security",
+    description:
+      "CCTV, access systems, and monitoring solutions tailored for hotels and hospitality businesses.",
+    url: "https://www.quadrasecurity.com/solutions/hotels",
+    images: [
+      {
+        url: "https://www.quadrasecurity.com/og/hotels-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Quadra Security - Hotel Security Systems",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
+};
+
+
 export default function Hotels() {
   return (
     <div className="h-auto w-full pt-10">

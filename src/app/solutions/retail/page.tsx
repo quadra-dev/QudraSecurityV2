@@ -3,6 +3,32 @@ import Buttonfunction from "@/components/Buttonfunction/Buttonfunction";
 import data from "@/constants/solutionPage/retails.json";
 import { ContactForm1 } from "@/components/contactForms/ContactForm1";
 
+export const metadata = {
+  title: "Retail Security Solutions — Quadra Security",
+  description:
+    "Protect your retail stores with advanced CCTV, intrusion alarms, and footfall analytics. Ensure customer safety and reduce losses.",
+  alternates: { canonical: "https://www.quadrasecurity.com/solutions/retail" },
+  openGraph: {
+    title: "Retail Security Solutions — Quadra Security",
+    description:
+      "CCTV, alarms, and analytics for secure and efficient retail operations.",
+    url: "https://www.quadrasecurity.com/solutions/retail",
+    images: [
+      {
+        url: "https://www.quadrasecurity.com/og/retail-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Quadra Security - Retail Security Solutions",
+      },
+    ],
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
+};
+
 export default function Retail() {
   return (
     <div className="h-auto w-full pt-10">
