@@ -132,6 +132,12 @@ export default function BlogPage() {
     "IoT",
     "Company News",
   ];
+  const tags = [
+    "CCTV", 
+    "SmartHome", 
+    "IoT", 
+    "SecurityTips", 
+    "AI"];
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#191970] via-[#082567] to-[#000080] text-white">
@@ -261,7 +267,67 @@ export default function BlogPage() {
           </div>
 
           {/* SIDEBAR */}
-          {/* (keep your sidebar code as-is) */}
+          <aside className="hidden lg:flex flex-col gap-6 sticky top-20 h-fit">
+            <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] bg-clip-text mb-3">
+              More Blogs
+            </h3>
+            <div className="flex flex-col gap-5">
+              {posts.slice(0, 5).map((p) => (
+                <Link
+                  key={p._id}
+                  href={`/blog/${p.slug.current}`}
+                  className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41] transition-all duration-300 backdrop-blur-sm shadow-md"
+                >
+                  <div className="flex items-center gap-3">
+                    {p.coverImage && (
+                      <img
+                        src={urlFor(p.coverImage)
+                          .width(100)
+                          .height(80)
+                          .auto("format")
+                          .url()}
+                        alt={p.title}
+                        className="w-20 h-16 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
+                        {p.title.length > 50
+                          ? `${p.title.slice(0, 50)}...`
+                          : p.title}
+                      </h4>
+                      {p.subtitle && (
+                        <p className="text-xs text-gray-400 italic line-clamp-2">
+                          {p.subtitle}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+              {/* Popular Tags */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-all"
+              >
+                <h3 className="text-lg font-semibold mb-4">Popular Tags</h3>
+                <div className="flex flex-wrap gap-2">
+                  {tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 hover:bg-blue-700/50 hover:text-white cursor-pointer transition"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </aside>
         </div>
       </section>
     </main>
