@@ -276,7 +276,7 @@ export default function BlogPage() {
                 <Link
                   key={p._id}
                   href={`/blog/${p.slug.current}`}
-                  className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41] transition-all duration-300 backdrop-blur-sm shadow-md"
+                  className="group bg-[#2b0340]/40 p-4 rounded-2xl shadow-md hover:bg-[#360a52]/50 transition-all duration-300 border border-transparent hover:border-pink-400/40 backdrop-blur-sm"
                 >
                   <div className="flex items-center gap-3">
                     {p.coverImage && (
