@@ -16,7 +16,7 @@ export default function HomeClient() {
   const router = useRouter();
 
   const handleConsultationClick = () => {
-    router.push("/contact-us");
+    router.push("/contact");
   };
 
   return (

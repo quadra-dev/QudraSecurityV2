@@ -58,6 +58,8 @@ export default function SiteVisitForm() {
 
       const result = await response.json();
       console.log("✅ API response:", result);
+      console.log("Response status:", response.status);
+      console.log("Result:", result);
 
       if (response.ok && result.success) {
         toast.success("We will contact you soon!");
@@ -154,7 +156,9 @@ export default function SiteVisitForm() {
             <option value="baggage-scanners">Baggage Scanners</option>
             <option value="alarm-systems">Alarm Systems</option>
             <option value="metal-detectors">Metal Detectors</option>
-            <option value="access-control-systems">Access Control Systems</option>
+            <option value="access-control-systems">
+              Access Control Systems
+            </option>
             <option value="boom-barriers-toll-solutions">
               Boom Barriers & Toll
             </option>

@@ -3,6 +3,7 @@ import "./globals.css";
 import NavigationBar from "@/components/navigation/NavigationBar"
 import Head from "next/head";
 import Footer from "@/components/Footer/Footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
         <NavigationBar/>
         {children}
         <Footer />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );
