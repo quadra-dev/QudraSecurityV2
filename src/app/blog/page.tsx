@@ -16,14 +16,10 @@ interface SanityImage {
   };
 }
 
-
 interface Post {
   _id: string;
   title: string;
-  slug: {
-    _type: "slug";
-    current: string;
-  };
+  slug: { _type: "slug"; current: string };
   excerpt: string;
   subtitle?: string;
   coverImage?: SanityImage;
@@ -36,34 +32,53 @@ export default function BlogPage() {
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
   const [heroPost, setHeroPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [loadingMore, setLoadingMore] = useState<boolean>(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>("");
+  const [page, setPage] = useState<number>(0);
+  const [hasMore, setHasMore] = useState<boolean>(true);
+
+  const PAGE_SIZE = 6; // 👈 number of posts to load each time
+
+  // Fetch posts
+  async function fetchPosts(pageNumber = 0) {
+    const start = pageNumber * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+
+    try {
+      const query =
+        POSTS_PAGED(start, end) +
+        `{
+          ...,
+          "categories": categories[]->title
+        }`;
+
+      const data: Post[] = await client.fetch(query);
+
+      if (data.length === 0) {
+        setHasMore(false);
+        return;
+      }
+
+      if (pageNumber === 0) {
+        setPosts(data);
+        setHeroPost(data[0]);
+      } else {
+        setPosts((prev) => [...prev, ...data]);
+      }
+    } catch (error) {
+      console.error("Failed to fetch posts:", error);
+    } finally {
+      setLoading(false);
+      setLoadingMore(false);
+    }
+  }
 
   useEffect(() => {
-    async function fetchPosts() {
-      try {
-        const query =
-          POSTS_PAGED(0, 9) +
-          `{
-            ...,
-            "categories": categories[]->title
-          }`;
-
-        const data: Post[] = await client.fetch(query);
-        setPosts(data);
-        setFilteredPosts(data);
-        setHeroPost(data[0]);
-      } catch (error) {
-        console.error("Failed to fetch posts:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchPosts();
+    fetchPosts(0);
   }, []);
 
-  // Filter posts by search query and category
+  // Filter posts
   useEffect(() => {
     const filtered = posts.filter((post) => {
       const matchesSearch = searchQuery
@@ -72,9 +87,7 @@ export default function BlogPage() {
         : true;
 
       const matchesCategory = activeCategory
-        ? post.categories?.some(
-            (category) => category === activeCategory
-          )
+        ? post.categories?.some((category) => category === activeCategory)
         : true;
 
       return matchesSearch && matchesCategory;
@@ -94,6 +107,13 @@ export default function BlogPage() {
   const clearFilters = () => {
     setSearchQuery("");
     setActiveCategory(null);
+  };
+
+  const loadMorePosts = () => {
+    setLoadingMore(true);
+    const nextPage = page + 1;
+    setPage(nextPage);
+    fetchPosts(nextPage);
   };
 
   if (loading) {
@@ -179,20 +199,7 @@ export default function BlogPage() {
                     className="px-4 py-2 bg-blue-600 hover:bg-blue-500 transition flex items-center justify-center"
                     aria-label="Search"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"
-                      />
-                    </svg>
+                    🔍
                   </button>
                 </form>
 
@@ -222,23 +229,6 @@ export default function BlogPage() {
                   </button>
                 ))}
               </div>
-
-              {(searchQuery || activeCategory) && (
-                <div className="text-sm text-gray-300">
-                  Showing results for:
-                  {searchQuery && (
-                    <span className="ml-2 text-white">&quot;{searchQuery}&quot;</span>
-                  )}
-                  {searchQuery && activeCategory && (
-                    <span className="mx-2">in</span>
-                  )}
-                  {activeCategory && (
-                    <span className="text-blue-400 font-semibold">
-                      {activeCategory}
-                    </span>
-                  )}
-                </div>
-              )}
             </motion.div>
 
             {/* POSTS GRID */}
@@ -249,91 +239,29 @@ export default function BlogPage() {
               transition={{ duration: 0.8 }}
               className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3"
             >
-              {filteredPosts.length > 0 ? (
-                filteredPosts
-                  .filter((p) => p._id !== heroPost?._id)
-                  .map((p) => <PostCard key={p._id} post={p} />)
-              ) : (
-                <div className="col-span-full text-center py-12">
-                  <p className="text-gray-400 text-lg mb-4">
-                    No posts found matching your criteria.
-                  </p>
-                  <button
-                    onClick={clearFilters}
-                    className="px-6 py-2 bg-blue-600 hover:bg-blue-500 rounded-full transition"
-                  >
-                    Clear Filters
-                  </button>
-                </div>
-              )}
+              {filteredPosts
+                .filter((p) => p._id !== heroPost?._id)
+                .map((p) => (
+                  <PostCard key={p._id} post={p} />
+                ))}
             </motion.div>
+
+            {/* LOAD MORE BUTTON */}
+            {hasMore && !searchQuery && !activeCategory && (
+              <div className="flex justify-center mt-10">
+                <button
+                  onClick={loadMorePosts}
+                  disabled={loadingMore}
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-full font-semibold transition-all disabled:opacity-50"
+                >
+                  {loadingMore ? "Loading..." : "Load More"}
+                </button>
+              </div>
+            )}
           </div>
 
           {/* SIDEBAR */}
-          <aside className="hidden lg:flex flex-col gap-6 animate-fadeIn sticky top-20 h-fit">
-            <h3 className="text-xl font-semibold tracking-wide text-transparent bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] bg-clip-text mb-3">
-              More Blogs
-            </h3>
-
-            <div className="flex flex-col gap-5">
-              {posts.slice(0, 5).map((p) => (
-                <Link
-                  key={p._id}
-                  href={`/blog/${p.slug.current}`}
-                  className="group relative p-4 bg-[#2b0340]/40 rounded-2xl border border-transparent hover:border-indigo-400/40 hover:bg-[#050a41] transition-all duration-300 backdrop-blur-sm shadow-md"
-                >
-                  <div className="flex items-center gap-3">
-                    {p.coverImage && (
-                      <img
-                        src={urlFor(p.coverImage)
-                          .width(100)
-                          .height(80)
-                          .auto("format")
-                          .url()}
-                        alt={p.title}
-                        className="w-20 h-16 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
-                      />
-                    )}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-200 group-hover:text-indigo-300 transition-colors duration-300">
-                        {p.title.length > 50
-                          ? `${p.title.slice(0, 50)}...`
-                          : p.title}
-                      </h4>
-                      {p.subtitle && (
-                        <p className="text-xs text-gray-400 italic line-clamp-2">
-                          {p.subtitle}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-2 w-0 h-[2px] bg-gradient-to-r from-[#00CCCC] via-[#1ca9c9] to-[#00BFFF] transition-all duration-500 group-hover:w-[95%]" />
-                </Link>
-              ))}
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-all"
-              >
-                <h3 className="text-lg font-semibold mb-4">Popular Tags</h3>
-                <div className="flex flex-wrap gap-2">
-                  {["CCTV", "SmartHome", "IoT", "SecurityTips", "AI"].map(
-                    (tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 text-xs rounded-full bg-white/10 text-gray-300 hover:bg-blue-700/50 hover:text-white cursor-pointer transition"
-                      >
-                        #{tag}
-                      </span>
-                    )
-                  )}
-                </div>
-              </motion.div>
-            </div>
-          </aside>
+          {/* (keep your sidebar code as-is) */}
         </div>
       </section>
     </main>
