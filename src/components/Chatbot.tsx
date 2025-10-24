@@ -2,7 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import { FaRocketchat } from "react-icons/fa";
 import { FaMessage, FaRobot } from "react-icons/fa6";
 import { toast } from "sonner";
 
@@ -14,7 +13,7 @@ const allQuestions = [
   {
     question: "How can I book a service?",
     answer:
-      "You can book a service by filling the form in the Book Now section on our website.",
+      "You can book a service by filling the form in the contact us section on our website.",
   },
   {
     question: "Do you provide service across India?",
@@ -42,8 +41,10 @@ export default function Chatbot() {
   const [mobile, setMobile] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [questionPhase, setQuestionPhase] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  const handleStart = () => {
+  // ✅ Now includes API call to save user info
+  const handleStart = async () => {
     if (!name.trim()) {
       toast.error("Please enter your name.");
       return;
@@ -57,11 +58,32 @@ export default function Chatbot() {
       return;
     }
 
-    setMessages([
-      { from: "bot", text: `Hi ${name}, welcome to Quadra Security! 👋` },
-    ]);
-    setHasUserInfo(true);
-    toast.success("Welcome! Let's get started.");
+    try {
+      setLoading(true);
+
+      const res = await fetch("/api/chatbot", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, mobile }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Welcome! Let's get started.");
+        setMessages([
+          { from: "bot", text: `Hi ${name}, welcome to Quadra Security! 👋` },
+        ]);
+        setHasUserInfo(true);
+      } else {
+        toast.error("Something went wrong while saving your info.");
+      }
+    } catch (error) {
+      console.error("Chatbot API error:", error);
+      toast.error("Failed to connect. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleClick = (q: string, a: string) => {
@@ -96,18 +118,22 @@ export default function Chatbot() {
 
   return (
     <>
+      {/* Floating Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-5 right-5 z-50 bg-[#13095C] text-white p-4 rounded-full shadow-lg hover:bg-purple-700 transition"
         aria-label="Toggle Chat"
       >
-       <FaMessage/>
+        <FaMessage />
       </button>
 
       {isOpen && (
         <div className="fixed bottom-24 right-5 w-80 max-w-[90%] bg-[#13095C] shadow-2xl rounded-xl z-50 flex flex-col">
+          {/* Header */}
           <div className="bg-purple-700 text-white px-4 py-3 rounded-t-xl font-semibold text-lg flex justify-between items-center">
-            <FaRobot/> Quadra Bot
+            <span className="flex items-center gap-2">
+              <FaRobot /> Quadra Bot
+            </span>
             <button
               onClick={() => {
                 setIsOpen(false);
@@ -128,6 +154,7 @@ export default function Chatbot() {
             </button>
           </div>
 
+          {/* Chat Messages */}
           <div className="flex flex-col gap-2 p-3 max-h-64 overflow-y-auto text-sm">
             {messages.map((msg, idx) => (
               <div
@@ -142,6 +169,7 @@ export default function Chatbot() {
               </div>
             ))}
 
+            {/* Step 1: Ask for user info */}
             {!hasUserInfo && (
               <div className="flex flex-col gap-2">
                 <input
@@ -149,24 +177,28 @@ export default function Chatbot() {
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="p-2 text-white rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+                  className="p-2 text-white rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500 bg-transparent"
                 />
                 <input
                   type="tel"
                   placeholder="Mobile Number"
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
-                  className="p-2 text-white rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+                  className="p-2 text-white rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500 bg-transparent"
                 />
                 <button
                   onClick={handleStart}
-                  className="bg-[#0E2A47] text-white py-2 rounded hover:bg-[#16406a] transition"
+                  disabled={loading}
+                  className={`bg-[#0E2A47] text-white py-2 rounded transition ${
+                    loading ? "opacity-70 cursor-not-allowed" : "hover:bg-[#16406a]"
+                  }`}
                 >
-                  Continue
+                  {loading ? "Saving..." : "Continue"}
                 </button>
               </div>
             )}
 
+            {/* Step 2: Ask yes/no for more questions */}
             {hasUserInfo && !questionPhase && (
               <div className="flex flex-col gap-2">
                 <input
@@ -178,12 +210,13 @@ export default function Chatbot() {
                       (e.target as HTMLInputElement).value = "";
                     }
                   }}
-                  className="text-white p-2 rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500"
+                  className="text-white p-2 rounded border border-gray-300 focus:outline-none focus:ring focus:ring-blue-500 bg-transparent"
                 />
               </div>
             )}
           </div>
 
+          {/* Step 3: Show question list */}
           {hasUserInfo && questionPhase && (
             <div className="p-3 border-t flex flex-col gap-2 bg-[#FAFAFA]">
               {visibleQuestions.map((q, i) => (
