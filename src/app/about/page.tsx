@@ -166,13 +166,13 @@ export default function About() {
 
         {/* Features Section */}
         <section className="py-5 bg-white ">
-          <Image
+          {/* <Image
             src="/AboutImages/AboutUsimgCircular.svg"
             alt="about"
             width={450}
             height={350}
             className="mx-auto py-4"
-          />
+          /> */}
           <div className="container mx-auto px-6 text-center pb-16">
             <h2 className="text-3xl font-bold mb-12">
               They Like How We Structure Their Security Strategy
